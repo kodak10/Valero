@@ -20,7 +20,7 @@
                     <div class="header-right-content">
                         <ul>
                             <li>
-                                <a href="#">Mon Compte</a>
+                                <a href="/my_account">Mon Compte</a>
                             </li>
                         </ul>
                     </div>
@@ -335,7 +335,7 @@
 
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Contact</a>
+                                <a href="/contact" class="nav-link">Contact</a>
                             </li>
                         </ul>
 

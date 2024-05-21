@@ -55,22 +55,16 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="#">A Propos</a>
+                            <a href="/">Accueil</a>
                         </li>
                         <li>
                             <a href="#">Nos Articles</a>
                         </li>
                         <li>
-                            <a href="#">FAQ</a>
+                            <a href="/my_account">Mon Compte</a>
                         </li>
                         <li>
-                            <a href="#">Termes et Conditions</a>
-                        </li>
-                        <li>
-                            <a href="#">Politique de Confidentialité</a>
-                        </li>
-                        <li>
-                            <a href="#">Mon Compte</a>
+                            <a href="/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -81,8 +75,15 @@
                     <h3>Service Clients</h3>
 
                     <ul class="import-link">
+                        
                         <li>
-                            <a href="#">Centre d'aide</a>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Termes et Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#">Politique de Confidentialité</a>
                         </li>
                         {{-- <li>
                             <a href="products.html">Products</a>
@@ -96,9 +97,7 @@
                         <li>
                             <a href="privacy-policy.html">Accessibility</a>
                         </li> --}}
-                        <li>
-                            <a href="#">Contact</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

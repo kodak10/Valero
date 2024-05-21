@@ -35,12 +35,12 @@
         </div>
 		<!-- End Preloader Area -->
 
-		@include('layouts.header');
+		@include('layouts.header')
 
 
-        @yield('content');
+        @yield('content')
 
-        @include('layouts.footer');
+        @include('layouts.footer')
 
 		<!-- Start Newsletter Modal -->
 		<div class="popup-overlay popup-hide">
@@ -229,7 +229,7 @@
 								<div class="share-this-product">
 									<ul>
 										<li>
-											<span>Share</span>
+											<span>Partager</span>
 										</li>
 										<li>
 											<a href="https://www.facebook.com/" target="_blank">
