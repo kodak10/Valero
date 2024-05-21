@@ -314,6 +314,10 @@
                             </li> -->
 
                             <li class="nav-item">
+                                <a href="/contact" class="nav-link">Contact</a>
+                            </li>
+
+                            <li class="nav-item">
                                 <a href="#" class="nav-link">
                                     Pages
                                     <i class="ri-arrow-down-s-line"></i>
@@ -334,9 +338,7 @@
 
 
 
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">Contact</a>
-                            </li>
+                           
                         </ul>
 
                     </div>

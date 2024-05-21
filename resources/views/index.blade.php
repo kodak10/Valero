@@ -6920,7 +6920,7 @@
 </div>
 <!-- End Partner Area -->
 
-<!-- Start Special Area -->
+{{-- <!-- Start Special Area -->
 <section class="special-area pb-30">
     <div class="container">
         <div class="row justify-content-center">
@@ -7265,7 +7265,7 @@
         </div>
     </div>
 </section>
-<!-- End Special Area -->
+<!-- End Special Area --> --}}
 
 <!-- Start Services Area -->
 <section class="services-area pt-0 pb-30">
