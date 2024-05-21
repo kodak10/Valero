@@ -36,7 +36,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3">
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="assets/images/logo.png" alt="Image" style="height: 100px !important;">
                         </a>
                     </div>
@@ -44,10 +44,10 @@
 
                 <div class="col-lg-5">
                     <form class="search-box">
-                        <input type="text" name="Search" placeholder="Faire le glissez deposer de l'image ici" class="form-control">
+                        <input type="text" name="Search" placeholder="Faire le glissez deposer de l'image ici " class="form-control">
                         <button type="submit" class="search-btn">
                             <i class="ri-search-line"></i>
-                            Rechercher
+                            Importer une Image
                         </button>
                     </form>
                 </div>
@@ -104,43 +104,43 @@
                         <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
                             <ul>
                                 <li>
-                                    <a href="products.html">Power Tools</a>
+                                    <a href="#">Power Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Hand Tools</a>
+                                    <a href="#">Hand Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Cordless Tools</a>
+                                    <a href="#">Cordless Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Welding & Soldering</a>
+                                    <a href="#">Welding & Soldering</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Gardening Tools</a>
+                                    <a href="#">Gardening Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Air and Gas Powered Tools</a>
+                                    <a href="#">Air and Gas Powered Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Safety Tools</a>
+                                    <a href="#">Safety Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Site lighting Tools</a>
+                                    <a href="#">Site lighting Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Tools Accessories</a>
+                                    <a href="#">Tools Accessories</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Outdoor Power Equipment</a>
+                                    <a href="#">Outdoor Power Equipment</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Safety Tools</a>
+                                    <a href="#">Safety Tools</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="logo">
-                        <a href="index.html">
+                        <a href="/">
                             <img src="assets/images/logo.png" alt="logo">
                         </a>
                     </div>
@@ -161,37 +161,37 @@
                         <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
                             <ul>
                                 <li>
-                                    <a href="products.html">Power Tools</a>
+                                    <a href="#">Power Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Hand Tools</a>
+                                    <a href="#">Hand Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Cordless Tools</a>
+                                    <a href="#">Cordless Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Welding & Soldering</a>
+                                    <a href="#">Welding & Soldering</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Gardening Tools</a>
+                                    <a href="#">Gardening Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Air and Gas Powered Tools</a>
+                                    <a href="#">Air and Gas Powered Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Safety Tools</a>
+                                    <a href="#">Safety Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Site lighting Tools</a>
+                                    <a href="#">Site lighting Tools</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Tools Accessories</a>
+                                    <a href="#">Tools Accessories</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Outdoor Power Equipment</a>
+                                    <a href="#">Outdoor Power Equipment</a>
                                 </li>
                                 <li>
-                                    <a href="products.html">Safety Tools</a>
+                                    <a href="#">Safety Tools</a>
                                 </li>
                             </ul>
                         </div>
@@ -225,16 +225,16 @@
 
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="products.html">Products</a>
+                                                        <a href="#">Products</a>
                                                     </li>
                                                     <li>
                                                         <a href="best-sellers.html">Best Sellers</a>
                                                     </li>
                                                     <li>
-                                                        <a href="featured-products.html">Featured Products</a>
+                                                        <a href="featured-#">Featured Products</a>
                                                     </li>
                                                     <li>
-                                                        <a href="trending-products.html">Trending Products</a>
+                                                        <a href="trending-#">Trending Products</a>
                                                     </li>
                                                     <li>
                                                         <a href="new-arrivals.html">New Arrivals</a>
@@ -253,7 +253,7 @@
 
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="offer-products.html">Offer Products</a>
+                                                        <a href="offer-#">Offer Products</a>
                                                     </li>
                                                     <li>
                                                         <a href="shopping-cart.html">Shopping Cart</a>
@@ -305,7 +305,7 @@
                                             </div>
 
                                             <div class="col">
-                                                <a href="products.html" class="menu-img">
+                                                <a href="#" class="menu-img">
                                                 </a>
                                             </div>
                                         </div>

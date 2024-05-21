@@ -82,9 +82,9 @@
 
                     <ul class="import-link">
                         <li>
-                            <a href="faq.html">Help Center</a>
+                            <a href="#">Centre d'aide</a>
                         </li>
-                        <li>
+                        {{-- <li>
                             <a href="products.html">Products</a>
                         </li>
                         <li>
@@ -95,9 +95,9 @@
                         </li>
                         <li>
                             <a href="privacy-policy.html">Accessibility</a>
-                        </li>
+                        </li> --}}
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="#">Contact</a>
                         </li>
                     </ul>
                 </div>

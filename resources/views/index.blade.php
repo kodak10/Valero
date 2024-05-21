@@ -15,7 +15,7 @@
                     <ul class="cart-list">
                         <li>
                             <img src="assets/images/products/product-1.jpg" alt="Image">
-                            <a href="shopping-cart.html">
+                            <a href="#">
                                 DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
                             </a>
                             <span>$125.00</span>
@@ -24,7 +24,7 @@
 
                         <li>
                             <img src="assets/images/products/product-2.jpg" alt="Image">
-                            <a href="shopping-cart.html">
+                            <a href="#">
                                 Power Tools Set Chinese Manufacturer Production 50V Lithu Battery
                             </a>
                             <span>$125.00</span>
@@ -33,7 +33,7 @@
 
                         <li>
                             <img src="assets/images/products/product-3.jpg" alt="Image">
-                            <a href="shopping-cart.html">
+                            <a href="#">
                                 Electrical Magnetic Impact Power Hammer Drills Machine
                             </a>
                             <span>$125.00</span>
@@ -42,7 +42,7 @@
 
                         <li>
                             <img src="assets/images/products/product-4.jpg" alt="Image">
-                            <a href="shopping-cart.html">
+                            <a href="#">
                                 Professional Cordless Drill Power Tools Set Competitive Price
                             </a>
                             <span>$125.00</span>
@@ -61,12 +61,12 @@
 
                     <ul class="cart-check-btn">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 View Cart
                             </a>
                         </li>
                         <li class="checkout">
-                            <a href="checkout.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 Checkout
                             </a>
                         </li>
@@ -90,7 +90,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="hero-slider-btn">
-                                <a href="products.html" class="default-btn">
+                                <a href="#" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -110,7 +110,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="banner-btn">
-                                <a href="products.html" class="default-btn">
+                                <a href="#" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -130,7 +130,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="banner-btn">
-                                <a href="products.html" class="default-btn">
+                                <a href="#" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -154,12 +154,12 @@
         <div class="row justify-content-center">
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-25.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Power Tools
                         </a>
                     </h3>
@@ -173,12 +173,12 @@
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories bg-eff5ff">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-26.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Machine Tools
                         </a>
                     </h3>
@@ -192,12 +192,12 @@
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories bg-ebf1f5">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-27.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Hand Tools
                         </a>
                     </h3>
@@ -211,12 +211,12 @@
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories bg-ebf9ea">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-28.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Cordless Tools
                         </a>
                     </h3>
@@ -230,12 +230,12 @@
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories bg-fff8e5">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-29.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Welding & Soldering
                         </a>
                     </h3>
@@ -249,12 +249,12 @@
 
             <div class="col-lg-4 col-sm-6">
                 <div class="single-categories bg-f3f1ff">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-30.png" alt="Image">
                     </a>
 
                     <h3>
-                        <a href="product-details.html">
+                        <a href="#">
                             Socket Wrenches
                         </a>
                     </h3>
@@ -280,7 +280,7 @@
                         <span class="best">Best Deals</span>
                         <h3>Premium Tools Sets</h3>
                         <span class="offer">Up to 30% off</span>
-                        <a href="products.html">
+                        <a href="#">
                             Shop Now
                         </a>
                     </div>
@@ -296,7 +296,7 @@
                     <div class="featured-product-slider owl-carousel owl-theme">
                         <div class="single-products">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-6.jpg" alt="Image">
                                 </a>
 
@@ -304,7 +304,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Cordless Drill Professional Combo Drill And Screwdriver
                                 </a>
 
@@ -325,7 +325,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (03 Review)
                                         </a>
                                     </li>
@@ -343,13 +343,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -364,7 +364,7 @@
 
                         <div class="single-products">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-7.jpg" alt="Image">
                                 </a>
 
@@ -372,7 +372,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Professional Cordless Drill Power Tools Competitive
                                 </a>
 
@@ -393,7 +393,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (03 Review)
                                         </a>
                                     </li>
@@ -411,13 +411,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -432,7 +432,7 @@
 
                         <div class="single-products">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-8.jpg" alt="Image">
                                 </a>
 
@@ -440,7 +440,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
                                 </a>
 
@@ -461,7 +461,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (03 Review)
                                         </a>
                                     </li>
@@ -479,13 +479,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -500,7 +500,7 @@
 
                         <div class="single-products">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-9.jpg" alt="Image">
                                 </a>
 
@@ -508,7 +508,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Power Tools Set Chinese Manufacturer Production 50V
                                 </a>
 
@@ -529,7 +529,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (03 Review)
                                         </a>
                                     </li>
@@ -547,13 +547,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -583,7 +583,7 @@
         <div class="best-product-slider owl-carousel owl-theme">
             <div class="single-products">
                 <div class="product-img">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-1.jpg" alt="Image">
                     </a>
 
@@ -591,7 +591,7 @@
                 </div>
 
                 <div class="product-content">
-                    <a href="product-details.html" class="title">
+                    <a href="#" class="title">
                         Cordless Drill Professional Combo Drill And Screwdriver
                     </a>
 
@@ -612,7 +612,7 @@
                             <i class="ri-star-fill"></i>
                         </li>
                         <li>
-                            <a href="product-details.html">
+                            <a href="#">
                                 (03 Review)
                             </a>
                         </li>
@@ -630,13 +630,13 @@
 
                     <ul class="products-cart-wish-view">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
                                 Add To Cart
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" class="wish-btn">
+                            <a href="#" class="wish-btn">
                                 <i class="ri-heart-line"></i>
                             </a>
                         </li>
@@ -651,7 +651,7 @@
 
             <div class="single-products">
                 <div class="product-img">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-2.jpg" alt="Image">
                     </a>
 
@@ -659,7 +659,7 @@
                 </div>
 
                 <div class="product-content">
-                    <a href="product-details.html" class="title">
+                    <a href="#" class="title">
                         Professional Cordless Drill Power Tools Set Competitive Price
                     </a>
 
@@ -680,7 +680,7 @@
                             <i class="ri-star-fill"></i>
                         </li>
                         <li>
-                            <a href="product-details.html">
+                            <a href="#">
                                 (03 Review)
                             </a>
                         </li>
@@ -698,13 +698,13 @@
 
                     <ul class="products-cart-wish-view">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
                                 Add To Cart
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" class="wish-btn">
+                            <a href="#" class="wish-btn">
                                 <i class="ri-heart-line"></i>
                             </a>
                         </li>
@@ -719,7 +719,7 @@
 
             <div class="single-products">
                 <div class="product-img">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-3.jpg" alt="Image">
                     </a>
 
@@ -727,7 +727,7 @@
                 </div>
 
                 <div class="product-content">
-                    <a href="product-details.html" class="title">
+                    <a href="#" class="title">
                         DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
                     </a>
 
@@ -748,7 +748,7 @@
                             <i class="ri-star-fill"></i>
                         </li>
                         <li>
-                            <a href="product-details.html">
+                            <a href="#">
                                 (03 Review)
                             </a>
                         </li>
@@ -766,13 +766,13 @@
 
                     <ul class="products-cart-wish-view">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
                                 Add To Cart
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" class="wish-btn">
+                            <a href="#" class="wish-btn">
                                 <i class="ri-heart-line"></i>
                             </a>
                         </li>
@@ -787,7 +787,7 @@
 
             <div class="single-products">
                 <div class="product-img">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-4.jpg" alt="Image">
                     </a>
 
@@ -795,7 +795,7 @@
                 </div>
 
                 <div class="product-content">
-                    <a href="product-details.html" class="title">
+                    <a href="#" class="title">
                         Power Tools Set Chinese Manufacturer Production 50V
                     </a>
 
@@ -816,7 +816,7 @@
                             <i class="ri-star-fill"></i>
                         </li>
                         <li>
-                            <a href="product-details.html">
+                            <a href="#">
                                 (03 Review)
                             </a>
                         </li>
@@ -834,13 +834,13 @@
 
                     <ul class="products-cart-wish-view">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
                                 Add To Cart
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" class="wish-btn">
+                            <a href="#" class="wish-btn">
                                 <i class="ri-heart-line"></i>
                             </a>
                         </li>
@@ -855,7 +855,7 @@
 
             <div class="single-products">
                 <div class="product-img">
-                    <a href="product-details.html">
+                    <a href="#">
                         <img src="assets/images/products/product-5.jpg" alt="Image">
                     </a>
 
@@ -863,7 +863,7 @@
                 </div>
 
                 <div class="product-content">
-                    <a href="product-details.html" class="title">
+                    <a href="#" class="title">
                         Professional Cordless Drill Power Tools Set Competitive Price
                     </a>
 
@@ -884,7 +884,7 @@
                             <i class="ri-star-fill"></i>
                         </li>
                         <li>
-                            <a href="product-details.html">
+                            <a href="#">
                                 (03 Review)
                             </a>
                         </li>
@@ -902,13 +902,13 @@
 
                     <ul class="products-cart-wish-view">
                         <li>
-                            <a href="shopping-cart.html" class="default-btn">
+                            <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
                                 Add To Cart
                             </a>
                         </li>
                         <li>
-                            <a href="wishlist.html" class="wish-btn">
+                            <a href="#" class="wish-btn">
                                 <i class="ri-heart-line"></i>
                             </a>
                         </li>
@@ -931,7 +931,7 @@
         <div class="sale-offer-bg bg-2">
             <h5>Sale offer - <span>30% off</span></h5>
             <h3>All types of premium quality tools</h3>
-            <a href="products.html" class="default-btn">
+            <a href="#" class="default-btn">
                 <i class="ri-shopping-cart-line"></i>
                 Shop Now
             </a>
@@ -991,7 +991,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-11.jpg" alt="Image">
                                         </a>
 
@@ -1001,7 +1001,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Hand Tools Rubber Handle Adjustable Spanner
                                         </a>
 
@@ -1024,7 +1024,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -1046,7 +1046,7 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
@@ -1061,7 +1061,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
@@ -1071,7 +1071,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Multifunctional Hammer
                                         </a>
 
@@ -1094,7 +1094,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -1116,7 +1116,7 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
@@ -1131,7 +1131,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
@@ -1141,7 +1141,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Multifunctional Hammer
                                         </a>
 
@@ -1164,7 +1164,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -1186,7 +1186,7 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
@@ -1218,7 +1218,7 @@
                         <img src="assets/images/products/product-12.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Good Quality Electric Cordless Drill
                             </a>
 
@@ -1253,7 +1253,7 @@
                         <img src="assets/images/products/product-13.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 High Quality Industrial Wood Planer
                             </a>
 
@@ -1288,7 +1288,7 @@
                         <img src="assets/images/products/product-14.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Professional Straight Cutting Scissor
                             </a>
 
@@ -1323,7 +1323,7 @@
                         <img src="assets/images/products/product-15.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 90 Degree Angle Square Combination Handle
                             </a>
 
@@ -1358,7 +1358,7 @@
                         <img src="assets/images/products/product-16.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 High Quality Steel Clamp Tool
                             </a>
 
@@ -1395,7 +1395,7 @@
                 <div class="section-title">
                     <h2>Nouveautés</h2>
 
-                    <a href="products.html" class="read-more">
+                    <a href="#" class="read-more">
                         Voir tout
                     </a>
                 </div>
@@ -1404,7 +1404,7 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-17.jpg" alt="Image">
                                 </a>
 
@@ -1412,7 +1412,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Electrical Magnetic Impact Power Hammer Drills
                                 </a>
 
@@ -1433,7 +1433,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (10 Review)
                                         </a>
                                     </li>
@@ -1448,13 +1448,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1471,13 +1471,13 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-18.jpg" alt="Image">
                                 </a>
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     High Quality Electric Hand Planer, 4-3/8-Inch
                                 </a>
 
@@ -1498,7 +1498,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (05 Review)
                                         </a>
                                     </li>
@@ -1516,13 +1516,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1539,7 +1539,7 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-19.jpg" alt="Image">
                                 </a>
 
@@ -1547,7 +1547,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     White Whale Vacuum Cleaner High Quality
                                 </a>
 
@@ -1568,7 +1568,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (10 Review)
                                         </a>
                                     </li>
@@ -1583,13 +1583,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1606,13 +1606,13 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-20.jpg" alt="Image">
                                 </a>
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     High Quality Carbon Steel Mini Drilling Machines
                                 </a>
 
@@ -1633,7 +1633,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (11 Review)
                                         </a>
                                     </li>
@@ -1651,13 +1651,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1674,13 +1674,13 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-21.jpg" alt="Image">
                                 </a>
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Power Hammer Drills 200V Machine Screwdriver
                                 </a>
 
@@ -1701,7 +1701,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (05 Review)
                                         </a>
                                     </li>
@@ -1719,13 +1719,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1742,7 +1742,7 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-22.jpg" alt="Image">
                                 </a>
 
@@ -1750,7 +1750,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Multi-function Screw Driver Set For Home Use
                                 </a>
 
@@ -1771,7 +1771,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (07 Review)
                                         </a>
                                     </li>
@@ -1786,13 +1786,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1809,13 +1809,13 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-23.jpg" alt="Image">
                                 </a>
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     Wall Polishing Square Sander Electric Machine
                                 </a>
 
@@ -1836,7 +1836,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (10 Review)
                                         </a>
                                     </li>
@@ -1851,13 +1851,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -1874,7 +1874,7 @@
                     <div class="col-xl-3 col-sm-6">
                         <div class="single-products new-arrivals">
                             <div class="product-img">
-                                <a href="product-details.html">
+                                <a href="#">
                                     <img src="assets/images/products/product-24.jpg" alt="Image">
                                 </a>
 
@@ -1882,7 +1882,7 @@
                             </div>
 
                             <div class="product-content">
-                                <a href="product-details.html" class="title">
+                                <a href="#" class="title">
                                     High Quality Carbon Steel Professional Power Tools
                                 </a>
 
@@ -1903,7 +1903,7 @@
                                         <i class="ri-star-fill"></i>
                                     </li>
                                     <li>
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             (10 Review)
                                         </a>
                                     </li>
@@ -1921,13 +1921,13 @@
 
                                 <ul class="products-cart-wish-view">
                                     <li>
-                                        <a href="shopping-cart.html" class="default-btn">
+                                        <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
                                             Add To Cart
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="wishlist.html" class="wish-btn">
+                                        <a href="#" class="wish-btn">
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
@@ -2011,7 +2011,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -2019,7 +2019,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -2040,7 +2040,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2055,13 +2055,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2076,13 +2076,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -2103,7 +2103,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -2121,13 +2121,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2142,7 +2142,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -2150,7 +2150,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -2171,7 +2171,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2186,13 +2186,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2207,13 +2207,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -2234,7 +2234,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -2252,13 +2252,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2273,13 +2273,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -2300,7 +2300,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -2318,13 +2318,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2339,7 +2339,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -2347,7 +2347,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -2368,7 +2368,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -2383,13 +2383,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2404,13 +2404,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -2431,7 +2431,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2446,13 +2446,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2467,7 +2467,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -2475,7 +2475,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -2496,7 +2496,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2514,13 +2514,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2539,7 +2539,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -2547,7 +2547,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -2568,7 +2568,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2583,13 +2583,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2604,13 +2604,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -2631,7 +2631,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -2649,13 +2649,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2670,7 +2670,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -2678,7 +2678,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -2699,7 +2699,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2714,13 +2714,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2735,13 +2735,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -2762,7 +2762,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -2780,13 +2780,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2801,13 +2801,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -2828,7 +2828,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -2846,13 +2846,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2867,7 +2867,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -2875,7 +2875,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -2896,7 +2896,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -2911,13 +2911,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2932,13 +2932,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -2959,7 +2959,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -2974,13 +2974,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -2995,7 +2995,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -3003,7 +3003,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -3024,7 +3024,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3042,13 +3042,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3067,7 +3067,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -3075,7 +3075,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -3096,7 +3096,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3111,13 +3111,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3132,13 +3132,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -3159,7 +3159,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -3177,13 +3177,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3198,7 +3198,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -3206,7 +3206,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -3227,7 +3227,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3242,13 +3242,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3263,13 +3263,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -3290,7 +3290,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -3308,13 +3308,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3329,13 +3329,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -3356,7 +3356,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -3374,13 +3374,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3395,7 +3395,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -3403,7 +3403,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -3424,7 +3424,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -3439,13 +3439,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3460,13 +3460,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -3487,7 +3487,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3502,13 +3502,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3523,7 +3523,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -3531,7 +3531,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -3552,7 +3552,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3570,13 +3570,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3595,7 +3595,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -3603,7 +3603,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -3624,7 +3624,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3639,13 +3639,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3660,13 +3660,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -3687,7 +3687,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -3705,13 +3705,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3726,7 +3726,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -3734,7 +3734,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -3755,7 +3755,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -3770,13 +3770,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3791,13 +3791,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -3818,7 +3818,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -3836,13 +3836,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3857,13 +3857,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -3884,7 +3884,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -3902,13 +3902,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3923,7 +3923,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -3931,7 +3931,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -3952,7 +3952,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -3967,13 +3967,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -3988,13 +3988,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -4015,7 +4015,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4030,13 +4030,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4051,7 +4051,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -4059,7 +4059,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -4080,7 +4080,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4098,13 +4098,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4123,7 +4123,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -4131,7 +4131,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -4152,7 +4152,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4167,13 +4167,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4188,13 +4188,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -4215,7 +4215,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -4233,13 +4233,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4254,7 +4254,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -4262,7 +4262,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -4283,7 +4283,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4298,13 +4298,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4319,13 +4319,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -4346,7 +4346,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -4364,13 +4364,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4385,13 +4385,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -4412,7 +4412,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -4430,13 +4430,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4451,7 +4451,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -4459,7 +4459,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -4480,7 +4480,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -4495,13 +4495,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4516,13 +4516,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -4543,7 +4543,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4558,13 +4558,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4579,7 +4579,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -4587,7 +4587,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -4608,7 +4608,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4626,13 +4626,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4651,7 +4651,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -4659,7 +4659,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -4680,7 +4680,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4695,13 +4695,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4716,13 +4716,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -4743,7 +4743,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -4761,13 +4761,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4782,7 +4782,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -4790,7 +4790,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -4811,7 +4811,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -4826,13 +4826,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4847,13 +4847,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -4874,7 +4874,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -4892,13 +4892,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4913,13 +4913,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -4940,7 +4940,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -4958,13 +4958,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -4979,7 +4979,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -4987,7 +4987,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -5008,7 +5008,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -5023,13 +5023,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5044,13 +5044,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -5071,7 +5071,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5086,13 +5086,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5107,7 +5107,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -5115,7 +5115,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -5136,7 +5136,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5154,13 +5154,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5179,7 +5179,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -5187,7 +5187,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -5208,7 +5208,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5223,13 +5223,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5244,13 +5244,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -5271,7 +5271,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -5289,13 +5289,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5310,7 +5310,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -5318,7 +5318,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -5339,7 +5339,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5354,13 +5354,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5375,13 +5375,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -5402,7 +5402,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -5420,13 +5420,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5441,13 +5441,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -5468,7 +5468,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -5486,13 +5486,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5507,7 +5507,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -5515,7 +5515,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -5536,7 +5536,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -5551,13 +5551,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5572,13 +5572,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -5599,7 +5599,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5614,13 +5614,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5635,7 +5635,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -5643,7 +5643,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -5664,7 +5664,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5682,13 +5682,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5707,7 +5707,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -5715,7 +5715,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -5736,7 +5736,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5751,13 +5751,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5772,13 +5772,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -5799,7 +5799,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -5817,13 +5817,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5838,7 +5838,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -5846,7 +5846,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -5867,7 +5867,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -5882,13 +5882,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5903,13 +5903,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -5930,7 +5930,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -5948,13 +5948,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -5969,13 +5969,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -5996,7 +5996,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -6014,13 +6014,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6035,7 +6035,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -6043,7 +6043,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -6064,7 +6064,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -6079,13 +6079,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6100,13 +6100,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -6127,7 +6127,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6142,13 +6142,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6163,7 +6163,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -6171,7 +6171,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -6192,7 +6192,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6210,13 +6210,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6234,7 +6234,7 @@
                             <div class="categories-slider owl-carousel owl-theme">
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-17.jpg" alt="Image">
                                         </a>
 
@@ -6242,7 +6242,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Electrical Magnetic Impact Power Hammer Drills
                                         </a>
 
@@ -6263,7 +6263,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6278,13 +6278,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6299,13 +6299,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-18.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Electric Hand Planer, 4-3/8-Inch
                                         </a>
 
@@ -6326,7 +6326,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -6344,13 +6344,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6365,7 +6365,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-19.jpg" alt="Image">
                                         </a>
 
@@ -6373,7 +6373,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             White Whale Vacuum Cleaner High Quality
                                         </a>
 
@@ -6394,7 +6394,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6409,13 +6409,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6430,13 +6430,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-20.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Mini Drilling Machines
                                         </a>
 
@@ -6457,7 +6457,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (11 Review)
                                                 </a>
                                             </li>
@@ -6475,13 +6475,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6496,13 +6496,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-21.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Power Hammer Drills 200V Machine Screwdriver
                                         </a>
 
@@ -6523,7 +6523,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (05 Review)
                                                 </a>
                                             </li>
@@ -6541,13 +6541,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6562,7 +6562,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-22.jpg" alt="Image">
                                         </a>
 
@@ -6570,7 +6570,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Multi-function Screw Driver Set For Home Use
                                         </a>
 
@@ -6591,7 +6591,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (07 Review)
                                                 </a>
                                             </li>
@@ -6606,13 +6606,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6627,13 +6627,13 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-23.jpg" alt="Image">
                                         </a>
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             Wall Polishing Square Sander Electric Machine
                                         </a>
 
@@ -6654,7 +6654,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6669,13 +6669,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6690,7 +6690,7 @@
 
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="product-details.html">
+                                        <a href="#">
                                             <img src="assets/images/products/product-24.jpg" alt="Image">
                                         </a>
 
@@ -6698,7 +6698,7 @@
                                     </div>
 
                                     <div class="product-content">
-                                        <a href="product-details.html" class="title">
+                                        <a href="#" class="title">
                                             High Quality Carbon Steel Professional Power Tools
                                         </a>
 
@@ -6719,7 +6719,7 @@
                                                 <i class="ri-star-fill"></i>
                                             </li>
                                             <li>
-                                                <a href="product-details.html">
+                                                <a href="#">
                                                     (10 Review)
                                                 </a>
                                             </li>
@@ -6737,13 +6737,13 @@
 
                                         <ul class="products-cart-wish-view">
                                             <li>
-                                                <a href="shopping-cart.html" class="default-btn">
+                                                <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
                                                     Add To Cart
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="wishlist.html" class="wish-btn">
+                                                <a href="#" class="wish-btn">
                                                     <i class="ri-heart-line"></i>
                                                 </a>
                                             </li>
@@ -6934,7 +6934,7 @@
                         <img src="assets/images/products/product-31.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 White Whale Vacuum Cleaner High Quality Product
                             </a>
 
@@ -6969,7 +6969,7 @@
                         <img src="assets/images/products/product-32.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Professional Cordless Drill Power Tools Set Competitive Price
                             </a>
 
@@ -7004,7 +7004,7 @@
                         <img src="assets/images/products/product-33.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Power Tools Set Chinese Manufacturer Production 50V Lithu Battery
                             </a>
 
@@ -7047,7 +7047,7 @@
                         <img src="assets/images/products/product-34.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Grinding Machine Polisher Household 5 Inch Mini Portable Power Tools
                             </a>
 
@@ -7082,7 +7082,7 @@
                         <img src="assets/images/products/product-35.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Professional 2000W 25mm Electric Jack Hammer Drill
                             </a>
 
@@ -7117,7 +7117,7 @@
                         <img src="assets/images/products/product-36.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 Electrical Magnetic Impact Power Hammer Drills Machine
                             </a>
 
@@ -7160,7 +7160,7 @@
                         <img src="assets/images/products/product-37.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 High Quality Industrial Stapler Powerful Heavy Duty Metal
                             </a>
 
@@ -7195,7 +7195,7 @@
                         <img src="assets/images/products/product-38.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 High Quality Carbon Steel Professional Power Tools
                             </a>
 
@@ -7230,7 +7230,7 @@
                         <img src="assets/images/products/product-39.jpg" alt="Image">
 
                         <div class="product-content">
-                            <a href="product-details.html" class="title">
+                            <a href="#" class="title">
                                 DFMALB 20V Max XX Oscillating Multi Variable Speed Tool
                             </a>
 
@@ -7311,7 +7311,7 @@
         <div class="row align-items-center">
             <div class="col-lg-2">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="/">
                         <img src="assets/images/logo.png" alt="Image" style="height: 100px !important;">
                     </a>
                 </div>
@@ -7330,7 +7330,7 @@
                     <input type="email" class="form-control" placeholder="Glisser deposer ici" name="EMAIL" required="" autocomplete="off">
 
                     <button class="submit-btn" type="submit">
-                        Subscribe
+                        Importer une Image
                     </button>
 
                     <div id="validator-newsletter" class="form-result"></div>

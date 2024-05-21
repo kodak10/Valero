@@ -23,7 +23,7 @@
 		<!-- Favicon -->
 		<link rel="icon" type="image/png" href="assets/images/favicon.png">
 		<!-- Title -->
-		<title>Ehay - Tools Store eCommerce HTML Template</title>
+		<title>Valero Project</title>
     </head>
 
     <body>
@@ -39,7 +39,7 @@
 
 
         @yield('content');
-        
+
         @include('layouts.footer');
 
 		<!-- Start Newsletter Modal -->
@@ -146,7 +146,7 @@
 										<i class="ri-star-fill"></i>
 										<i class="ri-star-fill"></i>
                                     </div>
-                                    <a href="product-details.html" class="rating-count">4 Reviews</a>
+                                    <a href="#" class="rating-count">4 Reviews</a>
 								</div>
 
                                 <div class="price">
@@ -172,7 +172,7 @@
 									</li>
                                     <li>
 										<span>Categories:</span>
-										<a href="products.html">Power Drill</a>
+										<a href="#">Power Drill</a>
 									</li>
 								</ul>
 
@@ -213,14 +213,14 @@
 										</span>
 									</div>
 
-									<a href="cart.html" class="default-btn">
+									<a href="#" class="default-btn">
 										<i class="ri-shopping-cart-line"></i>
 										Add To Cart
 									</a>
 								</div>
 
 								<div class="wishlist-btn">
-									<a href="wishlist.html" class="default-btn">
+									<a href="#" class="default-btn">
 										<i class="ri-heart-line"></i>
 										Wishlist
 									</a>
