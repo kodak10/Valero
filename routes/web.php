@@ -17,3 +17,4 @@ Route::get('/', [WebsiteController::class, 'index']);
 Route::get('/contact', [WebsiteController::class, 'contact']);
 Route::get('/my_account', [WebsiteController::class, 'my_account']);
 
+Route::get('/admin', [WebsiteController::class, 'adminDashboard']);

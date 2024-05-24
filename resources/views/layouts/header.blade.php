@@ -208,6 +208,10 @@
                                 <a href="#" class="nav-link">Nos Articles</a>
                             </li>
 
+                            <li class="nav-item">
+                                <a href="/admin" class="nav-link">Test Admin</a>
+                            </li>
+
 
 
 

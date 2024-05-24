@@ -20,4 +20,9 @@ class WebsiteController extends Controller
     {
         return view('account');
     }
+
+    public function adminDashboard()
+    {
+        return view('administrateur/home');
+    }
 }
