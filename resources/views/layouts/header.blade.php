@@ -1,6 +1,4 @@
-<!-- Start Header Area -->
 <header class="header-area">
-    <!-- Start Top Header -->
     <div class="top-header">
         <div class="container">
             <div class="row align-items-center">
@@ -44,8 +42,8 @@
 
                 <div class="col-lg-5">
                     <form class="search-box">
-                        <input type="text" name="Search" placeholder="Faire le glissez deposer de l'image ici " class="form-control">
-                        <button type="submit" class="search-btn">
+                        <input type="text" name="Search" placeholder="Que recherchez-vous ?" class="form-control">
+                        <button type="file" class="search-btn" type="file" accept=".jpg,.png">                    
                             <i class="ri-search-line"></i>
                             Importer une Image
                         </button>

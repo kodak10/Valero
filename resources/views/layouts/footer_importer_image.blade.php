@@ -12,17 +12,15 @@
 
             <div class="col-lg-5">
                 <div class="subscribe-content">
-                    {{-- <span>30% Discount For Your First Order</span>
-                    <h3>Subscribe To Our Newsletter</h3> --}}
                     <p>Préparez la rentrée avec confiance grâce à nos fournitures scolaires de qualité supérieure – tout ce dont vos enfants ont besoin, en un seul clic !</p>
                 </div>
             </div>
 
             <div class="col-lg-5">
                 <form class="newsletter-form" data-toggle="validator">
-                    <input type="email" class="form-control" placeholder="Glisser deposer ici" name="EMAIL" required="" autocomplete="off">
+                    <input type="text" class="form-control" placeholder="Que recherchez-vous ?">
 
-                    <button class="submit-btn" type="submit">
+                    <button class="submit-btn" type="file" accept=".jpg,.png">
                         Importer une Image
                     </button>
 

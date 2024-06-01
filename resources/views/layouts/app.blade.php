@@ -43,7 +43,7 @@
         @include('layouts.footer')
 
 		<!-- Start Newsletter Modal -->
-		<div class="popup-overlay popup-hide">
+		{{-- <div class="popup-overlay popup-hide">
 			<div class="container">
 				<div class="align-middle">
 					<div class="popup-body">
@@ -62,7 +62,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!-- End Newsletter Modal -->
 
 		<!-- Start Product View One Area -->
