@@ -55,8 +55,10 @@
                                     <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description de l'article"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <label for="images">Images</label>
-                                    <input type="file" class="form-control-file" id="images" name="images[]" multiple>
+                                    <label>Image</label>
+                                    <div class="input-group col-xs-12">
+                                        <input id="images" name="images[]" type="file" accept=".jpg,.png,.jpeg" class="form-control file-upload-info" placeholder="Importer l'image">
+                                    </div>
                                 </div>
                             </div>
                         </div>
