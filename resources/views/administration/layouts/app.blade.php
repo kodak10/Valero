@@ -24,16 +24,18 @@
 
     <!-- endinject -->
     <link rel="shortcut icon" href="{{asset('assets/admin/images/favicon.png')}}" />
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
   </head>
   <body class="with-welcome-text">
     <div class="container-scroller">
 
-      @include('administrateur.layouts.navbar')
+      @include('administration.layouts.navbar')
 
       <!-- partial -->
       <div class="container-fluid page-body-wrapper">
         <!-- partial:partials/_sidebar.html -->
-        @include('administrateur.layouts.sidebar')
+        @include('administration.layouts.sidebar')
         
         <!-- partial -->
         <div class="main-panel">
@@ -41,7 +43,7 @@
             @yield('content')
           </div>
 
-         @include('administrateur.layouts.footer')
+         @include('administration.layouts.footer')
          
         </div>
         <!-- main-panel ends -->
@@ -69,5 +71,7 @@
     <script src="{{asset('assets/admin/js/dashboard.js')}}"></script>
     <!-- <script src="assets/js/Chart.roundedBarCharts.js')}}"></script> -->
     <!-- End custom js for this page-->
+    
+    
   </body>
 </html>

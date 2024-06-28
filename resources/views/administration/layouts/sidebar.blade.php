@@ -1,26 +1,51 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="/admin">
+              <a class="nav-link" href="/administration">
                 <i class="mdi mdi-grid-large menu-icon"></i>
                 <span class="menu-title">Dashboard</span>
               </a>
             </li>
-            {{-- <li class="nav-item nav-category">Gestion des Articles</li> --}}
+            {{-- <li class="nav-item nav-category">Gestion des Catégories</li> --}}
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <a class="nav-link" data-bs-toggle="collapse" href="#one" aria-expanded="false" aria-controls="one">
+                <i class="menu-icon mdi mdi-floor-plan"></i>
+                <span class="menu-title">Gestion des Catégories</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="one">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{route('categories.index')}}">Liste </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('categories.create')}}">Ajouter</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#two" aria-expanded="false" aria-controls="two">
                 <i class="menu-icon mdi mdi-floor-plan"></i>
                 <span class="menu-title">Gestion des Articles</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="ui-basic">
+              <div class="collapse" id="two">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">Listes </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Ajouter</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Modifier</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('articles.index')}}">Liste </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('articles.create')}}">Ajouter</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="#">Stock</a></li>
                 </ul>
               </div>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="menu-icon mdi mdi-file-document"></i>
+                <span class="menu-title">Les Commandes</span>
+              </a>
+            </li>
+
+            
+            
+            
             {{-- <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
                 <i class="menu-icon mdi mdi-card-text-outline"></i>
@@ -88,7 +113,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="menu-icon mdi mdi-file-document"></i>
-                <span class="menu-title">Paramétrage</span>
+                <span class="menu-title">Paramétrage d'accès</span>
               </a>
             </li>
           </ul>

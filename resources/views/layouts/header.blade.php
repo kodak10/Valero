@@ -207,7 +207,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="/admin" class="nav-link">Test Admin</a>
+                                <a href="/administration" class="nav-link">Test Admin</a>
                             </li>
 
 

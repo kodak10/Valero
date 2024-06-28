@@ -6,10 +6,10 @@
             </button>
           </div>
           <div>
-            <a class="navbar-brand brand-logo" href="/admin">
+            <a class="navbar-brand brand-logo" href="/administration">
               <img src="" alt="Valero Project" />
             </a>
-            <a class="navbar-brand brand-logo-mini" href="/admin">
+            <a class="navbar-brand brand-logo-mini" href="/administration">
               <img src="" alt="Valero Project" />
             </a>
           </div>
