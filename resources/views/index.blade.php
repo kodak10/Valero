@@ -147,124 +147,37 @@
 <!-- Start Popular Categories Area -->
 <section class="popular-categories-area pt-54 pb-30">
     <div class="container">
-        <div class="section-title">
+        {{-- <div class="section-title">
             <h2>Les Niveaux </h2>
-        </div>
+        </div> --}}
 
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories">
-                    <a href="#">
-                        <img src="assets/images/products/product-25.png" alt="Image">
-                    </a>
-
-                    <h3>
+            @foreach ($categories as $categorie )
+                <div class="col-lg-4 col-sm-6">
+                    
+                    <div class="single-categories">
                         <a href="#">
-                            Power Tools
+                            <img src="{{ asset('images/articles/' . $categorie->couverture) }}" alt="Image">
+
                         </a>
-                    </h3>
-                    <span>15 Products</span>
 
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
-                </div>
-            </div>
+                        <h3 class="text-uppercase">
+                            <a href="#">
+                                {{$categorie->nom}}
+                            </a>
+                        </h3>
+                        <span>{{$categorie->articles->count()}}  Articles</span>
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories bg-eff5ff">
-                    <a href="#">
-                        <img src="assets/images/products/product-26.png" alt="Image">
-                    </a>
-
-                    <h3>
-                        <a href="#">
-                            Machine Tools
+                        <a href="product-details" class="read-more">
+                            Voir les articles
                         </a>
-                    </h3>
-                    <span>05 Products</span>
-
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
+                    </div>
+                    
+                    
                 </div>
-            </div>
+            @endforeach
 
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories bg-ebf1f5">
-                    <a href="#">
-                        <img src="assets/images/products/product-27.png" alt="Image">
-                    </a>
-
-                    <h3>
-                        <a href="#">
-                            Hand Tools
-                        </a>
-                    </h3>
-                    <span>18 Products</span>
-
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories bg-ebf9ea">
-                    <a href="#">
-                        <img src="assets/images/products/product-28.png" alt="Image">
-                    </a>
-
-                    <h3>
-                        <a href="#">
-                            Cordless Tools
-                        </a>
-                    </h3>
-                    <span>19 Products</span>
-
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories bg-fff8e5">
-                    <a href="#">
-                        <img src="assets/images/products/product-29.png" alt="Image">
-                    </a>
-
-                    <h3>
-                        <a href="#">
-                            Welding & Soldering
-                        </a>
-                    </h3>
-                    <span>04 Products</span>
-
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <div class="single-categories bg-f3f1ff">
-                    <a href="#">
-                        <img src="assets/images/products/product-30.png" alt="Image">
-                    </a>
-
-                    <h3>
-                        <a href="#">
-                            Socket Wrenches
-                        </a>
-                    </h3>
-                    <span>12 Products</span>
-
-                    <a href="product-details" class="read-more">
-                        Shop Now
-                    </a>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
@@ -294,18 +207,17 @@
 
                 <div class="featured-product-wrap">
                     <div class="featured-product-slider owl-carousel owl-theme">
+                        @foreach ($articles as $article )
                         <div class="single-products">
                             <div class="product-img">
                                 <a href="#">
                                     <img src="assets/images/products/product-6.jpg" alt="Image">
                                 </a>
-
-                                <span class="hot">Hot</span>
                             </div>
 
                             <div class="product-content">
                                 <a href="#" class="title">
-                                    Cordless Drill Professional Combo Drill And Screwdriver
+                                    {{$article->nom}}
                                 </a>
 
                                 <ul class="products-rating">
@@ -333,19 +245,18 @@
 
                                 <ul class="products-price">
                                     <li>
-                                        $119.00
-                                        <del>$219.00</del>
+                                        {{$article->prix}}
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <span>In Stock</span>
-                                    </li>
+                                    </li> --}}
                                 </ul>
 
-                                <ul class="products-cart-wish-view">
+                                <ul class="products-cart-wish-view d-flex justify-content-between">
                                     <li>
                                         <a href="#" class="default-btn">
                                             <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
+                                           Ajouter au panier
                                         </a>
                                     </li>
                                     <li>
@@ -353,7 +264,7 @@
                                             <i class="ri-heart-line"></i>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li> 
                                         <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                             <i class="ri-eye-line"></i>
                                         </button>
@@ -362,209 +273,9 @@
                             </div>
                         </div>
 
-                        <div class="single-products">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-7.jpg" alt="Image">
-                                </a>
+                        @endforeach
 
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Professional Cordless Drill Power Tools Competitive
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (03 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $130.00
-                                        <del>$250.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="single-products">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-8.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot">Hot</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (03 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $150.00
-                                        <del>$200.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="single-products">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-9.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Power Tools Set Chinese Manufacturer Production 50V
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (03 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $111.00
-                                        <del>$222.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                      
                     </div>
                 </div>
             </div>
@@ -573,26 +284,298 @@
 </section>
 <!-- End Featured Products Area -->
 
+<!-- Start New Arrivals Area -->
+<section class="new-arrivals-area pb-30">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="section-title">
+                    <h2>Tendances</h2>
+                </div>
+
+                <ul class="trending-product-list">
+                    <li class="single-list">
+                        <img src="assets/images/products/product-12.jpg" alt="Image">
+
+                        <div class="product-content">
+                            <a href="#" class="title">
+                                Good Quality Electric Cordless Drill
+                            </a>
+
+                            <ul class="products-price">
+                                <li>
+                                    $29.00
+                                    <del>$50.00</del>
+                                </li>
+                            </ul>
+
+                            <ul class="products-rating">
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="single-list">
+                        <img src="assets/images/products/product-13.jpg" alt="Image">
+
+                        <div class="product-content">
+                            <a href="#" class="title">
+                                High Quality Industrial Wood Planer
+                            </a>
+
+                            <ul class="products-price">
+                                <li>
+                                    $19.00
+                                    <del>$30.00</del>
+                                </li>
+                            </ul>
+
+                            <ul class="products-rating">
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="single-list">
+                        <img src="assets/images/products/product-14.jpg" alt="Image">
+
+                        <div class="product-content">
+                            <a href="#" class="title">
+                                Professional Straight Cutting Scissor
+                            </a>
+
+                            <ul class="products-price">
+                                <li>
+                                    $29.00
+                                    <del>$50.00</del>
+                                </li>
+                            </ul>
+
+                            <ul class="products-rating">
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="single-list">
+                        <img src="assets/images/products/product-15.jpg" alt="Image">
+
+                        <div class="product-content">
+                            <a href="#" class="title">
+                                90 Degree Angle Square Combination Handle
+                            </a>
+
+                            <ul class="products-price">
+                                <li>
+                                    $10.00
+                                    <del>$15.00</del>
+                                </li>
+                            </ul>
+
+                            <ul class="products-rating">
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="single-list">
+                        <img src="assets/images/products/product-16.jpg" alt="Image">
+
+                        <div class="product-content">
+                            <a href="#" class="title">
+                                High Quality Steel Clamp Tool
+                            </a>
+
+                            <ul class="products-price">
+                                <li>
+                                    $15.00
+                                    <del>$20.00</del>
+                                </li>
+                            </ul>
+
+                            <ul class="products-rating">
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                                <li>
+                                    <i class="ri-star-fill"></i>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-lg-9">
+                <div class="section-title">
+                    <h2>Articles disponibles</h2>
+
+                    <a href="#" class="read-more">
+                        Voir tout
+                    </a>
+                </div>
+
+                <div class="row">
+                    @foreach ($articles as $article )
+                        <div class="col-xl-3 col-sm-6">
+                            <div class="single-products new-arrivals">
+                                <div class="product-img">
+                                    <a href="#">
+                                        <img src="assets/images/products/product-17.jpg" alt="Image">
+                                    </a>
+
+                                    <span class="hot new">New</span>
+                                </div>
+
+                                <div class="product-content">
+                                    <a href="#" class="title">
+                                        {{$article->nom}}
+                                    </a>
+
+                                    <ul class="products-rating">
+                                        <li>
+                                            <i class="ri-star-fill"></i>
+                                        </li>
+                                        <li>
+                                            <i class="ri-star-fill"></i>
+                                        </li>
+                                        <li>
+                                            <i class="ri-star-fill"></i>
+                                        </li>
+                                        <li>
+                                            <i class="ri-star-fill"></i>
+                                        </li>
+                                        <li>
+                                            <i class="ri-star-fill"></i>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                (10 Review)
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="products-price">
+                                        <li>
+                                           {{$article->prix}}
+                                        </li>
+                                    </ul>
+
+                                    <ul class="products-cart-wish-view d-flex justify-content-between">
+                                        <li>
+                                            <a href="#" class="default-btn">
+                                                <i class="ri-shopping-cart-line"></i>
+                                                Ajouter au panier
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="wish-btn">
+                                                <i class="ri-heart-line"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                <i class="ri-eye-line"></i>
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End New Arrivals Area -->
+
 <!-- Start Best sellers Area -->
 <section class="best-seller-area pb-30">
     <div class="container">
+
         <div class="section-title">
             <h2>Meilleurs Ventes</h2>
         </div>
 
         <div class="best-product-slider owl-carousel owl-theme">
+            @foreach ($articles as $article)
             <div class="single-products">
                 <div class="product-img">
                     <a href="#">
                         <img src="assets/images/products/product-1.jpg" alt="Image">
                     </a>
-
-                    <span class="hot new">-30%</span>
                 </div>
 
                 <div class="product-content">
                     <a href="#" class="title">
-                        Cordless Drill Professional Combo Drill And Screwdriver
+                        {{$article->nom}}
                     </a>
 
                     <ul class="products-rating">
@@ -620,19 +603,15 @@
 
                     <ul class="products-price">
                         <li>
-                            $119.00
-                            <del>$219.00</del>
-                        </li>
-                        <li>
-                            <span>In Stock</span>
+                            {{$article->prix}}
                         </li>
                     </ul>
 
-                    <ul class="products-cart-wish-view">
+                    <ul class="products-cart-wish-view d-flex justify-content-between">
                         <li>
                             <a href="#" class="default-btn">
                                 <i class="ri-shopping-cart-line"></i>
-                                Add To Cart
+                                Ajouter au panier
                             </a>
                         </li>
                         <li>
@@ -648,278 +627,10 @@
                     </ul>
                 </div>
             </div>
+            @endforeach
+           
 
-            <div class="single-products">
-                <div class="product-img">
-                    <a href="#">
-                        <img src="assets/images/products/product-2.jpg" alt="Image">
-                    </a>
-
-                    <span class="hot new">-20%</span>
-                </div>
-
-                <div class="product-content">
-                    <a href="#" class="title">
-                        Professional Cordless Drill Power Tools Set Competitive Price
-                    </a>
-
-                    <ul class="products-rating">
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <a href="#">
-                                (03 Review)
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="products-price">
-                        <li>
-                            $130.00
-                            <del>$250.00</del>
-                        </li>
-                        <li>
-                            <span>In Stock</span>
-                        </li>
-                    </ul>
-
-                    <ul class="products-cart-wish-view">
-                        <li>
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Add To Cart
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="wish-btn">
-                                <i class="ri-heart-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="ri-eye-line"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="single-products">
-                <div class="product-img">
-                    <a href="#">
-                        <img src="assets/images/products/product-3.jpg" alt="Image">
-                    </a>
-
-                    <span class="hot new">-30%</span>
-                </div>
-
-                <div class="product-content">
-                    <a href="#" class="title">
-                        DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
-                    </a>
-
-                    <ul class="products-rating">
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <a href="#">
-                                (03 Review)
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="products-price">
-                        <li>
-                            $150.00
-                            <del>$200.00</del>
-                        </li>
-                        <li>
-                            <span>In Stock</span>
-                        </li>
-                    </ul>
-
-                    <ul class="products-cart-wish-view">
-                        <li>
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Add To Cart
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="wish-btn">
-                                <i class="ri-heart-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="ri-eye-line"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="single-products">
-                <div class="product-img">
-                    <a href="#">
-                        <img src="assets/images/products/product-4.jpg" alt="Image">
-                    </a>
-
-                    <span class="hot new">-10%</span>
-                </div>
-
-                <div class="product-content">
-                    <a href="#" class="title">
-                        Power Tools Set Chinese Manufacturer Production 50V
-                    </a>
-
-                    <ul class="products-rating">
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <a href="#">
-                                (03 Review)
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="products-price">
-                        <li>
-                            $111.00
-                            <del>$222.00</del>
-                        </li>
-                        <li>
-                            <span>In Stock</span>
-                        </li>
-                    </ul>
-
-                    <ul class="products-cart-wish-view">
-                        <li>
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Add To Cart
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="wish-btn">
-                                <i class="ri-heart-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="ri-eye-line"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="single-products">
-                <div class="product-img">
-                    <a href="#">
-                        <img src="assets/images/products/product-5.jpg" alt="Image">
-                    </a>
-
-                    <span class="hot">Hot</span>
-                </div>
-
-                <div class="product-content">
-                    <a href="#" class="title">
-                        Professional Cordless Drill Power Tools Set Competitive Price
-                    </a>
-
-                    <ul class="products-rating">
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <a href="#">
-                                (03 Review)
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="products-price">
-                        <li>
-                            $222.00
-                            <del>$250.00</del>
-                        </li>
-                        <li>
-                            <span>In Stock</span>
-                        </li>
-                    </ul>
-
-                    <ul class="products-cart-wish-view">
-                        <li>
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Add To Cart
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="wish-btn">
-                                <i class="ri-heart-line"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                <i class="ri-eye-line"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+           
         </div>
     </div>
 </section>
@@ -1204,748 +915,7 @@
 </section>
 <!-- End Flash Deals Area -->
 
-<!-- Start New Arrivals Area -->
-<section class="new-arrivals-area pb-30">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3">
-                <div class="section-title">
-                    <h2>Tendances</h2>
-                </div>
 
-                <ul class="trending-product-list">
-                    <li class="single-list">
-                        <img src="assets/images/products/product-12.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                Good Quality Electric Cordless Drill
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $29.00
-                                    <del>$50.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-13.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                High Quality Industrial Wood Planer
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $19.00
-                                    <del>$30.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-14.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                Professional Straight Cutting Scissor
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $29.00
-                                    <del>$50.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-15.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                90 Degree Angle Square Combination Handle
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $10.00
-                                    <del>$15.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-16.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                High Quality Steel Clamp Tool
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $15.00
-                                    <del>$20.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-9">
-                <div class="section-title">
-                    <h2>Nouveautés</h2>
-
-                    <a href="#" class="read-more">
-                        Voir tout
-                    </a>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-17.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Electrical Magnetic Impact Power Hammer Drills
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (10 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $170.00
-                                        <del>$220.00</del>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-18.jpg" alt="Image">
-                                </a>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    High Quality Electric Hand Planer, 4-3/8-Inch
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (05 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $69.00
-                                        <del>$90.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-19.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    White Whale Vacuum Cleaner High Quality
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (10 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $129.00
-                                        <del>$150.00</del>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-20.jpg" alt="Image">
-                                </a>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    High Quality Carbon Steel Mini Drilling Machines
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (11 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $99.00
-                                        <del>$150.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-21.jpg" alt="Image">
-                                </a>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Power Hammer Drills 200V Machine Screwdriver
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (05 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $159.00
-                                        <del>$200.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-22.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Multi-function Screw Driver Set For Home Use
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (07 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $29.00
-                                        <del>$50.00</del>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-23.jpg" alt="Image">
-                                </a>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    Wall Polishing Square Sander Electric Machine
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (10 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $89.00
-                                        <del>$120.00</del>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-xl-3 col-sm-6">
-                        <div class="single-products new-arrivals">
-                            <div class="product-img">
-                                <a href="#">
-                                    <img src="assets/images/products/product-24.jpg" alt="Image">
-                                </a>
-
-                                <span class="hot new">New</span>
-                            </div>
-
-                            <div class="product-content">
-                                <a href="#" class="title">
-                                    High Quality Carbon Steel Professional Power Tools
-                                </a>
-
-                                <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (10 Review)
-                                        </a>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-price">
-                                    <li>
-                                        $99.00
-                                        <del>$130.00</del>
-                                    </li>
-                                    <li>
-                                        <span>In Stock</span>
-                                    </li>
-                                </ul>
-
-                                <ul class="products-cart-wish-view">
-                                    <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                            Add To Cart
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                            <i class="ri-eye-line"></i>
-                                        </button>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End New Arrivals Area -->
 
 <!-- Start Sale Discount Area -->
 <section class="sale-discount-area pb-54">
@@ -1967,92 +937,61 @@
             <div class="row">
                 <div class="col-lg-3">
                     <div class="section-title">
-                        <h2>Categories</h2>
+                        <h2>Les Secondes Mains</h2>
                     </div>
 
                     <ul class="tabs">
-                        <li>
-                            Power Tools
+                        @foreach ($categories as $categorie)
+                        <li class="tab-link" data-tab="tab-{{ $categorie->id }}">
+                            {{ $categorie->nom }}
                         </li>
-
-                        <li>
-                            Hand Tools
-                        </li>
-
-                        <li>
-                            Cordless Tools
-                        </li>
-
-                        <li>
-                            Welding & Soldering
-                        </li>
-
-                        <li>
-                            Gardening Tools
-                        </li>
-
-                        <li>
-                            Safety Tools
-                        </li>
-
-                        <li>
-                            Site Lighting Tools
-                        </li>
-
-                        <li>
-                            Tools Accessories
-                        </li>
+                        @endforeach
                     </ul>
+        
+
+                    
                 </div>
 
                 <div class="col-lg-9">
                     <div class="tab_content">
-                        <div class="tabs_item">
+                        @foreach ($categories as $categorie)
+                        <div id="tab-{{ $categorie->id }}" class="tabs_item">
                             <div class="categories-slider owl-carousel owl-theme">
+                                @foreach ($articlesSecondMains as $article)
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
                                         <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
+                                            <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
                                         </a>
-
-                                        <span class="hot new">New</span>
                                     </div>
-
+        
                                     <div class="product-content">
                                         <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
+                                            {{ $article->nom }}
                                         </a>
-
+        
                                         <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
+                                            @for ($i = 0; $i < 5; $i++)
+                                                <li>
+                                                    <i class="ri-star-fill"></i>
+                                                </li>
+                                            @endfor
                                             <li>
                                                 <a href="#">
-                                                    (10 Review)
+                                                    ({{ $article->reviews_count }} Review)
                                                 </a>
                                             </li>
                                         </ul>
-
+        
                                         <ul class="products-price">
                                             <li>
-                                                $170.00
-                                                <del>$220.00</del>
+                                                ${{ $article->price }}
+                                                @if($article->old_price)
+                                                    <del>${{ $article->old_price }}</del>
+                                                @endif
                                             </li>
                                         </ul>
-
+        
                                         <ul class="products-cart-wish-view">
                                             <li>
                                                 <a href="#" class="default-btn">
@@ -2073,4690 +1012,10 @@
                                         </ul>
                                     </div>
                                 </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabs_item">
-                            <div class="categories-slider owl-carousel owl-theme">
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-17.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Electrical Magnetic Impact Power Hammer Drills
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $170.00
-                                                <del>$220.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-18.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Electric Hand Planer, 4-3/8-Inch
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $69.00
-                                                <del>$90.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-19.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            White Whale Vacuum Cleaner High Quality
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $129.00
-                                                <del>$150.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-20.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Mini Drilling Machines
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (11 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$150.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-21.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Power Hammer Drills 200V Machine Screwdriver
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $159.00
-                                                <del>$200.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-22.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Multi-function Screw Driver Set For Home Use
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (07 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-23.jpg" alt="Image">
-                                        </a>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            Wall Polishing Square Sander Electric Machine
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $89.00
-                                                <del>$120.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="single-products new-arrivals">
-                                    <div class="product-img">
-                                        <a href="#">
-                                            <img src="assets/images/products/product-24.jpg" alt="Image">
-                                        </a>
-
-                                        <span class="hot new">New</span>
-                                    </div>
-
-                                    <div class="product-content">
-                                        <a href="#" class="title">
-                                            High Quality Carbon Steel Professional Power Tools
-                                        </a>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $99.00
-                                                <del>$130.00</del>
-                                            </li>
-                                            <li>
-                                                <span>In Stock</span>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                                    <i class="ri-eye-line"></i>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
@@ -7305,6 +1564,257 @@
 </section>
 <!-- End Services Area -->
 
+
 		@include('layouts.footer_importer_image')
 
+        <!-- Start Product View One Area -->
+        {{-- <div class="modal fade product-view-one" id="exampleModal">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <button type="button" class="close" data-bs-dismiss="modal">
+                        <span aria-hidden="true">
+							<i class="ri-close-line"></i>
+						</span>
+					</button>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-6">
+                            <div class="product-view-one-image">
+								<div id="big" class="owl-carousel owl-theme">
+									<div class="item">
+										<img src="assets/images/products/product-1.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-2.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-3.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-4.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-5.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-6.jpg" alt="Image">
+									</div>
+								</div>
+
+								<div id="thumbs" class="owl-carousel owl-theme">
+									<div class="item">
+										<img src="assets/images/products/product-1.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-2.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-3.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-4.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-5.jpg" alt="Image">
+									</div>
+
+									<div class="item">
+										<img src="assets/images/products/product-6.jpg" alt="Image">
+									</div>
+								</div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="product-content">
+                                <h3>
+									Cordless Drill Professional Combo Drill And Screwdriver
+								</h3>
+
+								<div class="product-review">
+                                    <div class="rating">
+										<i class="ri-star-fill"></i>
+										<i class="ri-star-fill"></i>
+										<i class="ri-star-fill"></i>
+										<i class="ri-star-fill"></i>
+										<i class="ri-star-fill"></i>
+                                    </div>
+                                    <a href="#" class="rating-count">4 Reviews</a>
+								</div>
+
+                                <div class="price">
+									<span class="new-price">$119.0 <del>$219.0</del></span>
+									<span class="in-stock">In Stock (8 Items)</span>
+								</div>
+
+                                <ul class="product-info">
+                                    <li>
+										<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At magnam ad reprehenderit fuga nam, non odit necessitatibus facilis beatae temporibus</p>
+									</li>
+                                    <li>
+										<span>SKU:</span>
+										001
+									</li>
+                                    <li>
+										<span>Availability:</span>
+										Available
+									</li>
+                                    <li>
+										<span>Brand:</span>
+										Ehay
+									</li>
+                                    <li>
+										<span>Categories:</span>
+										<a href="#">Power Drill</a>
+									</li>
+								</ul>
+
+								<div class="product-color-switch">
+
+								   	<ul>
+										<li>
+											<span>Color:</span>
+										</li>
+										<li>
+											<button title="Black" class="color-black"></button>
+										</li>
+										<li>
+											<button title="White" class="color-white"></button>
+										</li>
+										<li class="active">
+											<button title="Green" class="color-green"></button>
+										</li>
+										<li>
+											<button title="Yellow Green" class="color-yellowgreen"></button>
+										</li>
+										<li>
+											<button title="Teal" class="color-teal"></button>
+										</li>
+								   	</ul>
+								</div>
+
+                                <div class="product-add-to-cart">
+                                    <div class="input-counter">
+										<span class="minus-btn">
+											<i class="ri-subtract-line"></i>
+										</span>
+
+										<input type="text" value="1">
+
+										<span class="plus-btn">
+											<i class="ri-add-line"></i>
+										</span>
+									</div>
+
+									<a href="#" class="default-btn">
+										<i class="ri-shopping-cart-line"></i>
+										Add To Cart
+									</a>
+								</div>
+
+								<div class="wishlist-btn">
+									<a href="#" class="default-btn">
+										<i class="ri-heart-line"></i>
+										Wishlist
+									</a>
+								</div>
+
+								<div class="share-this-product">
+									<ul>
+										<li>
+											<span>Partager</span>
+										</li>
+										<li>
+											<a href="https://www.facebook.com/" target="_blank">
+												<i class="ri-facebook-fill"></i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.instagram.com/" target="_blank">
+												<i class="ri-instagram-line"></i>
+											</a>
+										</li>
+										<li>
+											<a href="https://www.linkedin.com/" target="_blank">
+												<i class="ri-linkedin-fill"></i>
+											</a>
+										</li>
+										<li>
+											<a href="https://twitter.com/" target="_blank">
+												<i class="ri-twitter-fill"></i>
+											</a>
+										</li>
+									</ul>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> --}}
+            
+        
+@endsection
+
+@section('scripts')
+
+<script>
+    $(document).ready(function(){
+        $('.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('.tabs li').removeClass('current');
+            $('.tabs_item').removeClass('current');
+
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        });
+
+        $('.categories-slider').owlCarousel({
+            loop:true,
+            margin:10,
+            nav:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:5
+                }
+            }
+        });
+    });
+</script>
+
+<style>
+    .tabs li.current {
+        background: #f1f1f1;
+        color: #000;
+    }
+
+    .tabs_item {
+        display: none;
+    }
+
+    .tabs_item.current {
+        display: block;
+    }
+</style>
+
+<!-- jQuery -->
+</script><script src="assets/js/jquery.min.js"></script>
+<!-- Scripts supplémentaires comme Bootstrap, Owl Carousel, etc. -->
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
 @endsection

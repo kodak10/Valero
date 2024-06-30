@@ -50,6 +50,14 @@
                                     <label for="taille_format">Taille / Format</label>
                                     <input type="text" class="form-control" id="taille_format" name="taille_format" placeholder="Taille / Format de l'article">
                                 </div>
+
+                                <div class="form-group">
+                                    <label for="second_mains">Seconde Mains ?</label>
+                                    <select class="form-control" id="second_mains" name="second_mains">
+                                        <option value="1">Oui</option>
+                                        <option value="0">Non</option>
+                                    </select>
+                                </div>
                                 <div class="form-group">
                                     <label for="description">Description</label>
                                     <textarea class="form-control" id="description" name="description" rows="4" placeholder="Description de l'article"></textarea>

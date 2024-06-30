@@ -26,6 +26,7 @@
                       <tr>
                         <th>N°</th>
                         <th>Catégorie</th>
+                        <th>Seconde Mains ?</th>
                         <th>Nom</th>
                         <th>Surnoms</th>
                         <th>Prix</th>
@@ -46,6 +47,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td> <!-- Utilisation de $loop pour obtenir l'itération actuelle -->
                             <td>{{ $article->categorie->nom }}</td> <!-- Supposant que 'categorie' est la relation et 'nom' est le champ à afficher -->
+                            <td>{{ $article->second_mains ? 'Oui' : 'Non' }}</td>
                             <td>{{ $article->nom }}</td>
                             <td>{{ $article->surnoms }}</td>
                             <td>{{ $article->prix }}</td>

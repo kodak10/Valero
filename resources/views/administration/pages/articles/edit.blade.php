@@ -58,6 +58,16 @@
                                     <input type="text" class="form-control" id="taille_format" name="taille_format" value="{{ $article->taille_format }}">
                                 </div>
                                 <div class="form-group">
+                                    <label for="second_mains">Seconde Mains ?</label>
+                                    <select class="form-control" id="second_mains" name="second_mains">
+                                        <option value="1" {{ $article->second_mains ? 'selected' : '' }}>Oui</option>
+                                        <option value="0" {{ !$article->second_mains ? 'selected' : '' }}>Non</option>
+                                    </select>
+                                </div>
+                                
+                                
+                                
+                                <div class="form-group">
                                     <label for="description">Description</label>
                                     <textarea class="form-control" id="description" name="description" rows="4">{{ $article->description }}</textarea>
                                 </div>

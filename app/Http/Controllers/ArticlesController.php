@@ -38,6 +38,8 @@ class ArticlesController extends Controller
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpg,png,jpeg|max:2048',
             'couleurs' => 'nullable|array',
+            'second_mains' => 'required|boolean'
+
         ]);
 
         // Enregistrement de l'article
@@ -48,6 +50,8 @@ class ArticlesController extends Controller
         $article->prix = $request->prix;
         $article->taille_format = $request->taille_format;
         $article->description = $request->description;
+        $article->second_mains = $request->second_mains;
+
 
         // Enregistrement des couleurs choisies
         // $article->couleurs = $request->couleurs ?? [];
@@ -93,6 +97,8 @@ class ArticlesController extends Controller
             // 'en_stock' => 'required|integer|min:0',
             'description' => 'nullable|string',
             'images.*' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+            'second_mains' => 'required|boolean'
+
         ]);
 
         // Récupérez l'article à mettre à jour
@@ -107,6 +113,7 @@ class ArticlesController extends Controller
         $article->taille_format = $request->taille_format;
         // $article->en_stock = $request->en_stock;
         $article->description = $request->description;
+        $article->second_mains = $request->has('second_mains') ? true : false; // Assurez-vous que la valeur est booléenne
 
         // Traitement des images
         if ($request->hasFile('images')) {

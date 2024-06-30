@@ -37,6 +37,20 @@
             </li>
 
             <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#two" aria-expanded="false" aria-controls="two">
+                <i class="menu-icon mdi mdi-floor-plan"></i>
+                <span class="menu-title">Marketing</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="two">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="#">Ventes Flash </a></li>
+                </ul>
+              </div>
+            </li>
+            
+
+            <li class="nav-item">
               <a class="nav-link" href="#">
                 <i class="menu-icon mdi mdi-file-document"></i>
                 <span class="menu-title">Les Commandes</span>

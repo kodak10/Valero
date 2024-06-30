@@ -27,7 +27,7 @@
                       </div>
                   </div>
                   
-                  <button type="submit" class="btn btn-primary me-2">Envoyer</button>
+                  <button type="submit" class="btn btn-primary me-2">Enregistrer</button>
                   <button class="btn btn-light"><a href="{{ route('categories.index') }}">Annuler</a></button>
                 </form>
               </div>
