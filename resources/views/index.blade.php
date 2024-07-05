@@ -13,41 +13,20 @@
 
                 <div class="modal-body">
                     <ul class="cart-list">
-                        <li>
-                            <img src="assets/images/products/product-1.jpg" alt="Image">
-                            <a href="#">
-                                DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
-                            </a>
-                            <span>$125.00</span>
-                            <i class="ri-close-fill"></i>
-                        </li>
-
-                        <li>
-                            <img src="assets/images/products/product-2.jpg" alt="Image">
-                            <a href="#">
-                                Power Tools Set Chinese Manufacturer Production 50V Lithu Battery
-                            </a>
-                            <span>$125.00</span>
-                            <i class="ri-close-fill"></i>
-                        </li>
-
-                        <li>
-                            <img src="assets/images/products/product-3.jpg" alt="Image">
-                            <a href="#">
-                                Electrical Magnetic Impact Power Hammer Drills Machine
-                            </a>
-                            <span>$125.00</span>
-                            <i class="ri-close-fill"></i>
-                        </li>
-
-                        <li>
-                            <img src="assets/images/products/product-4.jpg" alt="Image">
-                            <a href="#">
-                                Professional Cordless Drill Power Tools Set Competitive Price
-                            </a>
-                            <span>$125.00</span>
-                            <i class="ri-close-fill"></i>
-                        </li>
+                        @foreach(session('cart', []) as $id => $details)
+                            <li>
+                                <img src="{{ $details['photo'] }}" alt="Image">
+                                <a href="#">
+                                    {{ $details['name'] }}
+                                </a>
+                                <span>{{ $details['price'] }} FCFA</span>
+                                <form action="{{ route('cart.destroy', $id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="ri-close-fill"></button>
+                                </form>
+                            </li>
+                        @endforeach
                     </ul>
 
                     <ul class="payable">
@@ -55,13 +34,13 @@
                             Payable total
                         </li>
                         <li class="total">
-                            <span>$564.00</span>
+                            <span>{{ array_sum(array_column(session('cart', []), 'price')) }} FCFA</span>
                         </li>
                     </ul>
 
                     <ul class="cart-check-btn">
                         <li>
-                            <a href="#" class="default-btn">
+                            <a href="{{ route('cart.index') }}" class="default-btn">
                                 View Cart
                             </a>
                         </li>
@@ -76,6 +55,44 @@
         </div>
     </div>
 </div>
+
+<!-- Modal pour les souhaits -->
+<div class="modal fade" id="exampleModal-wishlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mes Souhaits</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if(!empty(session('wishlist')) && count(session('wishlist')) > 0)
+                <ul class="wishlist-list">
+                    @foreach(session('wishlist') as $id => $details)
+                    <li>
+                        <img src="{{ $details['photo'] }}" alt="Image">
+                        <a href="#">
+                            {{ $details['name'] }}
+                        </a>
+                        <span>{{ $details['price'] }} FCFA</span>
+                        <form action="{{ route('wishlist.destroy', $id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="ri-close-fill"></button>
+                        </form>
+                    </li>
+                    @endforeach
+                </ul>
+                @else
+                <p>Votre liste de souhaits est vide.</p>
+                @endif
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- End Cart Shit Area -->
 
 <!-- Start Hero Slider Area -->
@@ -207,75 +224,62 @@
 
                 <div class="featured-product-wrap">
                     <div class="featured-product-slider owl-carousel owl-theme">
-                        @foreach ($articles as $article )
+                        @foreach ($articles as $article)
                         <div class="single-products">
                             <div class="product-img">
                                 <a href="#">
                                     <img src="assets/images/products/product-6.jpg" alt="Image">
                                 </a>
                             </div>
-
+                    
                             <div class="product-content">
                                 <a href="#" class="title">
                                     {{$article->nom}}
                                 </a>
-
+                    
                                 <ul class="products-rating">
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <i class="ri-star-fill"></i>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            (03 Review)
-                                        </a>
-                                    </li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><i class="ri-star-fill"></i></li>
+                                    <li><a href="#">(03 Review)</a></li>
                                 </ul>
-
+                    
                                 <ul class="products-price">
-                                    <li>
-                                        {{$article->prix}}
-                                    </li>
-                                    {{-- <li>
-                                        <span>In Stock</span>
-                                    </li> --}}
+                                    <li>{{$article->prix}}</li>
                                 </ul>
-
+                    
                                 <ul class="products-cart-wish-view d-flex justify-content-between">
                                     <li>
-                                        <a href="#" class="default-btn">
-                                            <i class="ri-shopping-cart-line"></i>
-                                           Ajouter au panier
-                                        </a>
+                                        <form action="{{ route('cart.store') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                            <button type="submit" class="default-btn">
+                                                <i class="ri-shopping-cart-line"></i>
+                                                Ajouter au panier
+                                            </button>
+                                        </form>
                                     </li>
                                     <li>
-                                        <a href="#" class="wish-btn">
-                                            <i class="ri-heart-line"></i>
-                                        </a>
+                                        <form action="{{ route('wishlist.store') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                            <button type="submit" class="wish-btn">
+                                                <i class="ri-heart-line"></i>
+                                            </button>
+                                        </form>
                                     </li>
-                                    <li> 
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <li>
+                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                             <i class="ri-eye-line"></i>
+                                            
                                         </button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
                         @endforeach
-
-                      
                     </div>
                 </div>
             </div>
@@ -528,21 +532,32 @@
 
                                     <ul class="products-cart-wish-view d-flex justify-content-between">
                                         <li>
-                                            <a href="#" class="default-btn">
-                                                <i class="ri-shopping-cart-line"></i>
-                                                Ajouter au panier
-                                            </a>
+                                            <form action="{{ route('cart.store') }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                                <button type="submit" class="default-btn">
+                                                    <i class="ri-shopping-cart-line"></i>
+                                                    Ajouter au panier
+                                                </button>
+                                            </form>
                                         </li>
                                         <li>
-                                            <a href="#" class="wish-btn">
-                                                <i class="ri-heart-line"></i>
-                                            </a>
+                                            <form action="{{ route('wishlist.store') }}" method="POST">
+                                                @csrf
+                                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                                <button type="submit" class="wish-btn">
+                                                    <i class="ri-heart-line"></i>
+                                                </button>
+                                            </form>
                                         </li>
                                         <li>
-                                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <!-- Bouton pour ouvrir le modal avec les détails du produit -->
+                                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                                 <i class="ri-eye-line"></i>
                                             </button>
                                         </li>
+
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -609,19 +624,28 @@
 
                     <ul class="products-cart-wish-view d-flex justify-content-between">
                         <li>
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Ajouter au panier
-                            </a>
+                            <form action="{{ route('cart.store') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                <button type="submit" class="default-btn">
+                                    <i class="ri-shopping-cart-line"></i>
+                                    Ajouter au panier
+                                </button>
+                            </form>
                         </li>
                         <li>
-                            <a href="#" class="wish-btn">
-                                <i class="ri-heart-line"></i>
-                            </a>
+                            <form action="{{ route('wishlist.store') }}" method="POST">
+                                @csrf
+                                <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                <button type="submit" class="wish-btn">
+                                    <i class="ri-heart-line"></i>
+                                </button>
+                            </form>
                         </li>
                         <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                 <i class="ri-eye-line"></i>
+                                
                             </button>
                         </li>
                     </ul>
@@ -992,21 +1016,32 @@
                                             </li>
                                         </ul>
         
-                                        <ul class="products-cart-wish-view">
+                                        <ul class="products-cart-wish-view d-flex justify-content-between">
                                             <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
+                                                <form action="{{ route('cart.store') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                                    <button type="submit" class="default-btn">
+                                                        <i class="ri-shopping-cart-line"></i>
+                                                        Ajouter au panier
+                                                    </button>
+                                                </form>
                                             </li>
                                             <li>
-                                                <a href="#" class="wish-btn">
-                                                    <i class="ri-heart-line"></i>
-                                                </a>
+                                                <form action="{{ route('wishlist.store') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                                    <button type="submit" class="wish-btn">
+                                                        <i class="ri-heart-line"></i>
+                                                    </button>
+                                                </form>
                                             </li>
                                             <li>
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                
+
+                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                                     <i class="ri-eye-line"></i>
+                                                    
                                                 </button>
                                             </li>
                                         </ul>
@@ -1762,6 +1797,170 @@
             </div> --}}
             
         
+            @foreach ($articlesSecondMains as $article)
+            <!-- Modal pour les détails du produit -->
+            <div class="modal fade product-view-one" id="exampleModal{{ $article->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content">
+                        <button type="button" class="close" data-bs-dismiss="modal">
+                            <span aria-hidden="true">
+                                <i class="ri-close-line"></i>
+                            </span>
+                        </button>
+            
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="product-view-one-image">
+                                    <!-- Placez ici votre carousel ou vos images de produits -->
+                                    <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
+                                </div>
+                            </div>
+            
+                            <div class="col-lg-6">
+                                <div class="product-content">
+                                    <h3>{{ $article->nom }}</h3>
+            
+                                    <!-- Ajoutez ici le reste des détails du produit comme la description, le prix, etc. -->
+                                    <div class="product-review">
+                                        <div class="rating">
+                                            @for ($i = 0; $i < 5; $i++)
+                                                <i class="ri-star-fill"></i>
+                                            @endfor
+                                        </div>
+                                        <a href="#" class="rating-count">{{ $article->reviews_count }} Reviews</a>
+                                    </div>
+            
+                                    <div class="price">
+                                        <span class="new-price">${{ $article->price }}</span>
+                                        @if($article->old_price)
+                                            <del>${{ $article->old_price }}</del>
+                                        @endif
+                                        <span class="in-stock">In Stock (8 Items)</span>
+                                    </div>
+            
+                                    <!-- Ajoutez d'autres informations sur le produit ici -->
+            
+                                    <div class="product-add-to-cart">
+                                        <div class="input-counter">
+                                            <span class="minus-btn">
+                                                <i class="ri-subtract-line"></i>
+                                            </span>
+                                            <input type="text" value="1">
+                                            <span class="plus-btn">
+                                                <i class="ri-add-line"></i>
+                                            </span>
+                                        </div>
+            
+                                        <a href="#" class="default-btn">
+                                            <i class="ri-shopping-cart-line"></i>
+                                            Ajouter au panier
+                                        </a>
+                                    </div>
+            
+                                    <div class="wishlist-btn">
+                                        <a href="#" class="default-btn">
+                                            <i class="ri-heart-line"></i>
+                                            Ajouter aux favoris
+                                        </a>
+                                    </div>
+            
+                                    <div class="share-this-product">
+                                        <ul>
+                                            <li><span>Partager</span></li>
+                                            <li><a href="https://www.facebook.com/" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                                            <li><a href="https://www.instagram.com/" target="_blank"><i class="ri-instagram-line"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
+                                            <li><a href="https://twitter.com/" target="_blank"><i class="ri-twitter-fill"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+
+
+            @foreach ($articles as $article)
+<!-- Modal pour les détails du produit -->
+<div class="modal fade product-view-one" id="exampleModal{{ $article->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <button type="button" class="close" data-bs-dismiss="modal">
+                <span aria-hidden="true">
+                    <i class="ri-close-line"></i>
+                </span>
+            </button>
+
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="product-view-one-image">
+                        <!-- Placez ici votre carousel ou vos images de produits -->
+                        <img src="assets/images/products/product-1.jpg" alt="Image">
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="product-content">
+                        <h3>{{ $article->nom }}</h3>
+
+                        <!-- Ajoutez ici le reste des détails du produit comme la description, le prix, etc. -->
+                        <div class="product-review">
+                            <div class="rating">
+                                @for ($i = 0; $i < 5; $i++)
+                                    <i class="ri-star-fill"></i>
+                                @endfor
+                            </div>
+                            <a href="#" class="rating-count">{{ $article->reviews_count }} Reviews</a>
+                        </div>
+
+                        <div class="price">
+                            <span class="new-price">${{ $article->prix }}</span>
+                            <!-- Vous pouvez ajouter le prix original avec la balise del si nécessaire -->
+                        </div>
+
+                        <!-- Ajoutez d'autres informations sur le produit ici -->
+
+                        <div class="product-add-to-cart">
+                            <div class="input-counter">
+                                <span class="minus-btn">
+                                    <i class="ri-subtract-line"></i>
+                                </span>
+                                <input type="text" value="1">
+                                <span class="plus-btn">
+                                    <i class="ri-add-line"></i>
+                                </span>
+                            </div>
+
+                            <a href="#" class="default-btn">
+                                <i class="ri-shopping-cart-line"></i>
+                                Ajouter au panier
+                            </a>
+                        </div>
+
+                        <div class="wishlist-btn">
+                            <a href="#" class="default-btn">
+                                <i class="ri-heart-line"></i>
+                                Ajouter aux favoris
+                            </a>
+                        </div>
+
+                        <div class="share-this-product">
+                            <ul>
+                                <li><span>Partager</span></li>
+                                <!-- Ajoutez ici les liens pour partager sur les réseaux sociaux -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endforeach
+
+            
 @endsection
 
 @section('scripts')
@@ -1817,4 +2016,26 @@
 <!-- Scripts supplémentaires comme Bootstrap, Owl Carousel, etc. -->
 <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
 <script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+		@if(session('success'))
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Succès!',
+            text: '{{ session('success') }}',
+        });
+    </script>
+@endif
+
+@if ($errors->any())
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Erreur!',
+            html: '<ul>@foreach ($errors->all() as $error) <li>{{ $error }}</li> @endforeach</ul>',
+        });
+    </script>
+@endif
 @endsection

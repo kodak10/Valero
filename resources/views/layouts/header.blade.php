@@ -17,9 +17,15 @@
                 <div class="col-lg-4">
                     <div class="header-right-content">
                         <ul>
-                            <li>
-                                <a href="/my_account">Mon Compte</a>
-                            </li>
+                            @auth
+                                <li>
+                                    <a href="/my_account">Mon Compte</a>
+                                </li>
+                            @else
+                                <li>
+                                    <a href="{{ route('register') }}">Connexion / Inscription</a>
+                                </li>
+                            @endauth
                         </ul>
                     </div>
                 </div>
@@ -41,29 +47,32 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <form class="search-box">
-                        <input type="text" name="Search" placeholder="Que recherchez-vous ?" class="form-control">
-                        <button type="file" class="search-btn" type="file" accept=".jpg,.png">                    
+                    <form action="{{ route('search.by.image') }}" method="POST" class="search-box" enctype="multipart/form-data">
+                        @csrf
+                        <input type="file" name="image" accept=".jpg,.png" required>
+                        <button type="submit" class="search-btn">
                             <i class="ri-search-line"></i>
-                            Importer une Image
+                            Rechercher par image
                         </button>
                     </form>
                 </div>
+                
+                
 
                 <div class="col-lg-4">
                     <ul class="wish-cart">
                         <li>
-                            <a href="#">
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal-wishlist">
                                 <span class="wish-icon">
                                     <i class="ri-heart-line"></i>
-                                    <span class="count">0</span>
+                                    <span class="count">{{ count(session('wishlist', [])) }}</span>
                                 </span>
                                 <span class="favorite">Mes Favoris</span>
                                 Mes souhaits
                             </a>
                         </li>
 
-                        <li>
+                        {{-- <li>
                             <span class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal-carttttt">
                                 <span class="wish-icon">
                                     <i class="ri-shopping-cart-line"></i>
@@ -71,17 +80,18 @@
                                 </span>
                                 <span class="favorite">Mon Panier</span>
                                 00 FCFA	</span>
-                        </li>
+                        </li> --}}
 
-                        <!-- <li>
+                        <li>
                             <span class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal-cart">
                                 <span class="wish-icon">
                                     <i class="ri-shopping-cart-line"></i>
-                                    <span class="count">0</span>
+                                    <span class="count">{{ count(session('cart', [])) }}</span>
                                 </span>
                                 <span class="favorite">Mon Panier</span>
-                                00 FCFA	</span>
-                        </li> -->
+                                {{ array_sum(array_column(session('cart', []), 'price')) }} FCFA
+                            </span>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -213,7 +223,7 @@
 
 
 
-                            <!-- <li class="nav-item mega-menu">
+                            {{-- <!-- <li class="nav-item mega-menu">
                                 <a href="#" class="nav-link">
                                     Shop
                                     <i class="ri-arrow-down-s-line"></i>
@@ -313,7 +323,7 @@
                                         </div>
                                     </li>
                                 </ul>
-                            </li> -->
+                            </li> --> --}}
 
                             <li class="nav-item">
                                 <a href="/contact" class="nav-link">Contact</a>

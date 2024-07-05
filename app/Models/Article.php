@@ -27,4 +27,9 @@ class Article extends Model
     {
         return $this->belongsTo(Category::class, 'categorie_id');
     }
+
+    public function wishes()
+    {
+        return $this->hasMany(Wish::class);
+    }
 }
