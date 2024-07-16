@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Article;
+use thiagoalessio\TesseractOCR\TesseractOCR;
+use Alimranahmed\LaraOCR\Facades\LaraOCR;
+
+
 use Symfony\Component\Process\Exception\ProcessFailedException;
 
 use Symfony\Component\Process\Process;
@@ -45,39 +49,41 @@ class WebsiteController extends Controller
     }
 
     public function searchByImage(Request $request)
-    {
-        $request->validate([
-            'image' => 'required|image',
-        ]);
+{
+    // Valider que l'image a été correctement téléchargée
+    $request->validate([
+        'image' => 'required|image',
+    ]);
 
-        // Enregistrement de l'image téléchargée
-        $imagePath = $request->file('image')->store('uploads', 'public');
+    // Récupérer le fichier image téléchargé
+    $image = $request->file('image');
 
-        // Chemin complet vers l'image enregistrée
-        $imageFullPath = storage_path('app/public/' . $imagePath);
+    // Générer un nom de fichier unique pour l'image
+    $fileName = uniqid('image_') . '.' . $image->getClientOriginalExtension();
+    
+    // Déplacer l'image vers le répertoire public/images/search avec un nom de fichier unique
+    $image->move(public_path('images/search'), $fileName);
 
-        try {
-            // Utilisation d'un outil OCR pour extraire le texte de l'image
-            $process = new Process(['tesseract', $imageFullPath, 'stdout']);
-            $process->run();
+    // Chemin complet vers l'image enregistrée
+    $imageFullPath = public_path('images/search/' . $fileName);
 
-            // Vérification des erreurs éventuelles
-            if (!$process->isSuccessful()) {
-                throw new ProcessFailedException($process);
-            }
+    // Utilisation de Tesseract OCR pour extraire le texte de l'image
+    $text = (new TesseractOCR($imageFullPath))->run();
 
-            // Texte extrait de l'image
-            $extractedText = trim($process->getOutput());
+    // Recherche des articles basée sur le texte extrait
+    $articles = Article::where('nom', 'like', '%' . $text . '%')
+        ->orWhere('description', 'like', '%' . $text . '%')
+        ->get();
 
-            // Recherche des articles basée sur le texte extrait (exemple simplifié)
-            $articles = Article::where('nom', 'like', '%' . $extractedText . '%')->get();
+    // Retourner la vue avec les articles trouvés
+   // return redirect()->route('articles.index')->with('success', 'Article mis à jour avec succès.');
 
-            // Retourner la vue avec les articles trouvés
-            return view('search-results', compact('articles'));
+   return view('search-results', compact('articles'));
+    //return view('search-results', compact('articles'));
+    //return redirect()->route('searchImageView', compact('articles'));
+    //return redirect()->route('searchImageview', compact('articles'))->with('success', 'Article mis à jour avec succès.');
+    
+}
 
-        } catch (ProcessFailedException $exception) {
-            // Gérer l'exception en affichant un message d'erreur approprié
-            return back()->withError('Erreur lors de l\'extraction du texte de l\'image. Veuillez réessayer.');
-        }
-    }
+    
 }

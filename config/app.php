@@ -182,7 +182,10 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'LaraOCR' => Alimranahmed\LaraOCR\Facades\LaraOCR::class,
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
+
+    
 
 ];

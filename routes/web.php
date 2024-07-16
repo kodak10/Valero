@@ -21,7 +21,13 @@ Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::post('/register', [UserController::class, 'store'])->name('register.store');
 
 
-Route::post('/', [WebsiteController::class, 'searchByImage'])->name('search.by.image');
+Route::post('/', [WebsiteController::class, 'searchByImage'])->name('searchImage');
+Route::get('/contact', [WebsiteController::class, 'contact']);
+
+
+Route::get('/search', function ($articles) {
+    return view('search-results');
+});
 
 
 // Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {

@@ -20,7 +20,11 @@
 		// Go To Top JS
 		var scrolled = $(window).scrollTop();
 		if (scrolled > 300) $('.go-top').addClass('active');
+		if (scrolled > 300) $('.camera').addClass('20');
+
 		if (scrolled < 300) $('.go-top').removeClass('active');
+		if (scrolled < 300) $('.camera').removeClass('active');
+
 	});
 
 	// navbar-category-dropdown

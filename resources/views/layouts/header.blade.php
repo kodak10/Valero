@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <form action="{{ route('search.by.image') }}" method="POST" class="search-box" enctype="multipart/form-data">
+                    <form action="{{ route('searchImage') }}" method="POST" class="search-box" enctype="multipart/form-data">
                         @csrf
                         <input type="file" name="image" accept=".jpg,.png" required>
                         <button type="submit" class="search-btn">
@@ -56,6 +56,13 @@
                         </button>
                     </form>
                 </div>
+
+                @if(session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
+                
                 
                 
 
