@@ -16,7 +16,6 @@ Route::get('/contact', [WebsiteController::class, 'contact']);
 Route::get('/my_account', [WebsiteController::class, 'my_account'])->name('register');
 Route::get('/login', [WebsiteController::class, 'my_account'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
-Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::post('/register', [UserController::class, 'store'])->name('register.store');
 
@@ -24,10 +23,19 @@ Route::post('/register', [UserController::class, 'store'])->name('register.store
 Route::post('/', [WebsiteController::class, 'searchByImage'])->name('searchImage');
 Route::get('/contact', [WebsiteController::class, 'contact']);
 
+Route::get('/images', [WebsiteController::class, 'images']);
 
-Route::get('/search', function ($articles) {
-    return view('search-results');
-});
+
+//articles
+Route::get('/article-details/{id}', [WebsiteController::class, 'articlesDetails'])->name('article.details');
+
+Route::get('/article', [WebsiteController::class, 'articles']);
+Route::get('/article/filter', [WebsiteController::class, 'filterByCategory'])->name('articles.filter');
+Route::get('/article/search', [WebsiteController::class, 'searchText'])->name('articles.searchText');
+
+//Route::get('/articles-details', [WebsiteController::class, 'details']);
+
+
 
 
 // Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
@@ -50,5 +58,19 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{item}', [CartController::class, 'destroy'])->name('cart.destroy');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+
+    Route::prefix('home')->group(function () {
+        Route::get('/', [UserController::class, 'home'])->name('user.index');
+        Route::get('/edit-profil', [UserController::class, 'editProfil'])->name('user.edit-profil');
+        Route::get('/password', [UserController::class, 'editPassword'])->name('user.password');
+
+        Route::get('/orders', [UserController::class, 'orders'])->name('user.orders');
+        Route::get('/orders-details', [UserController::class, 'ordersDetails'])->name('user.orders-details');
+        Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+        //Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+
+    });
+
+    
 
 });

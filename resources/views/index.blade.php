@@ -161,44 +161,29 @@
 </section>
 <!-- End Hero Slider Area -->
 
-<!-- Start Popular Categories Area -->
 <section class="popular-categories-area pt-54 pb-30">
     <div class="container">
-        {{-- <div class="section-title">
-            <h2>Les Niveaux </h2>
-        </div> --}}
-
+     
         <div class="row justify-content-center">
             @foreach ($categories as $categorie )
-                <div class="col-lg-4 col-sm-6">
-                    
-                    <div class="single-categories">
-                        <a href="#">
-                            <img src="{{ asset('images/articles/' . $categorie->couverture) }}" alt="Image">
 
-                        </a>
-
-                        <h3 class="text-uppercase">
-                            <a href="#">
-                                {{$categorie->nom}}
-                            </a>
-                        </h3>
-                        <span>{{$categorie->articles->count()}}  Articles</span>
-
-                        <a href="product-details" class="read-more">
-                            Voir les articles
-                        </a>
-                    </div>
-                    
-                    
+            <div class="col-lg-2 col-sm-6 col-md-4">
+                <div class="single-popular-categories">
+                    <a href="products.html">
+                        <img src="assets/images/icon/power-saw.png" alt="Image">
+                        <span>{{$categorie->nom}}</span> 
+                    </a>
                 </div>
+            </div>
             @endforeach
 
+           
            
         </div>
     </div>
 </section>
-<!-- End Popular Categories Area -->
+
+
 
 <!-- Start Featured Products Area -->
 <section class="featured-products-area pb-30">
@@ -227,13 +212,13 @@
                         @foreach ($articles as $article)
                         <div class="single-products">
                             <div class="product-img">
-                                <a href="#">
+                                <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                     <img src="assets/images/products/product-6.jpg" alt="Image">
                                 </a>
                             </div>
                     
                             <div class="product-content">
-                                <a href="#" class="title">
+                                <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                     {{$article->nom}}
                                 </a>
                     
@@ -270,12 +255,12 @@
                                             </button>
                                         </form>
                                     </li>
-                                    <li>
+                                    {{-- <li>
                                         <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                             <i class="ri-eye-line"></i>
                                             
                                         </button>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </div>
@@ -489,7 +474,7 @@
                         <div class="col-xl-3 col-sm-6">
                             <div class="single-products new-arrivals">
                                 <div class="product-img">
-                                    <a href="#">
+                                    <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                         <img src="assets/images/products/product-17.jpg" alt="Image">
                                     </a>
 
@@ -497,7 +482,7 @@
                                 </div>
 
                                 <div class="product-content">
-                                    <a href="#" class="title">
+                                    <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                         {{$article->nom}}
                                     </a>
 
@@ -550,12 +535,12 @@
                                                 </button>
                                             </form>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <!-- Bouton pour ouvrir le modal avec les détails du produit -->
                                             <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                                 <i class="ri-eye-line"></i>
                                             </button>
-                                        </li>
+                                        </li> --}}
 
                                         
                                     </ul>
@@ -583,13 +568,13 @@
             @foreach ($articles as $article)
             <div class="single-products">
                 <div class="product-img">
-                    <a href="#">
+                    <a href="{{ route('article.details', ['id' => $article->id]) }}">
                         <img src="assets/images/products/product-1.jpg" alt="Image">
                     </a>
                 </div>
 
                 <div class="product-content">
-                    <a href="#" class="title">
+                    <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                         {{$article->nom}}
                     </a>
 
@@ -642,12 +627,12 @@
                                 </button>
                             </form>
                         </li>
-                        <li>
+                        {{-- <li>
                             <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                 <i class="ri-eye-line"></i>
                                 
                             </button>
-                        </li>
+                        </li> --}}
                     </ul>
                 </div>
             </div>
@@ -726,7 +711,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="#">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                             <img src="assets/images/products/product-11.jpg" alt="Image">
                                         </a>
 
@@ -736,7 +721,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="#" class="title">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                             Hand Tools Rubber Handle Adjustable Spanner
                                         </a>
 
@@ -796,7 +781,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="#">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
@@ -806,7 +791,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="#" class="title">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                             High Quality Carbon Steel Multifunctional Hammer
                                         </a>
 
@@ -866,7 +851,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
                                     <div class="product-img">
-                                        <a href="#">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
@@ -876,7 +861,7 @@
 
                                 <div class="col-xl-6">
                                     <div class="product-content">
-                                        <a href="#" class="title">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                             High Quality Carbon Steel Multifunctional Hammer
                                         </a>
 
@@ -984,13 +969,13 @@
                                 @foreach ($articlesSecondMains as $article)
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
-                                        <a href="#">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
                                             <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
                                         </a>
                                     </div>
         
                                     <div class="product-content">
-                                        <a href="#" class="title">
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                             {{ $article->nom }}
                                         </a>
         
@@ -1036,14 +1021,14 @@
                                                     </button>
                                                 </form>
                                             </li>
-                                            <li>
+                                            {{-- <li>
                                                 
 
                                                 <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
                                                     <i class="ri-eye-line"></i>
                                                     
                                                 </button>
-                                            </li>
+                                            </li> --}}
                                         </ul>
                                     </div>
                                 </div>

@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 
+use App\Models\Category;
+
 class UserController extends Controller
 {
     public function store(Request $request)
@@ -23,5 +25,40 @@ class UserController extends Controller
         ]);
 
         return redirect()->route('register')->with('success', 'Enregistré avec succès!');
+    }
+
+    public function home()
+    {
+        $allCategories = Category::take(6)->get();
+
+        return view('account.home' , compact('allCategories'));
+    }
+
+    public function editProfil()
+    {
+        $allCategories = Category::take(6)->get();
+
+        return view('account.edit-profil' , compact('allCategories'));
+    }
+
+    public function editPassword()
+    {
+        $allCategories = Category::take(6)->get();
+
+        return view('account.password' , compact('allCategories'));
+    }
+
+    public function orders()
+    {
+        $allCategories = Category::take(6)->get();
+
+        return view('account.order-history' , compact('allCategories'));
+    }
+
+    public function ordersDetails()
+    {
+        $allCategories = Category::take(6)->get();
+
+        return view('account.order-details' , compact('allCategories'));
     }
 }

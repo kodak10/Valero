@@ -19,7 +19,7 @@
                         <ul>
                             @auth
                                 <li>
-                                    <a href="/my_account">Mon Compte</a>
+                                    <a href="/home">Mon Compte</a>
                                 </li>
                             @else
                                 <li>
@@ -47,24 +47,15 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <form action="{{ route('searchImage') }}" method="POST" class="search-box" enctype="multipart/form-data">
-                        @csrf
-                        <input type="file" name="image" accept=".jpg,.png" required>
+                    <form action="{{ route('articles.searchText') }}" method="GET" class="search-box">
+                        <input type="text" name="search" placeholder="Rechercher un article" class="form-control">
                         <button type="submit" class="search-btn">
                             <i class="ri-search-line"></i>
-                            Rechercher par image
+                            Valider
                         </button>
                     </form>
                 </div>
-
-                @if(session('error'))
-    <div class="alert alert-danger">
-        {{ session('error') }}
-    </div>
-@endif
-                
-                
-                
+                        
 
                 <div class="col-lg-4">
                     <ul class="wish-cart">
@@ -175,39 +166,13 @@
 
                         <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
                             <ul>
-                                <li>
-                                    <a href="#">Power Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Hand Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Cordless Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Welding & Soldering</a>
-                                </li>
-                                <li>
-                                    <a href="#">Gardening Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Air and Gas Powered Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Safety Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Site lighting Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tools Accessories</a>
-                                </li>
-                                <li>
-                                    <a href="#">Outdoor Power Equipment</a>
-                                </li>
-                                <li>
-                                    <a href="#">Safety Tools</a>
-                                </li>
+                                @foreach ($allCategories as $allCategorie)
+                                    <li>
+                                        <a href="#">{{$allCategorie->nom}}</a>
+                                    </li>
+                                @endforeach
+                               
+                               
                             </ul>
                         </div>
                     </div>
@@ -220,12 +185,12 @@
                             </li>
 
                             <li class="nav-item">
-                                <a href="#" class="nav-link">Nos Articles</a>
+                                <a href="/article" class="nav-link">Nos Articles</a>
                             </li>
 
-                            <li class="nav-item">
+                            {{-- <li class="nav-item">
                                 <a href="/administration" class="nav-link">Test Admin</a>
-                            </li>
+                            </li> --}}
 
 
 

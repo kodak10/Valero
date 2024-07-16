@@ -58,7 +58,7 @@
                             <a href="/">Accueil</a>
                         </li>
                         <li>
-                            <a href="#">Nos Articles</a>
+                            <a href="/article">Nos Articles</a>
                         </li>
                         <li>
                             <a href="/my_account">Mon Compte</a>
