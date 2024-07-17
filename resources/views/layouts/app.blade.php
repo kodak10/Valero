@@ -98,6 +98,98 @@
 			</div>
 		</div>
 
+
+		<!-- Modal-->
+
+		
+<div class="modal fade cart-shit" id="exampleModal-cart" tabindex="-1" aria-hidden="true">
+    <div class="cart-shit-wrap">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close-btn" data-bs-dismiss="modal">
+                        <i class="ri-close-fill"></i>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <ul class="cart-list">
+                        @foreach(session('cart', []) as $id => $details)
+                            <li>
+                                <img src="{{ $details['photo'] }}" alt="Image">
+                                <a href="#">
+                                    {{ $details['name'] }}
+                                </a>
+                                <span>{{ $details['price'] }} FCFA</span>
+                                <form action="{{ route('cart.destroy', $id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="ri-close-fill"></button>
+                                </form>
+                            </li>
+                        @endforeach
+                    </ul>
+
+                    <ul class="payable">
+                        <li>
+                            Payable total
+                        </li>
+                        <li class="total">
+                            <span>{{ array_sum(array_column(session('cart', []), 'price')) }} FCFA</span>
+                        </li>
+                    </ul>
+
+                    <ul class="cart-check-btn">
+                        
+                        <li class="checkout">
+                            <a href="#" class="default-btn">
+                                Payer
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal pour les souhaits -->
+<div class="modal fade" id="exampleModal-wishlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Mes Souhaits</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                @if(!empty(session('wishlist')) && count(session('wishlist')) > 0)
+                <ul class="wishlist-list">
+                    @foreach(session('wishlist') as $id => $details)
+                    <li>
+                        <img src="{{ $details['photo'] }}" alt="Image">
+                        <a href="#">
+                            {{ $details['name'] }}
+                        </a>
+                        <span>{{ $details['price'] }} FCFA</span>
+                        <form action="{{ route('wishlist.destroy', $id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="ri-close-fill"></button>
+                        </form>
+                    </li>
+                    @endforeach
+                </ul>
+                @else
+                <p>Votre liste de souhaits est vide.</p>
+                @endif
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
 		
 		<!-- End Go Top Area -->
 

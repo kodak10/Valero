@@ -21,7 +21,7 @@
                     <input type="text" class="form-control" placeholder="Rechercher un article" value="{{ request()->input('search') }}">
 
                     <button class="submit-btn" type="submit" >
-                        Importer une Image
+                        Valider
                     </button>
 
                     <div id="validator-newsletter" class="form-result"></div>

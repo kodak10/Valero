@@ -160,17 +160,30 @@
 												</span>
 											</div>
 											
-											<a href="shopping-cart.html" class="default-btn">
-												<i class="ri-shopping-cart-line"></i>
-												Ajouter au Panier
+											<a href="" class="default-btn">
+												<form action="{{ route('cart.store') }}" method="POST">
+													@csrf
+													<input type="hidden" name="article_id" value="{{ $article->id }}">
+													<button type="submit" class="default-btn">
+														<i class="ri-shopping-cart-line"></i>
+														Ajouter au panier
+													</button>
+												</form>
 											</a>
+
+											
 										</div>
 		
 										<div class="wishlist-btn">
-											<a href="wishlist.html" class="default-btn">
-												<i class="ri-heart-line"></i>
-												Mon Souhait
-											</a>
+											<form action="{{ route('wishlist.store') }}" method="POST">
+												@csrf
+												<input type="hidden" name="article_id" value="{{ $article->id }}">
+												<button type="submit" class="wish-btn">
+													<i class="ri-heart-line"> Mon Souhait</i>
+												</button>
+											</form>
+
+											
 										</div>
 		
 										<div class="share-this-product">
