@@ -107,7 +107,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="hero-slider-btn">
-                                <a href="#" class="default-btn">
+                                <a href="/article" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -127,7 +127,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="banner-btn">
-                                <a href="#" class="default-btn">
+                                <a href="/article" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -147,7 +147,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur</p>
 
                             <div class="banner-btn">
-                                <a href="#" class="default-btn">
+                                <a href="/article" class="default-btn">
                                     <i class="ri-shopping-cart-line"></i>
                                     Commander
                                 </a>
@@ -1867,83 +1867,7 @@
             @endforeach
 
 
-            @foreach ($articles as $article)
-<!-- Modal pour les détails du produit -->
-<div class="modal fade product-view-one" id="exampleModal{{ $article->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content">
-            <button type="button" class="close" data-bs-dismiss="modal">
-                <span aria-hidden="true">
-                    <i class="ri-close-line"></i>
-                </span>
-            </button>
-
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="product-view-one-image">
-                        <!-- Placez ici votre carousel ou vos images de produits -->
-                        <img src="assets/images/products/product-1.jpg" alt="Image">
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="product-content">
-                        <h3>{{ $article->nom }}</h3>
-
-                        <!-- Ajoutez ici le reste des détails du produit comme la description, le prix, etc. -->
-                        <div class="product-review">
-                            <div class="rating">
-                                @for ($i = 0; $i < 5; $i++)
-                                    <i class="ri-star-fill"></i>
-                                @endfor
-                            </div>
-                            <a href="#" class="rating-count">{{ $article->reviews_count }} Reviews</a>
-                        </div>
-
-                        <div class="price">
-                            <span class="new-price">${{ $article->prix }}</span>
-                            <!-- Vous pouvez ajouter le prix original avec la balise del si nécessaire -->
-                        </div>
-
-                        <!-- Ajoutez d'autres informations sur le produit ici -->
-
-                        <div class="product-add-to-cart">
-                            <div class="input-counter">
-                                <span class="minus-btn">
-                                    <i class="ri-subtract-line"></i>
-                                </span>
-                                <input type="text" value="1">
-                                <span class="plus-btn">
-                                    <i class="ri-add-line"></i>
-                                </span>
-                            </div>
-
-                            <a href="#" class="default-btn">
-                                <i class="ri-shopping-cart-line"></i>
-                                Ajouter au panier
-                            </a>
-                        </div>
-
-                        <div class="wishlist-btn">
-                            <a href="#" class="default-btn">
-                                <i class="ri-heart-line"></i>
-                                Ajouter aux favoris
-                            </a>
-                        </div>
-
-                        <div class="share-this-product">
-                            <ul>
-                                <li><span>Partager</span></li>
-                                <!-- Ajoutez ici les liens pour partager sur les réseaux sociaux -->
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endforeach
+            
 
             
 @endsection

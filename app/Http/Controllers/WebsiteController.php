@@ -79,7 +79,9 @@ class WebsiteController extends Controller
 
     public function contact()
     {
-        return view('contact');
+        $allCategories = Category::all();
+
+        return view('contact', compact('allCategories'));
     }
 
     public function my_account()
@@ -171,7 +173,7 @@ class WebsiteController extends Controller
 
          // Nombre d'articles Seconde main
          $countOccasion = Article::where('second_mains', 1)->count();
-         
+
         $allCategories = Category::all();
 
         return view('articles', compact('articles', 'allCategories', 'countNouveau','countOccasion'));
