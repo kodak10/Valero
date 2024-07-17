@@ -6,12 +6,12 @@
         <div class="page-title-content">
             <ul>
                 <li>
-                    <a href="index.html">
-                        Home 
+                    <a href="/">
+                        Accueil 
                     </a>
                 </li>
 
-                <li class="active">Product Details</li>
+                <li class="active">Details</li>
             </ul>
         </div>
     </div>
@@ -82,7 +82,7 @@
 								<div class="col-lg-6">
 									<div class="product-content ml-15">
 										<h3>
-											Cordless Drill Professional Combo Drill And Screwdriver
+											{{$article->nom}}
 										</h3>
 		
 										<div class="product-review">
@@ -97,36 +97,37 @@
 										</div>
 		
 										<div class="price">
-											<span class="new-price">$119.0 <del>$219.0</del></span>
-											<span class="in-stock">In Stock (8 Items)</span>
+											<span class="new-price">{{$article->prix}}</span>
+											<span class="in-stock">En Stock</span>
 										</div>
 										
 										<ul class="product-info">
 											<li>
-												<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus dicta a earum aspernatur ea, possimus ad at officia quisquam quos, fugiat quasi nostrum ullam commodi quia, cum laborum dolor molestias fugiat quasi nostrum ullam</p>
+												<p>{{$article->description}}</p>
 											</li>
 											<li>
-												<span>SKU:</span> 
-												001
+												<span>Catégorie:</span> 
+												
 											</li>
 											<li>
-												<span>Availability:</span> 
-												Available
+												<span>Format:</span> 
+												{{$article->taille_format}}
 											</li>
 											<li>
-												<span>Brand:</span> 
-												Ehay
+												<span>Qualité:</span> 
+													@if ($article->second_mains == "0")
+													Nouveaux
+												@else
+													Seconde mains
+                                            	@endif
 											</li>
-											<li>
-												<span>Categories:</span> 
-												<a href="products.html">Power Drill</a>
-											</li>
+											
 										</ul>
 		
 										<div class="product-color-switch">
 											<ul>
 												<li>
-													<span>Color:</span>
+													<span>Couleur:</span>
 												</li>
 												<li>
 													<button title="Black" class="color-black"></button>
@@ -161,21 +162,21 @@
 											
 											<a href="shopping-cart.html" class="default-btn">
 												<i class="ri-shopping-cart-line"></i>
-												Add To Cart
+												Ajouter au Panier
 											</a>
 										</div>
 		
 										<div class="wishlist-btn">
 											<a href="wishlist.html" class="default-btn">
 												<i class="ri-heart-line"></i>
-												Wishlist
+												Mon Souhait
 											</a>
 										</div>
 		
 										<div class="share-this-product">
 											<ul>
 												<li>
-													<span>Share</span>
+													<span>Partager</span>
 												</li>
 												<li>
 													<a href="https://www.facebook.com/" target="_blank">

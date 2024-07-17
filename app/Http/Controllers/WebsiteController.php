@@ -154,6 +154,7 @@ class WebsiteController extends Controller
 
     public function articlesDetails($id)
     {
+        
         $allCategories = Category::take(6)->get();
 
         $article = Article::findOrFail($id); // Récupère l'article par son ID
