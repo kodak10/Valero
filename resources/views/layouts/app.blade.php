@@ -31,8 +31,8 @@
 		<style>
 			.camera-container {
     			position: fixed;
-				bottom: 60px;
-				left: 40px;
+				bottom: 80px;
+				left: 20px;
 				z-index: 99;
 			}
 			.camera-icon {
@@ -137,7 +137,7 @@
         setTimeout(bounce, 1200);
     }
 
-    setInterval(bounceThreeTimes, 5000); // Repeat every 10 seconds
+    setInterval(bounceThreeTimes, 4000); // Repeat every 4 seconds
 });
 
 

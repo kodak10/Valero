@@ -109,45 +109,18 @@
 
                         <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
                             <ul>
-                                <li>
-                                    <a href="#">Power Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Hand Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Cordless Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Welding & Soldering</a>
-                                </li>
-                                <li>
-                                    <a href="#">Gardening Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Air and Gas Powered Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Safety Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Site lighting Tools</a>
-                                </li>
-                                <li>
-                                    <a href="#">Tools Accessories</a>
-                                </li>
-                                <li>
-                                    <a href="#">Outdoor Power Equipment</a>
-                                </li>
-                                <li>
-                                    <a href="#">Safety Tools</a>
-                                </li>
+                                @foreach ($allCategories as $allCategorie)
+                                    <li>
+                                        <a href="#">{{$allCategorie->nom}}</a>
+                                    </li>
+                                @endforeach
+                                
                             </ul>
                         </div>
                     </div>
                     <div class="logo">
                         <a href="/">
-                            <img src="assets/images/logo.png" alt="logo">
+                            <img src="{{asset('assets/images/logo.png')}}" alt="logo">
                         </a>
                     </div>
                 </div>

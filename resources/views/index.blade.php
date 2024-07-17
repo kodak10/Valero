@@ -192,8 +192,8 @@
                         <span class="best">Best Deals</span>
                         <h3>Premium Tools Sets</h3>
                         <span class="offer">Up to 30% off</span>
-                        <a href="#">
-                            Shop Now
+                        <a href="/article">
+                            Commander
                         </a>
                     </div>
                 </div>
@@ -648,9 +648,9 @@
         <div class="sale-offer-bg bg-2">
             <h5>Sale offer - <span>30% off</span></h5>
             <h3>All types of premium quality tools</h3>
-            <a href="#" class="default-btn">
+            <a href="/article" class="default-btn">
                 <i class="ri-shopping-cart-line"></i>
-                Shop Now
+                Commander
             </a>
         </div>
     </div>
@@ -722,7 +722,7 @@
                                             Hand Tools Rubber Handle Adjustable Spanner
                                         </a>
 
-                                        <span class="in-stock">In Stock</span>
+                                        {{-- <span class="in-stock">In Stock</span> --}}
 
                                         <ul class="products-rating">
                                             <li>
@@ -765,7 +765,7 @@
                                             <li>
                                                 <a href="#" class="default-btn">
                                                     <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
+                                                    Ajouter au Panier
                                                 </a>
                                             </li>
                                         </ul>
