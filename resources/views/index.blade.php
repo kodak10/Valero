@@ -168,7 +168,7 @@
 
             <div class="col-lg-2 col-sm-6 col-md-4">
                 <div class="single-popular-categories">
-                    <a href="products.html">
+                    <a href="{{ route('articles.filter', ['categorie_id' => $categorie->id]) }}">
                         <img src="assets/images/icon/power-saw.png" alt="Image">
                         <span>{{$categorie->nom}}</span> 
                     </a>
