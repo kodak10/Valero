@@ -37,8 +37,8 @@
 			}
 			.camera-icon {
 				display: block;
-				width: 50px;
-				height: 50px;
+				width: 35px;
+				height: 35px;
 				background: url('{{asset('assets/images/uploadImage.png')}}') no-repeat center center;
 				background-size: contain;
 				transition: transform 0.3s ease;
@@ -72,7 +72,7 @@
 		</div>
 
 		<div class="camera-container">
-			<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			<button class="eye-btn" style="background-color: transparent !important" data-bs-toggle="modal" data-bs-target="#exampleModal">
 				<i class="camera-icon"></i>
 			</button>
 		</div>

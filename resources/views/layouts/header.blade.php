@@ -41,14 +41,14 @@
                 <div class="col-lg-3">
                     <div class="logo">
                         <a href="/">
-                            <img src="assets/images/logo.png" alt="Image" style="height: 100px !important;">
+                            <img src="{{asset('assets/images/logo.png')}}" alt="Logo" style="height: 100px !important;">
                         </a>
                     </div>
                 </div>
 
                 <div class="col-lg-5">
                     <form action="{{ route('articles.searchText') }}" method="GET" class="search-box">
-                        <input type="text" name="search" placeholder="Rechercher un article" class="form-control">
+                        <input type="text" name="search" placeholder="Rechercher un article" class="form-control" value="{{ request()->input('search') }}">
                         <button type="submit" class="search-btn">
                             <i class="ri-search-line"></i>
                             Valider

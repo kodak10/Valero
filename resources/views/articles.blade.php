@@ -355,8 +355,7 @@
                             </div>
 
                             <div class="showing-result-count">
-                                <p>Affichage de {{ $articles->count() }} sur {{ $articles->total() }} produits</p>
-                            </div>
+                                <p>Affichage de {{ $articles->count() }} sur {{$nbrArticle->count()}} produits</p>                            </div>
                             
                         </div>
                         
@@ -367,8 +366,9 @@
                                     <select class="form-select mr-3 " name="categorie_id" aria-label="Sélectionnez une catégorie">
                                         <option value="">Tous les articles</option>
                                         @foreach ($allCategories as $allCategorie)
-                                            <option value="{{ $allCategorie->id }}">{{ $allCategorie->nom }}</option>
-                                        @endforeach
+                                            <option value="{{ $allCategorie->id }}" {{ request()->get('categorie_id') == $allCategorie->id ? 'selected' : '' }}>
+                                                {{ $allCategorie->nom }}
+                                            </option>                                        @endforeach
                                     </select>
                                     <button type="submit" class="btn btn-primary">Filtrer</button>
                                 </form>

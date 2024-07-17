@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
-<!-- Start Cart Shit Area -->
+
+
 <div class="modal fade cart-shit" id="exampleModal-cart" tabindex="-1" aria-hidden="true">
     <div class="cart-shit-wrap">
         <div class="modal-dialog">
@@ -93,8 +94,6 @@
     </div>
 </div>
 
-<!-- End Cart Shit Area -->
-
 <!-- Start Hero Slider Area -->
 <section class="hero-slider-area hero-slider-area-style-two">
     <div class="hero-slider-two owl-carousel owl-theme">
@@ -182,8 +181,6 @@
         </div>
     </div>
 </section>
-
-
 
 <!-- Start Featured Products Area -->
 <section class="featured-products-area pb-30">
@@ -923,8 +920,6 @@
     </div>
 </section>
 <!-- End Flash Deals Area -->
-
-
 
 <!-- Start Sale Discount Area -->
 <section class="sale-discount-area pb-54">

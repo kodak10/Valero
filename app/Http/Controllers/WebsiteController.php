@@ -50,21 +50,41 @@ class WebsiteController extends Controller
 
     }
 
-    public function articles()
+    public function articles(Request $request)
     {
-         // Nombre d'articles Nouveaux
-         $countNouveau = Article::where('second_mains', 0)->count();
+        $countNouveau = Article::where('second_mains', 0)->count();
+        $countOccasion = Article::where('second_mains', 1)->count();
 
-         // Nombre d'articles Seconde main
-         $countOccasion = Article::where('second_mains', 1)->count();
+        $articlesSecondMains = Article::where('second_mains', 1)->get();
 
         $categories = Category::take(6)->get();
         $allCategories = category::all();
 
-        $articles = Article::paginate(9); // Paginate with 9 articles per page
+        // Récupérer le terme de recherche depuis la requête GET
+        $searchTerm = $request->input('search');
+        $categorie_id = $request->input('categorie_id');
 
-        
-        $articlesSecondMains = Article::where('second_mains', 1)->get();
+
+       // Initialisez la requête de base
+        $query = Article::query();
+
+        // Ajoutez la condition de recherche
+        if ($searchTerm) {
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('nom', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('description', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        // Ajoutez la condition de catégorie si elle est présente
+        if (!empty($categorie_id)) {
+            $query->where('categorie_id', $categorie_id);
+        }
+
+    // Récupérez les articles paginés
+    $articles = $query->paginate(9);
+
+        $nbrArticle = Article::all();
 
         // Créer un tableau pour stocker les articles de chaque catégorie
         $categoriesWithArticles = [];
@@ -73,7 +93,7 @@ class WebsiteController extends Controller
             // Récupérer les articles de chaque catégorie
             $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
         }
-        return view('articles', compact('categories', 'countNouveau', 'countOccasion', 'articles','articlesSecondMains','categoriesWithArticles', 'allCategories'));
+        return view('articles', compact('categories', 'countNouveau', 'countOccasion', 'articles','articlesSecondMains','categoriesWithArticles','nbrArticle', 'allCategories' ));
 
     }
 
@@ -163,20 +183,6 @@ class WebsiteController extends Controller
         return view('articles', compact('articles', 'allCategories', 'countNouveau','countOccasion'));
     }
 
-    public function searchText(Request $request)
-    {
-        $query = $request->input('search');
-        $articles = Article::where('nom', 'like', "%$query%")->get();
-
-         // Nombre d'articles Nouveaux
-         $countNouveau = Article::where('second_mains', 0)->count();
-
-         // Nombre d'articles Seconde main
-         $countOccasion = Article::where('second_mains', 1)->count();
-
-        $allCategories = Category::all();
-
-        return view('articles', compact('articles', 'allCategories', 'countNouveau','countOccasion'));
-    }
+    
     
 }

@@ -30,8 +30,8 @@ Route::get('/images', [WebsiteController::class, 'images']);
 Route::get('/article-details/{id}', [WebsiteController::class, 'articlesDetails'])->name('article.details');
 
 Route::get('/article', [WebsiteController::class, 'articles']);
-Route::get('/article/filter', [WebsiteController::class, 'filterByCategory'])->name('articles.filter');
-Route::get('/article/search', [WebsiteController::class, 'searchText'])->name('articles.searchText');
+Route::get('/article/filter', [WebsiteController::class, 'articles'])->name('articles.filter');
+Route::get('/article', [WebsiteController::class, 'articles'])->name('articles.searchText');
 
 //Route::get('/articles-details', [WebsiteController::class, 'details']);
 
