@@ -121,7 +121,7 @@
                         <div class="single-products">
                             <div class="product-img">
                                 <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                    <img src="assets/images/products/product-6.jpg" alt="Image">
+                                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                 </a>
                             </div>
                     
@@ -163,12 +163,15 @@
                                             </button>
                                         </form>
                                     </li>
-                                    {{-- <li>
-                                        <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
-                                            <i class="ri-eye-line"></i>
+                                    <li>
+                                        <button class="eye-btn">
+                                            <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                                                <i class="ri-eye-line"></i>
+                                            </a>
+                                            
                                             
                                         </button>
-                                    </li> --}}
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -191,180 +194,45 @@
                 </div>
 
                 <ul class="trending-product-list">
-                    <li class="single-list">
-                        <img src="assets/images/products/product-12.jpg" alt="Image">
+                   @foreach ($trendingArticles as $trendingArticle)
+                   <li class="single-list">
+                    <img src="{{ asset('images/articles/' . $trendingArticle->couverture) }}" style="height: 100px !important" alt="Image">
+                    
 
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                Good Quality Electric Cordless Drill
-                            </a>
+                    <div class="product-content">
+                        <a href="#" class="title">
+                           {{$trendingArticle->nom}}
+                        </a>
 
-                            <ul class="products-price">
-                                <li>
-                                    $29.00
-                                    <del>$50.00</del>
-                                </li>
-                            </ul>
+                        <ul class="products-price">
+                            <li>
+                                {{$trendingArticle->prix}}
+                                
+                            </li>
+                        </ul>
 
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                        <ul class="products-rating">
+                            <li>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                            <li>
+                                <i class="ri-star-fill"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                   @endforeach
 
-                    <li class="single-list">
-                        <img src="assets/images/products/product-13.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                High Quality Industrial Wood Planer
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $19.00
-                                    <del>$30.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-14.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                Professional Straight Cutting Scissor
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $29.00
-                                    <del>$50.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-15.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                90 Degree Angle Square Combination Handle
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $10.00
-                                    <del>$15.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
-                    <li class="single-list">
-                        <img src="assets/images/products/product-16.jpg" alt="Image">
-
-                        <div class="product-content">
-                            <a href="#" class="title">
-                                High Quality Steel Clamp Tool
-                            </a>
-
-                            <ul class="products-price">
-                                <li>
-                                    $15.00
-                                    <del>$20.00</del>
-                                </li>
-                            </ul>
-
-                            <ul class="products-rating">
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                                <li>
-                                    <i class="ri-star-fill"></i>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+                    
                 </ul>
             </div>
 
@@ -383,7 +251,7 @@
                             <div class="single-products new-arrivals">
                                 <div class="product-img">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                        <img src="assets/images/products/product-17.jpg" alt="Image">
+                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
 
                                     <span class="hot new">New</span>
@@ -443,12 +311,15 @@
                                                 </button>
                                             </form>
                                         </li>
-                                        {{-- <li>
-                                            <!-- Bouton pour ouvrir le modal avec les détails du produit -->
-                                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
-                                                <i class="ri-eye-line"></i>
+                                        <li>
+                                            <button class="eye-btn">
+                                                <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                                                    <i class="ri-eye-line"></i>
+                                                </a>
+                                                
+                                                
                                             </button>
-                                        </li> --}}
+                                        </li>
 
                                         
                                     </ul>
@@ -477,7 +348,7 @@
             <div class="single-products">
                 <div class="product-img">
                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                        <img src="assets/images/products/product-1.jpg" alt="Image">
+                                            <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                     </a>
                 </div>
 
@@ -535,12 +406,15 @@
                                 </button>
                             </form>
                         </li>
-                        {{-- <li>
-                            <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
-                                <i class="ri-eye-line"></i>
+                        <li>
+                            <button class="eye-btn">
+                                <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                                    <i class="ri-eye-line"></i>
+                                </a>
+                                
                                 
                             </button>
-                        </li> --}}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -876,7 +750,7 @@
                                 <div class="single-products new-arrivals">
                                     <div class="product-img">
                                         <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                            <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
+                                            <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                         </a>
                                     </div>
         
@@ -900,7 +774,7 @@
         
                                         <ul class="products-price">
                                             <li>
-                                                ${{ $article->price }}
+                                                {{ $article->prix }}
                                                 @if($article->old_price)
                                                     <del>${{ $article->old_price }}</del>
                                                 @endif
@@ -927,14 +801,16 @@
                                                     </button>
                                                 </form>
                                             </li>
-                                            {{-- <li>
+                                            <li>
                                                 
 
-                                                <button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal{{ $article->id }}">
-                                                    <i class="ri-eye-line"></i>
+                                                <button class="eye-btn">
+                                                    <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                                                        <i class="ri-eye-line"></i>
+                                                    </a>
                                                     
                                                 </button>
-                                            </li> --}}
+                                            </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1528,7 +1404,7 @@
 									</div>
 
 									<div class="item">
-										<img src="assets/images/products/product-6.jpg" alt="Image">
+										<img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
 									</div>
 								</div>
 
@@ -1554,7 +1430,7 @@
 									</div>
 
 									<div class="item">
-										<img src="assets/images/products/product-6.jpg" alt="Image">
+										<img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
 									</div>
 								</div>
                             </div>
@@ -1703,7 +1579,7 @@
                             <div class="col-lg-6">
                                 <div class="product-view-one-image">
                                     <!-- Placez ici votre carousel ou vos images de produits -->
-                                    <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image">
+                                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                 </div>
                             </div>
             

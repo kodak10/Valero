@@ -7,8 +7,8 @@
 
                         <li>
                             Besoin de nous contactez ?:
-                            <a href="tel:+2250101010101">
-                                <span>0101010101 / 0202020202</span>
+                            <a href="tel:+2250789399871">
+                                <span>0789399871 / 0748325809</span>
                             </a>
                         </li>
                     </ul>
@@ -41,7 +41,7 @@
                 <div class="col-lg-3">
                     <div class="logo">
                         <a href="/">
-                            <img src="{{asset('assets/images/logo.png')}}" alt="Logo" style="height: 100px !important;">
+                            <img src="{{asset('assets/images/logo-blue.jpg')}}" alt="Logo" style="height: 100px !important;">
                         </a>
                     </div>
                 </div>
@@ -120,7 +120,7 @@
                     </div>
                     <div class="logo">
                         <a href="/">
-                            <img src="{{asset('assets/images/logo.png')}}" alt="logo">
+                            <img src="{{asset('assets/images/logo-blue.jpg')}}" alt="logo">
                         </a>
                     </div>
                 </div>

@@ -21,9 +21,9 @@
 		<link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
 
 		<!-- Favicon -->
-		<link rel="icon" type="image/png" href="{{asset('assets/images/favicon.png')}}">
+		<link rel="icon" type="image/png" href="{{asset('assets/images/logo.png')}}">
 		<!-- Title -->
-		<title>Valero Project</title>
+		<title>B-TECHLINE</title>
 
 		<!-- SweetAlert2 CSS -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">

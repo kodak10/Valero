@@ -61,13 +61,12 @@
                                 <span class="description-limit">{{ $article->description }}</span>
                             </td>
                             <td>
-                                @if($article->images && count($article->images) > 0)
-                                @foreach($article->images as $image)
-                                    <img src="{{ asset('images/articles/' . $image) }}" alt="Image de la catégorie" style="height: 80px !important; width: 80px !important; margin-right: 5px;">
-                                @endforeach
-                                @else
-                                    Aucune image
+                                @if($article->couverture)
+                                
+                               
+                                    <img src="{{ asset('images/articles/' . $article->couverture) }}" alt="Image de la couverture" style="height: 80px !important; width: 80px !important; margin-right: 5px;">
                                 @endif
+                            
                             
                             </td>
                             <td>

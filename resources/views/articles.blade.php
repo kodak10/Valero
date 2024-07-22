@@ -146,19 +146,20 @@
                             <li>
                                 <h3>Produits tendance</h3>
                             </li>
+                            @foreach ($trendingArticles as $trendingArticle)
                             <li class="single-list">
-                                <img src="assets/images/products/product-12.jpg" alt="Image">
+                                <img src="{{ asset('images/articles/' . $trendingArticle->couverture) }}" style="height: 100px !important" alt="Image">
 
                                 <div class="product-content">
                                     <a href="product-details.html" class="title">
-                                        Good Quality Electric Cordless Drill
+                                        {{$trendingArticle->nom}}
                                     </a>
 
                                     <ul class="products-price">
                                         <li>
-                                            $29.00
-                                            <del>$50.00</del>
+                                            {{$trendingArticle->prix}}
                                         </li>
+
                                     </ul>
         
                                     <ul class="products-rating">
@@ -180,146 +181,9 @@
                                     </ul>
                                 </div>
                             </li>
+                            @endforeach
 
-                            <li class="single-list">
-                                <img src="assets/images/products/product-13.jpg" alt="Image">
-
-                                <div class="product-content">
-                                    <a href="product-details.html" class="title">
-                                        High Quality Industrial Wood Planer
-                                    </a>
-
-                                    <ul class="products-price">
-                                        <li>
-                                            $19.00
-                                            <del>$30.00</del>
-                                        </li>
-                                    </ul>
-        
-                                    <ul class="products-rating">
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="single-list">
-                                <img src="assets/images/products/product-14.jpg" alt="Image">
-
-                                <div class="product-content">
-                                    <a href="product-details.html" class="title">
-                                        Professional Straight Cutting Scissor
-                                    </a>
-
-                                    <ul class="products-price">
-                                        <li>
-                                            $29.00
-                                            <del>$50.00</del>
-                                        </li>
-                                    </ul>
-        
-                                    <ul class="products-rating">
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="single-list">
-                                <img src="assets/images/products/product-15.jpg" alt="Image">
-
-                                <div class="product-content">
-                                    <a href="product-details.html" class="title">
-                                        90 Degree Angle Square Combination Handle
-                                    </a>
-
-                                    <ul class="products-price">
-                                        <li>
-                                            $10.00
-                                            <del>$15.00</del>
-                                        </li>
-                                    </ul>
-        
-                                    <ul class="products-rating">
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-
-                            <li class="single-list">
-                                <img src="assets/images/products/product-16.jpg" alt="Image">
-
-                                <div class="product-content">
-                                    <a href="product-details.html" class="title">
-                                        High Quality Steel Clamp Tool
-                                    </a>
-
-                                    <ul class="products-price">
-                                        <li>
-                                            $15.00
-                                            <del>$20.00</del>
-                                        </li>
-                                    </ul>
-        
-                                    <ul class="products-rating">
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -385,7 +249,7 @@
                             <div class="single-products">
                                 <div class="product-img">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                        <img src="assets/images/products/product-1.jpg" alt="Image">
+                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
                                 </div>
         
@@ -419,11 +283,10 @@
         
                                     <ul class="products-price">
                                         <li>
-                                            {{$article->nom}}
-                                            <del>{{$article->prix}}</del>
+                                            {{$article->prix}}
                                         </li>
                                         <li>
-                                            @if ($article->second_mains == "0")
+                                            @if ($article->second_mains === "0")
                                                 <span>Nouveaux</span>
                                             @else
                                                 <span>Seconde mains</span>

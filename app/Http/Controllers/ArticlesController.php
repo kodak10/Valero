@@ -38,7 +38,8 @@ class ArticlesController extends Controller
             'images' => 'nullable|array',
             'images.*' => 'image|mimes:jpg,png,jpeg|max:2048',
             'couleurs' => 'nullable|array',
-            'second_mains' => 'required|boolean'
+            'couverture' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'second_mains' => 'required|boolean',
 
         ]);
 
@@ -50,11 +51,19 @@ class ArticlesController extends Controller
         $article->prix = $request->prix;
         $article->taille_format = $request->taille_format;
         $article->description = $request->description;
-        $article->second_mains = $request->second_mains;
+        $article->second_mains = $request->boolean('second_mains'); // Assurez-vous que la valeur est booléenne
 
 
         // Enregistrement des couleurs choisies
         // $article->couleurs = $request->couleurs ?? [];
+
+        // Enregistrement de la couverture
+        if ($request->hasFile('couverture')) {
+            $coverImage = $request->file('couverture');
+            $coverFileName = time() . '_' . $coverImage->getClientOriginalName();
+            $coverImage->move(public_path('images/articles'), $coverFileName);
+            $article->couverture = $coverFileName;
+        }
 
         // Gestion des images
         if ($request->hasFile('images')) {
@@ -97,7 +106,9 @@ class ArticlesController extends Controller
             // 'en_stock' => 'required|integer|min:0',
             'description' => 'nullable|string',
             'images.*' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
-            'second_mains' => 'required|boolean'
+            'second_mains' => 'required|boolean',
+            'couverture' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
+
 
         ]);
 
@@ -113,8 +124,16 @@ class ArticlesController extends Controller
         $article->taille_format = $request->taille_format;
         // $article->en_stock = $request->en_stock;
         $article->description = $request->description;
-        $article->second_mains = $request->has('second_mains') ? true : false; // Assurez-vous que la valeur est booléenne
+        $article->second_mains = $request->boolean('second_mains'); // Assurez-vous que la valeur est booléenne
 
+        // Traitement de la couverture
+        if ($request->hasFile('couverture')) {
+            $coverImage = $request->file('couverture');
+            $coverFileName = time() . '_' . $coverImage->getClientOriginalName();
+            $coverImage->move(public_path('images/articles'), $coverFileName);
+            $article->couverture = $coverFileName;
+        }
+        
         // Traitement des images
         if ($request->hasFile('images')) {
             $imagePaths = [];

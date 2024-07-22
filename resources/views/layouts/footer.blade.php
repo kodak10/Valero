@@ -9,15 +9,15 @@
                     <ul class="info-list">
                         <li>
                             <i class="ri-map-pin-line"></i>
-                            Abidjan, ...................
+                            Abidjan,Boulevard Carde, non loin de la pharmacie Carde
                         </li>
                         <li>
                             <i class="ri-phone-line"></i>
-                            <a href="tel:+2250101010101">+225 0101010101 / 0202020202</a>
+                            <a href="tel:+2250789399871">+225 0789399871 / 0748325809</a>
                         </li>
                         <li>
                             <i class="ri-mail-send-line"></i>
-                            <a href="#"><span class="">email@gmail.com</span></a>
+                            <a href="#"><span class="">btechlineinfo@gmail.com</span></a>
                         </li>
                     </ul>
 
@@ -111,7 +111,7 @@
 <!-- Start Copy Right Area -->
 <div class="copy-right-area">
     <div class="container">
-        <p>© Valero. Tous droits réservés</a></p>
+        <p>© B-TECHLINE. Tous droits réservés</a></p>
     </div>
 </div>
 <!-- End Copy Right Area -->

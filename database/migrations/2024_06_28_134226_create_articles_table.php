@@ -22,8 +22,7 @@ return new class extends Migration
             $table->integer('en_stock')->default(0);
             $table->text('description')->nullable();
             $table->json('images')->nullable(); // Stockage JSON des chemins d'images
-            $table->string('second_mains')->default(0); // Article seconde mains. 0 veux dire neuf
-
+            $table->boolean('second_mains')->default(false)->change();
             $table->timestamps();
         });
     }
