@@ -254,7 +254,6 @@
                                         <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
 
-                                    <span class="hot new">New</span>
                                 </div>
 
                                 <div class="product-content">
@@ -497,7 +496,6 @@
                                             <img src="assets/images/products/product-11.jpg" alt="Image">
                                         </a>
 
-                                        <span class="hot new">New</span>
                                     </div>
                                 </div>
 
@@ -567,7 +565,6 @@
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
-                                        <span class="hot new">New</span>
                                     </div>
                                 </div>
 
@@ -637,7 +634,6 @@
                                             <img src="assets/images/products/product-10.jpg" alt="Image">
                                         </a>
 
-                                        <span class="hot new">New</span>
                                     </div>
                                 </div>
 
