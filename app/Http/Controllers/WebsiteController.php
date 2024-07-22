@@ -34,7 +34,7 @@ class WebsiteController extends Controller
         $allCategories = category::all();
         $articles = Article::all();
         
-        $articlesSecondMains = Article::where('second_mains', 1)->get();
+        $articlesSecondMains = Article::where('second_mains', true)->get();
 
         // Créer un tableau pour stocker les articles de chaque catégorie
         $categoriesWithArticles = [];
@@ -73,7 +73,8 @@ class WebsiteController extends Controller
         $countNouveau = Article::where('second_mains', 0)->count();
         $countOccasion = Article::where('second_mains', 1)->count();
 
-        $articlesSecondMains = Article::where('second_mains', 1)->get();
+        $articlesSecondMains = Article::where('second_mains', true)->get();
+
 
         $categories = Category::take(6)->get();
         $allCategories = category::all();

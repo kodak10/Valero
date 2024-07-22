@@ -54,10 +54,12 @@
                                 <div class="form-group">
                                     <label for="second_mains">Seconde Mains ?</label>
                                     <select class="form-control" id="second_mains" name="second_mains">
-                                        <option value="0" {{ old('second_mains', $article->second_mains) == "0" ? 'selected' : '' }}>Non</option>
-                                        <option value="1" {{ old('second_mains', $article->second_mains) == "1" ? 'selected' : '' }}>Oui</option>
+                                        <option value="0" {{ old('second_mains') === "0" ? 'selected' : '' }}>Non</option>
+                                        <option value="1" {{ old('second_mains') === "1" ? 'selected' : '' }}>Oui</option>
                                     </select>
                                 </div>
+
+                                
                                 
                                 
                                 <div class="form-group">
