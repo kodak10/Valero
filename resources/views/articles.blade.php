@@ -286,7 +286,7 @@
                                             {{$article->prix}}
                                         </li>
                                         <li>
-                                            @if ($article->second_mains === "0")
+                                            @if ($article->second_mains == false)
                                                 <span>Nouveaux</span>
                                             @else
                                                 <span>Seconde mains</span>
