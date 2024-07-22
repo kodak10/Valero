@@ -32,4 +32,21 @@ class Article extends Model
     {
         return $this->hasMany(Wish::class);
     }
+
+    public function comments()
+{
+    return $this->hasMany(Comment::class);
+}
+
+// Méthode pour obtenir la note moyenne
+public function averageRating()
+{
+    return $this->comments()->avg('rating');
+}
+
+public function reviewsCount()
+{
+    return $this->comments()->count();
+}
+
 }

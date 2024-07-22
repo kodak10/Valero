@@ -36,7 +36,7 @@ class ArticlesController extends Controller
             'taille_format' => 'nullable|string|max:255',
             'description' => 'nullable|string',
             'images' => 'nullable|array',
-            'images.*' => 'image|mimes:jpg,png,jpeg|max:2048',
+            'images.*' => 'nullable|image|mimes:jpg,png,jpeg|max:2048',
             'couleurs' => 'nullable|array',
             'couverture' => 'required|image|mimes:jpg,png,jpeg|max:2048',
             'second_mains' => 'required|boolean',
@@ -67,13 +67,15 @@ class ArticlesController extends Controller
 
         // Gestion des images
         if ($request->hasFile('images')) {
-            $images = [];
+            $imagePaths = [];
             foreach ($request->file('images') as $image) {
                 $fileName = time() . '_' . $image->getClientOriginalName();
                 $image->move(public_path('images/articles'), $fileName);
-                $images[] = $fileName;
+                $imagePaths[] = $fileName;
             }
-            $article->images = $images;
+            $article->images = json_encode($imagePaths); // Convertir en JSON pour stocker dans la base de données
+        } else {
+            $article->images = json_encode([]); // Assurez-vous que le champ n'est pas null
         }
 
         $article->save();
@@ -134,16 +136,18 @@ class ArticlesController extends Controller
             $article->couverture = $coverFileName;
         }
         
-        // Traitement des images
+       // Gestion des images
+        $existingImages = json_decode($article->images, true) ?? []; // Conservez les images existantes
+
         if ($request->hasFile('images')) {
-            $imagePaths = [];
             foreach ($request->file('images') as $image) {
                 $fileName = time() . '_' . $image->getClientOriginalName();
                 $image->move(public_path('images/articles'), $fileName);
-                $imagePaths[] = $fileName;
+                $existingImages[] = $fileName;
             }
-            $article->images = json_encode($imagePaths);
         }
+
+        $article->images = json_encode($existingImages); // Conservez toutes les images
 
         // Enregistrez les modifications dans la base de données
         $article->save();

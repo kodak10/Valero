@@ -116,10 +116,13 @@
                     <ul class="cart-list">
                         @foreach(session('cart', []) as $id => $details)
                             <li>
-                                <img src="{{ $details['photo'] }}" alt="Image">
-                                <a href="#">
+                                <img src="{{ asset('images/articles/' . $details['photo']) }}" style="height: 60px !important; width:60px !important" alt="Image">
+                                
+                                <a href="{{ route('article.details', ['id' => $id]) }}">
                                     {{ $details['name'] }}
                                 </a>
+                               
+
                                 <span>{{ $details['price'] }} FCFA</span>
                                 <form action="{{ route('cart.destroy', $id) }}" method="POST">
                                     @csrf
@@ -129,15 +132,16 @@
                             </li>
                         @endforeach
                     </ul>
-
+                    
                     <ul class="payable">
                         <li>
-                            Payable total
+                            Total
                         </li>
                         <li class="total">
                             <span>{{ array_sum(array_column(session('cart', []), 'price')) }} FCFA</span>
                         </li>
                     </ul>
+                    
 
                     <ul class="cart-check-btn">
                         
@@ -167,8 +171,10 @@
                 <ul class="wishlist-list">
                     @foreach(session('wishlist') as $id => $details)
                     <li>
-                        <img src="{{ $details['photo'] }}" alt="Image">
-                        <a href="#">
+                        <img src="{{ asset('images/articles/' . $details['photo']) }}" style="height: 60px !important; width:60px !important" alt="Image">
+
+
+                        <a href="{{ route('article.details', ['id' => $id]) }}">
                             {{ $details['name'] }}
                         </a>
                         <span>{{ $details['price'] }} FCFA</span>

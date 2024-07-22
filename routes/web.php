@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\WishController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CommentController;
 
 
 Route::get('/', [WebsiteController::class, 'index'])->name('index');
@@ -35,7 +36,8 @@ Route::get('/article', [WebsiteController::class, 'articles'])->name('articles.s
 
 //Route::get('/articles-details', [WebsiteController::class, 'details']);
 
-
+Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
+Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 
 // Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {

@@ -131,12 +131,19 @@
                                 </a>
                     
                                 <ul class="products-rating">
-                                    <li><i class="ri-star-fill"></i></li>
-                                    <li><i class="ri-star-fill"></i></li>
-                                    <li><i class="ri-star-fill"></i></li>
-                                    <li><i class="ri-star-fill"></i></li>
-                                    <li><i class="ri-star-fill"></i></li>
-                                    <li><a href="#">(03 Review)</a></li>
+                                    @php
+                                        $averageRating = $article->averageRating();
+                                    @endphp
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        <li>
+                                            <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                        </li>
+                                    @endfor
+                                    <li>
+                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
+                                            ({{ $article->reviewsCount() }} {{ Str::plural('avis', $article->reviewsCount()) }})
+                                        </a>
+                                    </li>
                                 </ul>
                     
                                 <ul class="products-price">
@@ -200,7 +207,7 @@
                     
 
                     <div class="product-content">
-                        <a href="#" class="title">
+                        <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}" class="title">
                            {{$trendingArticle->nom}}
                         </a>
 
@@ -212,20 +219,18 @@
                         </ul>
 
                         <ul class="products-rating">
+                            @php
+                                $averageRating = $trendingArticle->averageRating();
+                            @endphp
+                            @for ($i = 1; $i <= 5; $i++)
+                                <li>
+                                    <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                </li>
+                            @endfor
                             <li>
-                                <i class="ri-star-fill"></i>
-                            </li>
-                            <li>
-                                <i class="ri-star-fill"></i>
-                            </li>
-                            <li>
-                                <i class="ri-star-fill"></i>
-                            </li>
-                            <li>
-                                <i class="ri-star-fill"></i>
-                            </li>
-                            <li>
-                                <i class="ri-star-fill"></i>
+                                <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}">
+                                    ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
+                                </a>
                             </li>
                         </ul>
                     </div>

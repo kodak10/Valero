@@ -12,6 +12,8 @@
                 </li>
 
                 <li class="active">Details</li>
+				<li class="active">{{$article->nom}}</li>
+
             </ul>
         </div>
     </div>
@@ -27,55 +29,52 @@
 									<div class="product-view-one-image">
 										<div id="big" class="owl-carousel owl-theme">
 
-											<div class="item">
-												<img src="assets/images/products/product-1.jpg" alt="Image">
-											</div>
+											
+
+											@if ($article->images)
+											@php
+												$images = json_decode($article->images, true); // Décodez le JSON en tableau
+											@endphp
+										
+											@if (is_array($images) && count($images) > 0)
+												@foreach ($images as $image)
+												<div class="item">
+													<img src="{{ asset('images/articles/' . $image) }}" style="max-width: 100px; max-height: 100px;" alt="Image">
+												</div>
+
+													
+												@endforeach
+											@else
+												<p>Aucune image disponible.</p>
+											@endif
+										@endif
 		
-											<div class="item">
-												<img src="assets/images/products/product-2.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-3.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-4.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-5.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-6.jpg" alt="Image">
-											</div>
+											
 										</div>
 		
 										<div id="thumbs" class="owl-carousel owl-theme">
-											<div class="item">
-												<img src="assets/images/products/product-1.jpg" alt="Image">
-											</div>
+
+											
 		
-											<div class="item">
-												<img src="assets/images/products/product-2.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-3.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-4.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-5.jpg" alt="Image">
-											</div>
-		
-											<div class="item">
-												<img src="assets/images/products/product-6.jpg" alt="Image">
-											</div>
+											@if ($article->images)
+											@php
+												$images = json_decode($article->images, true); // Décodez le JSON en tableau
+											@endphp
+										
+											@if (is_array($images) && count($images) > 0)
+												@foreach ($images as $image)
+												<div class="item">
+													<img src="{{ asset('images/articles/' . $image) }}" style="max-width: 50px; max-height: 50px;" alt="Image">
+												</div>
+
+												
+
+													
+												@endforeach
+											@else
+												<p>Aucune image disponible.</p>
+											@endif
+										@endif
 										</div>
 									</div>
 								</div>
@@ -230,7 +229,7 @@
 										</li>
 										
 										<li>
-											Reviews
+											Commentaires
 										</li>
 									</ul>
 								</div>
@@ -239,23 +238,12 @@
 									<div class="tab_content">
 										<div class="tabs_item">
 											<div class="products-details-tab-content">
-												<h3>Product Description</h3>
-												<p>Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum.  Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Nulla libero. Vivamus pharetra posuere sapien.</p>
+												<h3>Description</h3>
 
-												<p>Design inspiration lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi commodo, ipsum sed pharetra gravida, orci magna rhoncus neque, id pulvinar odio lorem non turpis. Nullam sit amet enim. Suspendisse id velit vitae ligula volutpat condimentum.  Aliquam erat volutpat. Sed quis velit. Nulla facilisi. Nulla libero. Vivamus pharetra posuere sapien. Nam consectetuer. Sed aliquam, nunc eget euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Nam consectetuer.</p>
+												<p>
+													{{ $article->description }}
+												</p>
 
-												<h3>Specification</h3>
-
-												<ul class="specification">
-													<li>Model: 001</li>
-													<li>Battery Chemistry: Lithm</li>
-													<li>Battery Voltage: 120V</li>
-													<li>Battery Capacity: 1.0Ah</li>
-													<li>Max Capacity In Metal: 20mm</li>
-													<li>Weight: 2.5kg</li>
-													<li>Drilling capacity: Concrete: 32 mm</li>
-													<li>No Load Speed:0-520 rpm</li>
-												</ul>
 											</div>
 										</div>
 
@@ -264,9 +252,9 @@
 										<div class="tabs_item">
 											<div class="products-details-tab-content">
 												<div class="product-review-form">
-													<h3>Customer Reviews</h3>
-
-													<div class="review-title">
+													<h3>Commentaires des clients</h3>
+										
+													{{-- <div class="review-title">
 														<div class="rating">
 															<i class="ri-star-fill"></i>
 															<i class="ri-star-fill"></i>
@@ -275,99 +263,142 @@
 															<i class="ri-star-fill"></i>
 														</div>
 														<p>Based on 3 reviews</p>
-
-														<a href="#" class="btn default-btn">Write A Review</a>
-													</div>
+														<!-- Vous pouvez ajouter un lien pour écrire une revue si vous le souhaitez -->
+														<!-- <a href="#" class="btn default-btn">Write A Review</a> -->
+													</div> --}}
 
 													<div class="review-comments">
-														<div class="review-item">
-															<div class="rating">
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
+														@foreach ($comments as $comment)
+															<div class="review-item">
+																<div class="rating">
+																	@for ($i = 1; $i <= 5; $i++)
+																		<i class="ri-star-fill {{ $comment->rating >= $i ? 'text-warning' : 'text-muted' }}"></i>
+																	@endfor
+																</div>
+													
+																<h3>{{ $comment->title }}</h3>
+													
+																<span><strong>{{ $comment->user->name }}</strong> on <strong>{{ $comment->created_at->format('F j, Y') }}</strong></span>
+													
+																<p>{{ $comment->comment }}</p>
+													
+																<a href="#" class="review-report-link">Signaler comme étant inapproprié</a>
 															</div>
-															<h3>Good</h3>
-															<span><strong>Admin</strong> on <strong>July 18, 2024</strong></span>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
-
-															<a href="#" class="review-report-link">Report as Inappropriate</a>
-														</div>
-
-														<div class="review-item">
-															<div class="rating">
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-															</div>
-															<h3>Good</h3>
-															<span><strong>Admin</strong> on <strong>July 20, 2024</strong></span>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
-
-															<a href="#" class="review-report-link">Report as Inappropriate</a>
-														</div>
-
-														<div class="review-item">
-															<div class="rating">
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-																<i class="ri-star-fill"></i>
-															</div>
-															<h3>Good</h3>
-															<span><strong>Admin</strong> on <strong>July 21, 2024</strong></span>
-															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
-
-															<a href="#" class="review-report-link">Report as Inappropriate</a>
-														</div>
+														@endforeach
 													</div>
-
+													
+										
+													<!-- Affichage des commentaires -->
+													<div class="review-comments">
+														@foreach ($article->comments as $comment)
+															<div class="review-item">
+																<div class="rating">
+																	@for ($i = 0; $i < 5; $i++)
+																		<i class="ri-star-fill"></i>
+																	@endfor
+																</div>
+																<h3>{{ $comment->user->name }}</h3>
+																<span><strong>{{ $comment->user->name }}</strong> on <strong>{{ $comment->created_at->format('F j, Y') }}</strong></span>
+																<p>{{ $comment->comment }}</p>
+																@if (Auth::check() && Auth::id() === $comment->user_id)
+																	<form action="{{ route('comments.destroy', $comment->id) }}" method="POST" style="display:inline;">
+																		@csrf
+																		@method('DELETE')
+																		<button type="submit" class="btn btn-danger btn-sm">Supprimer</button>
+																	</form>
+																@endif
+															</div>
+														@endforeach
+													</div>
+										
+													<!-- Formulaire d'ajout de commentaire -->
 													<div class="review-form">
-														<h3>Write A Review</h3>
+														<h3>Écrire un commentaire</h3>
+														<form action="{{ route('comments.store') }}" method="POST">
+															@csrf
+															<div class="form-group">
+																<label for="rating">Évaluation (de 1 à 5)</label>
+																<div class="rating">
+																	<input type="radio" id="star1" name="rating" value="1">
+																	<label for="star1" class="ri-star-fill"></label>
+																	<input type="radio" id="star2" name="rating" value="2">
+																	<label for="star2" class="ri-star-fill"></label>
+																	<input type="radio" id="star3" name="rating" value="3">
+																	<label for="star3" class="ri-star-fill"></label>
+																	<input type="radio" id="star4" name="rating" value="4">
+																	<label for="star4" class="ri-star-fill"></label>
+																	<input type="radio" id="star5" name="rating" value="5">
+																	<label for="star5" class="ri-star-fill"></label>
+																</div>
+															</div>
 
-														<form>
+															<input type="hidden" name="article_id" value="{{ $article->id }}">
 															<div class="row">
 																<div class="col-lg-6 col-md-6">
 																	<div class="form-group">
-																		<label>Name</label>
-																		<input type="text" id="name" name="name" placeholder="Enter your name" class="form-control">
+																		<label>Nom</label>
+																		<input type="text" id="Nom" name="name" value="{{ old('name') }}" placeholder="Enter votre nom" class="form-control">
+																		@error('name')
+																			<div class="text-danger">{{ $message }}</div>
+																		@enderror
 																	</div>
 																</div>
-
+										
 																<div class="col-lg-6 col-md-6">
 																	<div class="form-group">
 																		<label>Email</label>
-																		<input type="email" id="email" name="email" placeholder="Enter your email" class="form-control">
+																		<input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="Enter votre email" class="form-control">
+																		@error('email')
+																			<div class="text-danger">{{ $message }}</div>
+																		@enderror
 																	</div>
 																</div>
-
+										
 																<div class="col-lg-12 col-md-12">
 																	<div class="form-group">
-																		<label>Review Title</label>
-																		<input type="text" id="review-title" name="review-title" placeholder="Enter your review a title" class="form-control">
+																		<label>Titre</label>
+																		<input type="text" id="review-title" name="review-title" value="{{ old('review-title') }}" placeholder="Enter le titre" class="form-control">
+																		@error('review-title')
+																			<div class="text-danger">{{ $message }}</div>
+																		@enderror
 																	</div>
 																</div>
-
+										
 																<div class="col-lg-12 col-md-12">
 																	<div class="form-group">
-																		<label>Body of Review (1500)</label>
-																		<textarea name="review-body" id="review-body" cols="30" rows="8" placeholder="Write your comments here" class="form-control"></textarea>
+																		<label>Commentaire</label>
+																		<div class="form-group">
+																			<label for="comment">Commentaire</label>
+																			<textarea id="comment" name="comment" rows="4" class="form-control" required>Commentaire</textarea>
+																			@error('comment')
+																			<div class="text-danger">{{ $message }}</div>
+																			@enderror
+																		</div>
+																		
 																	</div>
 																</div>
-
+										
 																<div class="col-lg-12 col-md-12">
-																	<button type="submit" class="btn default-btn">Submit Review</button>
+																	<button type="submit" class="btn default-btn">Soumettre</button>
 																</div>
 															</div>
 														</form>
+
+														@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 													</div>
 												</div>
 											</div>
 										</div>
+										
 									</div>
 								</div>
 							</div>
@@ -382,7 +413,7 @@
 		<section class="best-seller-area pb-30">
 			<div class="container">
 				<div class="section-title">
-					<h2>Related Products</h2>
+					<h2>Produits associés</h2>
 				</div>
 
 				<div class="best-product-slider owl-carousel owl-theme">

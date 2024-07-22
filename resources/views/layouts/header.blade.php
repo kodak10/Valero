@@ -141,7 +141,7 @@
                             <ul>
                                 @foreach ($allCategories as $allCategorie)
                                     <li>
-                                        <a href="#">{{$allCategorie->nom}}</a>
+                                        <a href="">{{$allCategorie->nom}}</a>
                                     </li>
                                 @endforeach
                                

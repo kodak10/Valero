@@ -71,11 +71,12 @@
                                     <input type="file" class="form-control" id="couverture" name="couverture" accept=".jpg,.png,.jpeg">
                                 </div>
                                 <div class="form-group">
-                                    <label>Image</label>
+                                    <label>Images</label>
                                     <div class="input-group col-xs-12">
-                                        <input id="images" name="images[]" type="file" accept=".jpg,.png,.jpeg" class="form-control file-upload-info" placeholder="Importer l'image">
+                                        <input id="images" name="images[]" type="file" accept=".jpg,.png,.jpeg" class="form-control file-upload-info" placeholder="Importer les images" multiple>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Enregistrer</button>

@@ -26,7 +26,7 @@ class WishController extends Controller
     $wishlist[$article->id] = [
         'name' => $article->nom,
         'price' => $article->prix,
-        'photo' => $article->photo,
+        'photo' => $article->couverture,
     ];
 
     session()->put('wishlist', $wishlist);

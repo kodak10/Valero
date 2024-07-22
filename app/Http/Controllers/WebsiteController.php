@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Alimranahmed\LaraOCR\Facades\LaraOCR;
 use Illuminate\Http\Request;
+use App\Models\Comment;
 
 use App\Models\Category;
 use App\Models\Article;
@@ -25,27 +26,55 @@ class WebsiteController extends Controller
         $this->trendingArticleService = $trendingArticleService;
     }
 
-    public function index()
-    {
-        // Utiliser le service pour obtenir les articles tendances
-        $trendingArticles = $this->trendingArticleService->getTrendingArticles();
+    // public function index()
+    // {
+    //     $articles = Article::withCount('comments')->get();
 
-        $categories = Category::take(6)->get();
-        $allCategories = category::all();
-        $articles = Article::all();
+    //     // Utiliser le service pour obtenir les articles tendances
+    //     $trendingArticles = $this->trendingArticleService->getTrendingArticles();
+
+    //     $categories = Category::take(6)->get();
+    //     $allCategories = category::all();
+    //     $articles = Article::all();
         
-        $articlesSecondMains = Article::where('second_mains', true)->get();
+    //     $articlesSecondMains = Article::where('second_mains', true)->get();
 
-        // Créer un tableau pour stocker les articles de chaque catégorie
-        $categoriesWithArticles = [];
+    //     // Créer un tableau pour stocker les articles de chaque catégorie
+    //     $categoriesWithArticles = [];
 
-        foreach ($categories as $category) {
-            // Récupérer les articles de chaque catégorie
-            $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
-        }
-        return view('index', compact('categories', 'articles','articlesSecondMains','categoriesWithArticles', 'allCategories', 'trendingArticles'));
+    //     foreach ($categories as $category) {
+    //         // Récupérer les articles de chaque catégorie
+    //         $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
+    //     }
+    //     return view('index', compact('categories', 'articles','articlesSecondMains','categoriesWithArticles', 'allCategories', 'trendingArticles'));
 
+    // }
+
+    public function index()
+{
+    // Récupérer tous les articles avec le nombre de commentaires
+    $articles = Article::withCount('comments')->get();
+
+    // Utiliser le service pour obtenir les articles tendances
+    $trendingArticles = $this->trendingArticleService->getTrendingArticles();
+
+    // Récupérer les catégories et les articles associés
+    $categories = Category::with('articles')->take(6)->get(); // Vous pouvez ajuster la limite selon vos besoins
+    $allCategories = Category::all(); // Récupérer toutes les catégories
+    $articlesSecondMains = Article::where('second_mains', true)->get();
+
+    // Créer un tableau pour stocker les articles de chaque catégorie
+    $categoriesWithArticles = [];
+
+    foreach ($categories as $category) {
+        // Récupérer les articles de chaque catégorie (5 premiers articles)
+        $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
     }
+
+    // Passer toutes les données à la vue
+    return view('index', compact('categories', 'articles', 'articlesSecondMains', 'categoriesWithArticles', 'allCategories', 'trendingArticles'));
+}
+
 
     public function details()
     {
@@ -75,6 +104,7 @@ class WebsiteController extends Controller
 
         $articlesSecondMains = Article::where('second_mains', true)->get();
 
+        
 
         $categories = Category::take(6)->get();
         $allCategories = category::all();
@@ -86,6 +116,7 @@ class WebsiteController extends Controller
 
        // Initialisez la requête de base
         $query = Article::query();
+
 
         // Ajoutez la condition de recherche
         if ($searchTerm) {
@@ -184,8 +215,10 @@ class WebsiteController extends Controller
         $allCategories = Category::take(6)->get();
 
         $article = Article::findOrFail($id); // Récupère l'article par son ID
+        $comments = Comment::where('article_id', $id)->get();
 
-        return view('articles-details', compact('article', 'allCategories'));
+
+        return view('articles-details', compact('article', 'allCategories', 'comments'));
     }
 
     

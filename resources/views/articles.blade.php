@@ -151,7 +151,7 @@
                                 <img src="{{ asset('images/articles/' . $trendingArticle->couverture) }}" style="height: 100px !important" alt="Image">
 
                                 <div class="product-content">
-                                    <a href="product-details.html" class="title">
+                                    <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}" class="title">
                                         {{$trendingArticle->nom}}
                                     </a>
 
@@ -163,20 +163,18 @@
                                     </ul>
         
                                     <ul class="products-rating">
+                                        @php
+                                            $averageRating = $trendingArticle->averageRating();
+                                        @endphp
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <li>
+                                                <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                            </li>
+                                        @endfor
                                         <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
+                                            <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}">
+                                                ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -193,7 +191,7 @@
                 <div class="sale-offer-bg product-page">
                     <h5>Sale offer - <span>30% off</span></h5>
                     <h3>All types of premium quality tools</h3>
-                    <a href="products.html" class="default-btn">
+                    <a href="#" class="default-btn">
                         <i class="ri-shopping-cart-line"></i>
                         Shop Now
                     </a>
@@ -244,7 +242,7 @@
 
                 <div id="products-filter" class="products-collections-listing row justify-content-center">
 
-                    @foreach ($articles as $article)
+                    @forelse ($articles as $article)
                         <div class="col-lg-4">
                             <div class="single-products">
                                 <div class="product-img">
@@ -252,35 +250,28 @@
                                         <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
                                 </div>
-        
+
                                 <div class="product-content">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
                                         {{$article->nom}}
                                     </a>
-        
+
                                     <ul class="products-rating">
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
+                                        @php
+                                            $averageRating = $article->averageRating();
+                                        @endphp
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <li>
+                                                <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                            </li>
+                                        @endfor
                                         <li>
                                             <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                                (03 Review)
+                                                ({{ $article->reviewsCount() }} {{ Str::plural('avis', $article->reviewsCount()) }})
                                             </a>
                                         </li>
                                     </ul>
-        
+
                                     <ul class="products-price">
                                         <li>
                                             {{$article->prix}}
@@ -293,7 +284,7 @@
                                             @endif
                                         </li>
                                     </ul>
-        
+
                                     <ul class="products-cart-wish-view">
                                         <li>
                                             <form action="{{ route('cart.store') }}" method="POST">
@@ -318,14 +309,16 @@
                                         <li>
                                             <a class="eye-btn" href="{{ route('article.details', ['id' => $article->id]) }}">
                                                 <i class="ri-eye-line"></i>
-                                                
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <p>Aucun article trouvé.</p>
+                    @endforelse
+
                    
 
                     
