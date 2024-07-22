@@ -26,6 +26,7 @@
 								<div class="col-lg-6">
 									<div class="product-view-one-image">
 										<div id="big" class="owl-carousel owl-theme">
+
 											<div class="item">
 												<img src="assets/images/products/product-1.jpg" alt="Image">
 											</div>
@@ -227,9 +228,7 @@
 										<li>
 											Description
 										</li>
-										<li>
-											Additional Information
-										</li>
+										
 										<li>
 											Reviews
 										</li>
@@ -260,17 +259,7 @@
 											</div>
 										</div>
 
-										<div class="tabs_item">
-											<div class="products-details-tab-content">
-												<ul class="additional-information">
-													<li><span>Brand:</span> ThemeForest</li>
-													<li><span>Color:</span> Brown</li>
-													<li><span>Size:</span> Large, Medium</li>
-													<li><span>Weight:</span> 27 kg</li>
-													<li><span>Dimensions:</span> 16 x 22 x 123 cm</li>
-												</ul>
-											</div>
-										</div>
+										
 
 										<div class="tabs_item">
 											<div class="products-details-tab-content">
@@ -287,7 +276,7 @@
 														</div>
 														<p>Based on 3 reviews</p>
 
-														<a href="product-details.html" class="btn default-btn">Write A Review</a>
+														<a href="#" class="btn default-btn">Write A Review</a>
 													</div>
 
 													<div class="review-comments">
@@ -303,7 +292,7 @@
 															<span><strong>Admin</strong> on <strong>July 18, 2024</strong></span>
 															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
 
-															<a href="product-details.html" class="review-report-link">Report as Inappropriate</a>
+															<a href="#" class="review-report-link">Report as Inappropriate</a>
 														</div>
 
 														<div class="review-item">
@@ -318,7 +307,7 @@
 															<span><strong>Admin</strong> on <strong>July 20, 2024</strong></span>
 															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
 
-															<a href="product-details.html" class="review-report-link">Report as Inappropriate</a>
+															<a href="#" class="review-report-link">Report as Inappropriate</a>
 														</div>
 
 														<div class="review-item">
@@ -333,7 +322,7 @@
 															<span><strong>Admin</strong> on <strong>July 21, 2024</strong></span>
 															<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation labore et dolore</p>
 
-															<a href="product-details.html" class="review-report-link">Report as Inappropriate</a>
+															<a href="#" class="review-report-link">Report as Inappropriate</a>
 														</div>
 													</div>
 
@@ -399,13 +388,13 @@
 				<div class="best-product-slider owl-carousel owl-theme">
 					<div class="single-products">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="#">
 								<img src="assets/images/products/product-1.jpg" alt="Image">
 							</a>
 						</div>
 
 						<div class="product-content">
-							<a href="product-details.html" class="title">
+							<a href="#" class="title">
 								Cordless Drill Professional Combo Drill And Screwdriver
 							</a>
 
@@ -426,7 +415,7 @@
 									<i class="ri-star-fill"></i>
 								</li>
 								<li>
-									<a href="product-details.html">
+									<a href="#">
 										(03 Review)
 									</a>
 								</li>
@@ -465,13 +454,13 @@
 
 					<div class="single-products">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="#">
 								<img src="assets/images/products/product-2.jpg" alt="Image">
 							</a>
 						</div>
 
 						<div class="product-content">
-							<a href="product-details.html" class="title">
+							<a href="#" class="title">
 								Professional Cordless Drill Power Tools Set Competitive Price
 							</a>
 
@@ -492,7 +481,7 @@
 									<i class="ri-star-fill"></i>
 								</li>
 								<li>
-									<a href="product-details.html">
+									<a href="#">
 										(03 Review)
 									</a>
 								</li>
@@ -531,13 +520,13 @@
 
 					<div class="single-products">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="#">
 								<img src="assets/images/products/product-3.jpg" alt="Image">
 							</a>
 						</div>
 
 						<div class="product-content">
-							<a href="product-details.html" class="title">
+							<a href="#" class="title">
 								DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
 							</a>
 
@@ -558,7 +547,7 @@
 									<i class="ri-star-fill"></i>
 								</li>
 								<li>
-									<a href="product-details.html">
+									<a href="#">
 										(03 Review)
 									</a>
 								</li>
@@ -597,13 +586,13 @@
 
 					<div class="single-products">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="#">
 								<img src="assets/images/products/product-4.jpg" alt="Image">
 							</a>
 						</div>
 
 						<div class="product-content">
-							<a href="product-details.html" class="title">
+							<a href="#" class="title">
 								Power Tools Set Chinese Manufacturer Production 50V 
 							</a>
 
@@ -624,7 +613,7 @@
 									<i class="ri-star-fill"></i>
 								</li>
 								<li>
-									<a href="product-details.html">
+									<a href="#">
 										(03 Review)
 									</a>
 								</li>
@@ -663,13 +652,13 @@
 
 					<div class="single-products">
 						<div class="product-img">
-							<a href="product-details.html">
+							<a href="#">
 								<img src="assets/images/products/product-5.jpg" alt="Image">
 							</a>
 						</div>
 
 						<div class="product-content">
-							<a href="product-details.html" class="title">
+							<a href="#" class="title">
 								Professional Cordless Drill Power Tools Set Competitive Price
 							</a>
 
@@ -690,7 +679,7 @@
 									<i class="ri-star-fill"></i>
 								</li>
 								<li>
-									<a href="product-details.html">
+									<a href="#">
 										(03 Review)
 									</a>
 								</li>

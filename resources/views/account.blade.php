@@ -112,9 +112,27 @@
 											<input class="form-control" type="password" name="password_confirmation" required>
 										</div>
 									</div>
+
+									<div class="col-12">
+										<div class="login-action">
+											
+											<div class="form-group">
+												<span class="log-rem">
+													<input id="terms" type="checkbox" name="terms" {{ old('terms') ? 'checked' : '' }} required>
+													J'accepte les <a href="#" target="_blank">Conditions d'utilisation</a> et la <a href="#" target="_blank">Politique de confidentialité</a>.
+												</span>
+												@if ($errors->has('terms'))
+													<div class="invalid-feedback d-block">
+														{{ $errors->first('terms') }}
+													</div>
+												@endif
+											</div>
+											
+										</div>
+									</div>
 					
 									<div class="col-12">
-										<button class="btn btn-primary" type="submit">
+										<button class="default-btn" type="submit">
 											S'inscrire
 										</button>
 									</div>
