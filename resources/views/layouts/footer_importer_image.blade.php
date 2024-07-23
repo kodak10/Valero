@@ -5,7 +5,7 @@
             <div class="col-lg-2">
                 <div class="logo">
                     <a href="/">
-                        <img src="{{asset('assets/images/logo.png')}}" alt="Image" style="height: 100px !important;">
+                        <img src="{{asset('assets/images/logo-blue.jpg')}}" alt="Image" style="height: 100px !important;">
                     </a>
                 </div>
             </div>

@@ -1,39 +1,5 @@
 <header class="header-area">
-    <div class="top-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <ul class="header-left-content">
-
-                        <li>
-                            Besoin de nous contactez ?:
-                            <a href="tel:+2250789399871">
-                                <span>0789399871 / 0748325809</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="header-right-content">
-                        <ul>
-                            @auth
-                                <li>
-                                    <a href="/home">Mon Compte</a>
-                                </li>
-                            @else
-                                <li>
-                                    <a href="{{ route('register') }}">Connexion / Inscription</a>
-                                </li>
-                            @endauth
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Start Top Header -->
-
+    
     <!-- Start Middle Header -->
     <div class="middle-header middle-header-style-two">
         <div class="container">
@@ -46,7 +12,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5">
+                <div class="col-lg-3">
                     <form action="{{ route('articles.searchText') }}" method="GET" class="search-box">
                         <input type="text" name="search" placeholder="Rechercher un article" class="form-control" value="{{ request()->input('search') }}">
                         <button type="submit" class="search-btn">
@@ -57,8 +23,34 @@
                 </div>
                         
 
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <ul class="wish-cart">
+
+                    @auth
+                        <li>
+                            <a href="{{ route('user.index') }}">
+                                <span class="wish-icon">
+                                    <i class="ri-dashboard-line"></i>
+                                </span>
+                                <span class="favorite">Mon Compte</span>
+                                Menu Général
+                            </a>
+                        </li>
+                    @else
+                    <li>
+                        <a href="{{ route('register') }}">
+                            <span class="wish-icon">
+                                <i class="ri-user-add-line"></i>
+                            </span>
+                            <span class="favorite">Mon Compte</span>
+                            S'inscrire / Connexion
+                        </a>
+                    </li>
+                    @endauth
+
+
+                        
+
                         <li>
                             <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal-wishlist">
                                 <span class="wish-icon">
@@ -69,17 +61,6 @@
                                 Mes souhaits
                             </a>
                         </li>
-
-                        {{-- <li>
-                            <span class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal-carttttt">
-                                <span class="wish-icon">
-                                    <i class="ri-shopping-cart-line"></i>
-                                    <span class="count">0</span>
-                                </span>
-                                <span class="favorite">Mon Panier</span>
-                                00 FCFA	</span>
-                        </li> --}}
-
                         <li>
                             <span class="cart" data-bs-toggle="modal" data-bs-target="#exampleModal-cart">
                                 <span class="wish-icon">

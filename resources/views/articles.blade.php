@@ -189,11 +189,11 @@
 
             <div class="col-lg-8">
                 <div class="sale-offer-bg product-page">
-                    <h5>Sale offer - <span>30% off</span></h5>
-                    <h3>All types of premium quality tools</h3>
+                    {{-- <h5>Sale offer - <span>30% off</span></h5> --}}
+                    <h3>Tous types d'articles de qualité supérieure</h3>
                     <a href="#" class="default-btn">
                         <i class="ri-shopping-cart-line"></i>
-                        Shop Now
+                        Commander Maintenant
                     </a>
                 </div>
                 

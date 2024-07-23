@@ -13,8 +13,11 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="hero-slider-content">
-                            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <h1>Bienvenue chez B-TECHLINE</h1>
+                            <p>Votre destination unique pour toutes vos fournitures scolaires.
+                                Des produits de qualité à des prix imbattables.
+                                Préparez-vous pour une année scolaire réussie avec nous !
+                            </p>
 
                             <div class="hero-slider-btn">
                                 <a href="/article" class="default-btn">
@@ -33,8 +36,13 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="hero-slider-content">
-                            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <h1 style="color: #f1f1f1 !important">Produits en Vedette
+                            </h1>
+                            <p style="color: #f1f1f1 !important">
+                                Découvrez notre sélection des fournitures scolaires les plus populaires et innovantes.
+                                Des outils de qualité pour chaque étudiant, du primaire à l'université.
+                                Commandez maintenant et profitez de nos offres spéciales !
+                            </p>
 
                             <div class="banner-btn">
                                 <a href="/article" class="default-btn">
@@ -53,8 +61,11 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="hero-slider-content">
-                            <h1>Lorem ipsum dolor sit amet, consectetur</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <h1 style="color: #f1f1f1 !important">Des articles de Seconde Main
+                            </h1>
+                            <p style="color: #f1f1f1 !important">Des fournitures scolaires de qualité à des prix réduits.
+                                Faites des économies tout en préservant l'environnement.
+                                Découvrez notre sélection d'articles d'occasion soigneusement vérifiés.</p>
 
                             <div class="banner-btn">
                                 <a href="/article" class="default-btn">
@@ -80,7 +91,7 @@
             <div class="col-lg-2 col-sm-6 col-md-4">
                 <div class="single-popular-categories">
                     <a href="{{ route('articles.filter', ['categorie_id' => $categorie->id]) }}">
-                        <img src="assets/images/icon/power-saw.png" alt="Image">
+                        <img src="{{ asset('images/articles/couvertures/' . $categorie->couverture) }}" alt="Image">
                         <span>{{$categorie->nom}}</span> 
                     </a>
                 </div>
@@ -435,8 +446,8 @@
 <section class="sale-offer-area">
     <div class="container">
         <div class="sale-offer-bg bg-2">
-            <h5>Sale offer - <span>30% off</span></h5>
-            <h3>All types of premium quality tools</h3>
+            {{-- <h5 style="color: #f1f1f1">Sale offer - <span>30% off</span></h5> --}}
+            <h3 style="color: #f1f1f1">Tous les articles pour différentes classes</h3>
             <a href="/article" class="default-btn">
                 <i class="ri-shopping-cart-line"></i>
                 Commander
@@ -712,8 +723,8 @@
     <div class="container">
         <div class="sale-discount-bg">
             <div class="discount-content">
-                <h5>Get Discount 30% Off</h5>
-                <h3>New Lower Prices On Hundreds Premium Quality Tools</h3>
+                {{-- <h5>Get Discount 30% Off</h5> --}}
+                <h3 style="color: #2a3f5a">Nouveaux prix plus bas sur des centaines d'articles de qualité supérieure</h3>
             </div>
         </div>
     </div>
