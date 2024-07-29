@@ -15,6 +15,7 @@
                 <div class="col-lg-3">
                     <form action="{{ route('articles.searchText') }}" method="GET" class="search-box">
                         <input type="text" name="search" placeholder="Rechercher un article" class="form-control" value="{{ request()->input('search') }}">
+
                         <button type="submit" class="search-btn">
                             <i class="ri-search-line"></i>
                             Valider
@@ -101,7 +102,7 @@
                     </div>
                     <div class="logo">
                         <a href="/">
-                            <img src="{{asset('assets/images/logo-blue.jpg')}}" alt="logo">
+                            <img src="{{asset('assets/images/logo-white.jpg')}}" alt="logo">
                         </a>
                     </div>
                 </div>

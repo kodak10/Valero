@@ -62,7 +62,9 @@
 				<div class="contact-form">
 					<h2>Laisser un message</h2>
 
-					<form id="contactForm">
+					
+						<form method="POST" action="{{ route('contact.send') }}">
+                        @csrf
 						<div class="row">
 							<div class="col-lg-6 col-sm-6">
 								<div class="form-group">
@@ -106,6 +108,7 @@
 							</div>
 
 							<div class="col-lg-12 col-md-12">
+								
 								<button type="submit" class="default-btn">
 									<span>Envoyer</span>
 								</button>

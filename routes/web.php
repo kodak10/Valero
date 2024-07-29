@@ -40,8 +40,11 @@ Route::post('/comments', [CommentController::class, 'store'])->name('comments.st
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 
-// Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
-Route::prefix('administration')->group(function () {
+Route::post('/contact', [WebsiteController::class, 'sendMail'])->name('contact.send');
+
+
+Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
+// Route::prefix('administration')->group(function () {
     Route::get('/', [AdministrationController::class, 'index']);
     
     // route des categories

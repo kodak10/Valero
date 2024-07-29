@@ -36,9 +36,9 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="hero-slider-content">
-                            <h1 style="color: #f1f1f1 !important">Produits en Vedette
+                            <h1 style="color: #f1f1f1">Produits en Vedette
                             </h1>
-                            <p style="color: #f1f1f1 !important">
+                            <p style="color: #f1f1f1">
                                 Découvrez notre sélection des fournitures scolaires les plus populaires et innovantes.
                                 Des outils de qualité pour chaque étudiant, du primaire à l'université.
                                 Commandez maintenant et profitez de nos offres spéciales !
@@ -61,9 +61,9 @@
                 <div class="d-table-cell">
                     <div class="container">
                         <div class="hero-slider-content">
-                            <h1 style="color: #f1f1f1 !important">Des articles de Seconde Main
+                            <h1 style="color: #f1f1f1 ">Des articles de Seconde Main
                             </h1>
-                            <p style="color: #f1f1f1 !important">Des fournitures scolaires de qualité à des prix réduits.
+                            <p style="color: #f1f1f1">Des fournitures scolaires de qualité à des prix réduits.
                                 Faites des économies tout en préservant l'environnement.
                                 Découvrez notre sélection d'articles d'occasion soigneusement vérifiés.</p>
 
@@ -111,9 +111,9 @@
             <div class="col-lg-3">
                 <div class="featured-product-img bg-2">
                     <div class="featured-product-content">
-                        <span class="best">Best Deals</span>
-                        <h3>Premium Tools Sets</h3>
-                        <span class="offer">Up to 30% off</span>
+                        <span class="best">Bon Plan</span>
+                        <h3>Ensembles d'outils haut de gamme et seconde mains</h3>
+                        <span class="offer">Jusqu'à 30% de réduction</span>
                         <a href="/article">
                             Commander
                         </a>
@@ -1349,8 +1349,8 @@
                     <div class="icon">
                         <img src="assets/images/icon/support.png" alt="Image">
                     </div>
-                    <h3>Customer Support</h3>
-                    <p>24/7 We are customer care best support</p>
+                    <h3>Service clientt</h3>
+                    <p>24h/24 et 7j/7</p>
                 </div>
             </div>
 
@@ -1359,8 +1359,8 @@
                     <div class="icon">
                         <img src="assets/images/icon/payment.png" alt="Image">
                     </div>
-                    <h3>Secure Payments</h3>
-                    <p>Pay with the world's top payment methods</p>
+                    <h3>Paiements sécurisés</h3>
+                    <p>Payez avec les moyens de payement mobile monney ou cash.</p>
                 </div>
             </div>
 
@@ -1369,8 +1369,8 @@
                     <div class="icon">
                         <img src="assets/images/icon/network.png" alt="Image">
                     </div>
-                    <h3>Worldwide Delivery</h3>
-                    <p>What you want, delivered to where you want</p>
+                    <h3>Livraison</h3>
+                    <p>Nous livrons où vous voulez.</p>
                 </div>
             </div>
         </div>

@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Mail\ContactMail;
 
 use Alimranahmed\LaraOCR\Facades\LaraOCR;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+
 use App\Models\Comment;
 
 use App\Models\Category;
@@ -152,6 +155,27 @@ class WebsiteController extends Controller
         $allCategories = Category::all();
 
         return view('contact', compact('allCategories'));
+    }
+
+    public function sendMail(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        $details = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'message' => $request->message,
+        ];
+
+        $recipient = env('MAIL_TO_ADDRESS', 'kodaklamagie@gmail.com');
+
+        Mail::to($recipient)->send(new ContactMail($details));
+
+        return back()->with('success', 'Your message has been sent!');
     }
 
     public function my_account()

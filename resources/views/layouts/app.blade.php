@@ -47,6 +47,12 @@
 				transform: translateY(-10px);
 			}
 
+            .import-image{
+                position: absolute;
+                top: 12px;
+                right: 112px;
+            }
+
 		</style>
     </head>
 

@@ -24,6 +24,7 @@ class UserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 'user',
         ]);
 
         return redirect()->route('register')->with('success', 'Enregistré avec succès!');
