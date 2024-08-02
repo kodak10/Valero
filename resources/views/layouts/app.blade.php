@@ -93,12 +93,14 @@
                         </button>
 					</div>
 					<div class="modal-body">
-						<form>
-							<div class="form-group">
-								<input type="file" class="form-control-file" id="file-input" accept="image/*">
-							</div>
-							<button type="submit" class="btn btn-primary">Importer</button>
-						</form>
+                        <form action="{{ route('image.search') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="form-group">
+                                <label for="image">Choisir une image</label>
+                                <input type="file" name="image" id="image" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Rechercher</button>
+                        </form>
 					</div>
 				</div>
 			</div>

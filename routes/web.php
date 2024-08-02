@@ -11,6 +11,8 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
 
+use App\Http\Controllers\ImageSearchController;
+
 
 Route::get('/', [WebsiteController::class, 'index'])->name('index');
 Route::get('/contact', [WebsiteController::class, 'contact']);
@@ -40,6 +42,12 @@ Route::post('/comments', [CommentController::class, 'store'])->name('comments.st
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
 Route::post('/contact', [WebsiteController::class, 'sendMail'])->name('contact.send');
+
+
+
+Route::get('/image-search', [ImageSearchController::class, 'showForm'])->name('image.form');
+Route::post('/image-search', [ImageSearchController::class, 'search'])->name('image.search');
+
 
 Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
 // Route::prefix('administration')->group(function () {
