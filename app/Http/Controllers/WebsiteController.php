@@ -12,6 +12,8 @@ use App\Models\Comment;
 use App\Models\Category;
 use App\Models\Article;
 use App\Models\ArticleClick;
+use App\Models\FlashSale;
+
 use Illuminate\Support\Facades\DB;
 use App\Services\TrendingArticleService;
 use Illuminate\Support\Facades\Request as FacadesRequest;
@@ -56,10 +58,12 @@ class WebsiteController extends Controller
     public function index()
 {
     // Récupérer tous les articles avec le nombre de commentaires
-    $articles = Article::withCount('comments')->get();
+    $articles = Article::withCount('comments')->paginate(12);
 
     // Utiliser le service pour obtenir les articles tendances
     $trendingArticles = $this->trendingArticleService->getTrendingArticles();
+
+
 
     // Récupérer les catégories et les articles associés
     $categories = Category::with('articles')->take(6)->get(); // Vous pouvez ajuster la limite selon vos besoins
@@ -74,8 +78,10 @@ class WebsiteController extends Controller
         $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
     }
 
+    $flashSales = FlashSale::with('article')->get();
+
     // Passer toutes les données à la vue
-    return view('index', compact('categories', 'articles', 'articlesSecondMains', 'categoriesWithArticles', 'allCategories', 'trendingArticles'));
+    return view('index', compact('categories', 'articles', 'articlesSecondMains', 'categoriesWithArticles', 'allCategories', 'trendingArticles', 'flashSales'));
 }
 
 
@@ -94,7 +100,9 @@ class WebsiteController extends Controller
             // Récupérer les articles de chaque catégorie
             $categoriesWithArticles[$category->id] = $category->articles()->take(5)->get();
         }
-        return view('articles-details', compact('categories', 'articles','articlesSecondMains','categoriesWithArticles', 'allCategories'));
+        $associatedProducts = $articles->associatedProducts;
+
+        return view('articles-details', compact('categories', 'articles','articlesSecondMains','categoriesWithArticles', 'allCategories', 'associatedProducts'));
 
     }
 
@@ -240,9 +248,10 @@ class WebsiteController extends Controller
 
         $article = Article::findOrFail($id); // Récupère l'article par son ID
         $comments = Comment::where('article_id', $id)->get();
+        $associatedProducts = $article->associatedProducts;
 
 
-        return view('articles-details', compact('article', 'allCategories', 'comments'));
+        return view('articles-details', compact('article', 'allCategories', 'comments', 'associatedProducts'));
     }
 
     

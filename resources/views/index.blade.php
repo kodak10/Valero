@@ -158,7 +158,7 @@
                                 </ul>
                     
                                 <ul class="products-price">
-                                    <li>{{$article->prix}}</li>
+                                    <li>{{$article->prix}}</li> FCFA
                                 </ul>
                     
                                 <ul class="products-cart-wish-view d-flex justify-content-between">
@@ -224,7 +224,7 @@
 
                         <ul class="products-price">
                             <li>
-                                {{$trendingArticle->prix}}
+                                {{$trendingArticle->prix}} FCFA
                                 
                             </li>
                         </ul>
@@ -278,31 +278,24 @@
                                     </a>
 
                                     <ul class="products-rating">
+                                        @php
+                                            $averageRating = $trendingArticle->averageRating();
+                                        @endphp
+                                        @for ($i = 1; $i <= 5; $i++)
+                                            <li>
+                                                <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                            </li>
+                                        @endfor
                                         <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <i class="ri-star-fill"></i>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                (10 Review)
+                                            <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}">
+                                                ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
                                             </a>
                                         </li>
                                     </ul>
 
                                     <ul class="products-price">
                                         <li>
-                                           {{$article->prix}}
+                                           {{$article->prix}} FCFA
                                         </li>
                                     </ul>
 
@@ -373,31 +366,24 @@
                     </a>
 
                     <ul class="products-rating">
+                        @php
+                            $averageRating = $trendingArticle->averageRating();
+                        @endphp
+                        @for ($i = 1; $i <= 5; $i++)
+                            <li>
+                                <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                            </li>
+                        @endfor
                         <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <i class="ri-star-fill"></i>
-                        </li>
-                        <li>
-                            <a href="#">
-                                (03 Review)
+                            <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}">
+                                ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
                             </a>
                         </li>
                     </ul>
 
                     <ul class="products-price">
                         <li>
-                            {{$article->prix}}
+                            {{$article->prix}} FCFA
                         </li>
                     </ul>
 
@@ -501,218 +487,76 @@
                 <div class="section-title">
                     <h2>Ventes flash</h2>
                 </div>
-
+            
                 <div class="flash-deals-wrap need-border">
                     <div class="flash-deals-slider owl-carousel owl-theme">
-                        <div class="single-products deals-products">
-                            <div class="row align-items-center">
-                                <div class="col-xl-6">
-                                    <div class="product-img">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                            <img src="assets/images/products/product-11.jpg" alt="Image">
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-6">
-                                    <div class="product-content">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                            Hand Tools Rubber Handle Adjustable Spanner
-                                        </a>
-
-                                        {{-- <span class="in-stock">In Stock</span> --}}
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (05 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $60.00
-                                                <del>$99.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <div id="timer">
-                                            <div id="days"></div>
-                                            <div id="hours"></div>
-                                            <div id="minutes"></div>
-                                            <div id="seconds"></div>
+                        @foreach($flashSales as $flashSale)
+                            <div class="single-products deals-products">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-6">
+                                        <div class="product-img">
+                                            <a href="{{ route('article.details', ['id' => $flashSale->article->id]) }}">
+                                                <img src="{{ asset('storage/' . $flashSale->article->image) }}" alt="Image">
+                                            </a>
                                         </div>
+                                    </div>
+            
+                                    <div class="col-xl-6">
+                                        <div class="product-content">
+                                            <a href="{{ route('article.details', ['id' => $flashSale->article->id]) }}" class="title">
+                                                {{ $flashSale->article->name }}
+                                            </a>
+            
+                                            <ul class="products-rating">
+                                                @php
+                                                    $averageRating = $trendingArticle->averageRating();
+                                                @endphp
+                                                @for ($i = 1; $i <= 5; $i++)
+                                                    <li>
+                                                        <i class="ri-star-fill {{ $i <= $averageRating ? 'text-warning' : 'text-muted' }}"></i>
+                                                    </li>
+                                                @endfor
+                                                <li>
+                                                    <a href="{{ route('article.details', ['id' => $trendingArticle->id]) }}">
+                                                        ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
+                                                    </a>
+                                                </li>
+                                            </ul>
+            
+                                            <ul class="products-price">
+                                                <li>{{ $flashSale->discount_price }} FCFA<del>{{ $flashSale->article->price }} FCFA</del></li>
+                                            </ul>
+            
+                                            <div id="timer">
+                                                <div id="days"></div>
+                                                <div id="hours"></div>
+                                                <div id="minutes"></div>
+                                                <div id="seconds"></div>
+                                            </div>
+            
+                                            <ul class="products-cart-wish-view">
+                                                
+                                                <li>
+                                                    <form action="{{ route('cart.store') }}" method="POST">
+                                                        @csrf
+                                                        <input type="hidden" name="article_id" value="{{ $article->id }}">
+                                                        <button type="submit" class="default-btn">
+                                                            <i class="ri-shopping-cart-line"></i>
+                                                            Ajouter au panier
+                                                        </button>
+                                                    </form>
+                                                </li>
 
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Ajouter au Panier
-                                                </a>
-                                            </li>
-                                        </ul>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="single-products deals-products">
-                            <div class="row align-items-center">
-                                <div class="col-xl-6">
-                                    <div class="product-img">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                            <img src="assets/images/products/product-10.jpg" alt="Image">
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-6">
-                                    <div class="product-content">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                            High Quality Carbon Steel Multifunctional Hammer
-                                        </a>
-
-                                        <span class="in-stock">In Stock</span>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <div id="timers">
-                                            <div id="days-p"></div>
-                                            <div id="hours-p"></div>
-                                            <div id="minutes-p"></div>
-                                            <div id="seconds-p"></div>
-                                        </div>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="single-products deals-products">
-                            <div class="row align-items-center">
-                                <div class="col-xl-6">
-                                    <div class="product-img">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                            <img src="assets/images/products/product-10.jpg" alt="Image">
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-6">
-                                    <div class="product-content">
-                                        <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                            High Quality Carbon Steel Multifunctional Hammer
-                                        </a>
-
-                                        <span class="in-stock">In Stock</span>
-
-                                        <ul class="products-rating">
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <i class="ri-star-fill"></i>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    (10 Review)
-                                                </a>
-                                            </li>
-                                        </ul>
-
-                                        <ul class="products-price">
-                                            <li>
-                                                $29.00
-                                                <del>$50.00</del>
-                                            </li>
-                                        </ul>
-
-                                        <div id="timerss">
-                                            <div id="days-pp"></div>
-                                            <div id="hours-pp"></div>
-                                            <div id="minutes-pp"></div>
-                                            <div id="seconds-pp"></div>
-                                        </div>
-
-                                        <ul class="products-cart-wish-view">
-                                            <li>
-                                                <a href="#" class="default-btn">
-                                                    <i class="ri-shopping-cart-line"></i>
-                                                    Add To Cart
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
@@ -786,9 +630,9 @@
         
                                         <ul class="products-price">
                                             <li>
-                                                {{ $article->prix }}
+                                                {{ $article->prix }} FCFA
                                                 @if($article->old_price)
-                                                    <del>${{ $article->old_price }}</del>
+                                                    <del>{{ $article->old_price }} FCFA</del>
                                                 @endif
                                             </li>
                                         </ul>
@@ -1610,11 +1454,11 @@
                                     </div>
             
                                     <div class="price">
-                                        <span class="new-price">${{ $article->price }}</span>
+                                        <span class="new-price">{{ $article->price }} FCFA</span>
                                         @if($article->old_price)
-                                            <del>${{ $article->old_price }}</del>
+                                            <del>{{ $article->old_price }} FCFA</del>
                                         @endif
-                                        <span class="in-stock">In Stock (8 Items)</span>
+                                        {{-- <span class="in-stock">In Stock (8 Items)</span> --}}
                                     </div>
             
                                     <!-- Ajoutez d'autres informations sur le produit ici -->

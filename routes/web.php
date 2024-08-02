@@ -39,9 +39,7 @@ Route::get('/article', [WebsiteController::class, 'articles'])->name('articles.s
 Route::post('/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
-
 Route::post('/contact', [WebsiteController::class, 'sendMail'])->name('contact.send');
-
 
 Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
 // Route::prefix('administration')->group(function () {
@@ -54,11 +52,9 @@ Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->gro
 
 });
 
-
 Route::middleware('auth')->group(function () {
     Route::post('/wishlist', [WishController::class, 'store'])->name('wishlist.store');
     Route::delete('/wishlist/{id}', [WishController::class, 'destroy'])->name('wishlist.destroy');
-
 
     Route::post('/cart', [CartController::class, 'store'])->name('cart.store');
     Route::delete('/cart/{item}', [CartController::class, 'destroy'])->name('cart.destroy');
@@ -72,10 +68,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/orders', [UserController::class, 'orders'])->name('user.orders');
         Route::get('/orders-details', [UserController::class, 'ordersDetails'])->name('user.orders-details');
         Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-        //Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     });
-
-    
 
 });

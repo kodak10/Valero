@@ -415,340 +415,84 @@
 				<div class="section-title">
 					<h2>Produits associés</h2>
 				</div>
-
+		
 				<div class="best-product-slider owl-carousel owl-theme">
-					<div class="single-products">
-						<div class="product-img">
-							<a href="#">
-								<img src="assets/images/products/product-1.jpg" alt="Image">
-							</a>
+					@forelse ($associatedProducts as $product)
+						<div class="single-products">
+							<div class="product-img">
+								<a href="#">
+									<img src="{{ asset('images/articles/' . $product->images[0]) }}" alt="Image">
+								</a>
+							</div>
+		
+							<div class="product-content">
+								<a href="#" class="title">
+									{{ $product->nom }}
+								</a>
+		
+								<ul class="products-rating">
+									@for ($i = 0; $i < 5; $i++)
+										<li>
+											<i class="ri-star-fill"></i>
+										</li>
+									@endfor
+									<li>
+										<a href="#">
+											({{ $product->reviewsCount() }} Avis)
+										</a>
+									</li>
+								</ul>
+		
+								<ul class="products-price">
+									<li>
+										{{ number_format($product->prix, 2) }} FCFA
+										{{-- <del>${{ number_format($product->prix + 50, 2) }}</del> <!-- Juste un exemple pour l'ancien prix --> --}}
+									</li>
+									{{-- <li>
+										<span>In Stock</span>
+									</li> --}}
+								</ul>
+		
+								<ul class="products-cart-wish-view">
+									<li>
+										<form action="{{ route('cart.store') }}" method="POST">
+											@csrf
+											<input type="hidden" name="article_id" value="{{ $article->id }}">
+											<button type="submit" class="default-btn">
+												<i class="ri-shopping-cart-line"></i>
+												Ajouter au panier
+											</button>
+										</form>
+									</li>
+
+									<li>
+										<form action="{{ route('wishlist.store') }}" method="POST">
+											@csrf
+											<input type="hidden" name="article_id" value="{{ $article->id }}">
+											<button type="submit" class="wish-btn">
+												<i class="ri-heart-line"></i>
+											</button>
+										</form>
+									</li>
+									<li>
+										<button class="eye-btn">
+											<a href="{{ route('article.details', ['id' => $article->id]) }}">
+												<i class="ri-eye-line"></i>
+											</a>
+											
+											
+										</button>
+									</li>
+								</ul>
+							</div>
 						</div>
-
-						<div class="product-content">
-							<a href="#" class="title">
-								Cordless Drill Professional Combo Drill And Screwdriver
-							</a>
-
-							<ul class="products-rating">
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<a href="#">
-										(03 Review)
-									</a>
-								</li>
-							</ul>
-
-							<ul class="products-price">
-								<li>
-									$119.00
-									<Del>$219.00</Del>
-								</li>
-								<li>
-									<span>In Stock</span>
-								</li>
-							</ul>
-
-							<ul class="products-cart-wish-view">
-								<li>
-									<a href="shopping-cart.html" class="default-btn">
-										<i class="ri-shopping-cart-line"></i>
-										Add To Cart
-									</a>
-								</li>
-								<li>
-									<a href="wishlist.html" class="wish-btn">
-										<i class="ri-heart-line"></i>
-									</a>
-								</li>
-								<li>
-									<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="ri-eye-line"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="single-products">
-						<div class="product-img">
-							<a href="#">
-								<img src="assets/images/products/product-2.jpg" alt="Image">
-							</a>
-						</div>
-
-						<div class="product-content">
-							<a href="#" class="title">
-								Professional Cordless Drill Power Tools Set Competitive Price
-							</a>
-
-							<ul class="products-rating">
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<a href="#">
-										(03 Review)
-									</a>
-								</li>
-							</ul>
-
-							<ul class="products-price">
-								<li>
-									$130.00
-									<Del>$250.00</Del>
-								</li>
-								<li>
-									<span>In Stock</span>
-								</li>
-							</ul>
-
-							<ul class="products-cart-wish-view">
-								<li>
-									<a href="shopping-cart.html" class="default-btn">
-										<i class="ri-shopping-cart-line"></i>
-										Add To Cart
-									</a>
-								</li>
-								<li>
-									<a href="wishlist.html" class="wish-btn">
-										<i class="ri-heart-line"></i>
-									</a>
-								</li>
-								<li>
-									<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="ri-eye-line"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="single-products">
-						<div class="product-img">
-							<a href="#">
-								<img src="assets/images/products/product-3.jpg" alt="Image">
-							</a>
-						</div>
-
-						<div class="product-content">
-							<a href="#" class="title">
-								DFMALB 20V Max XX Oscillating Multi Tool Variable Speed Tool
-							</a>
-
-							<ul class="products-rating">
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<a href="#">
-										(03 Review)
-									</a>
-								</li>
-							</ul>
-
-							<ul class="products-price">
-								<li>
-									$150.00
-									<Del>$200.00</Del>
-								</li>
-								<li>
-									<span>In Stock</span>
-								</li>
-							</ul>
-
-							<ul class="products-cart-wish-view">
-								<li>
-									<a href="shopping-cart.html" class="default-btn">
-										<i class="ri-shopping-cart-line"></i>
-										Add To Cart
-									</a>
-								</li>
-								<li>
-									<a href="wishlist.html" class="wish-btn">
-										<i class="ri-heart-line"></i>
-									</a>
-								</li>
-								<li>
-									<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="ri-eye-line"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="single-products">
-						<div class="product-img">
-							<a href="#">
-								<img src="assets/images/products/product-4.jpg" alt="Image">
-							</a>
-						</div>
-
-						<div class="product-content">
-							<a href="#" class="title">
-								Power Tools Set Chinese Manufacturer Production 50V 
-							</a>
-
-							<ul class="products-rating">
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<a href="#">
-										(03 Review)
-									</a>
-								</li>
-							</ul>
-
-							<ul class="products-price">
-								<li>
-									$111.00
-									<Del>$222.00</Del>
-								</li>
-								<li>
-									<span>In Stock</span>
-								</li>
-							</ul>
-
-							<ul class="products-cart-wish-view">
-								<li>
-									<a href="shopping-cart.html" class="default-btn">
-										<i class="ri-shopping-cart-line"></i>
-										Add To Cart
-									</a>
-								</li>
-								<li>
-									<a href="wishlist.html" class="wish-btn">
-										<i class="ri-heart-line"></i>
-									</a>
-								</li>
-								<li>
-									<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="ri-eye-line"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="single-products">
-						<div class="product-img">
-							<a href="#">
-								<img src="assets/images/products/product-5.jpg" alt="Image">
-							</a>
-						</div>
-
-						<div class="product-content">
-							<a href="#" class="title">
-								Professional Cordless Drill Power Tools Set Competitive Price
-							</a>
-
-							<ul class="products-rating">
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<i class="ri-star-fill"></i>
-								</li>
-								<li>
-									<a href="#">
-										(03 Review)
-									</a>
-								</li>
-							</ul>
-
-							<ul class="products-price">
-								<li>
-									$222.00
-									<Del>$250.00</Del>
-								</li>
-								<li>
-									<span>In Stock</span>
-								</li>
-							</ul>
-
-							<ul class="products-cart-wish-view">
-								<li>
-									<a href="shopping-cart.html" class="default-btn">
-										<i class="ri-shopping-cart-line"></i>
-										Add To Cart
-									</a>
-								</li>
-								<li>
-									<a href="wishlist.html" class="wish-btn">
-										<i class="ri-heart-line"></i>
-									</a>
-								</li>
-								<li>
-									<button class="eye-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-										<i class="ri-eye-line"></i>
-									</button>
-								</li>
-							</ul>
-						</div>
-					</div>
+					@empty
+						<p>Aucun produit associé disponible.</p>
+					@endforelse
 				</div>
 			</div>
 		</section>
+		
 		<!-- End Related Products Area -->
 
 	

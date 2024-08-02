@@ -17,11 +17,6 @@ class Article extends Model
         // 'couleurs' => 'array',
     ];
 
-    // public function category()
-    // {
-    //     return $this->belongsTo(Category::class);
-    // }
-
     // Relation avec la catégorie
     public function categorie()
     {
@@ -48,5 +43,16 @@ public function reviewsCount()
 {
     return $this->comments()->count();
 }
+
+public function flashSales()
+    {
+        return $this->hasMany(FlashSale::class);
+    }
+
+    // Relation pour les produits associés
+    public function associatedProducts()
+    {
+        return $this->belongsToMany(Article::class, 'associated_products', 'article_id', 'associated_article_id');
+    }
 
 }

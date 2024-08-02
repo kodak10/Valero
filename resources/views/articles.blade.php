@@ -157,7 +157,7 @@
 
                                     <ul class="products-price">
                                         <li>
-                                            {{$trendingArticle->prix}}
+                                            {{$trendingArticle->prix}} FCFA
                                         </li>
 
                                     </ul>
@@ -274,7 +274,7 @@
 
                                     <ul class="products-price">
                                         <li>
-                                            {{$article->prix}}
+                                            {{$article->prix}} FCFA
                                         </li>
                                         <li>
                                             @if ($article->second_mains == false)
