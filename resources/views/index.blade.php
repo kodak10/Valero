@@ -211,7 +211,7 @@
                     <h2>Tendances</h2>
                 </div>
 
-                <ul class="trending-product-list">
+                {{-- <ul class="trending-product-list">
                    @foreach ($trendingArticles as $trendingArticle)
                    <li class="single-list">
                     <img src="{{ asset('images/articles/' . $trendingArticle->couverture) }}" style="height: 100px !important" alt="Image">
@@ -249,7 +249,7 @@
                    @endforeach
 
                     
-                </ul>
+                </ul> --}}
             </div>
 
             <div class="col-lg-9">
@@ -277,7 +277,7 @@
                                         {{$article->nom}}
                                     </a>
 
-                                    <ul class="products-rating">
+                                    {{-- <ul class="products-rating">
                                         @php
                                             $averageRating = $trendingArticle->averageRating();
                                         @endphp
@@ -291,7 +291,7 @@
                                                 ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
                                             </a>
                                         </li>
-                                    </ul>
+                                    </ul> --}}
 
                                     <ul class="products-price">
                                         <li>
@@ -365,7 +365,7 @@
                         {{$article->nom}}
                     </a>
 
-                    <ul class="products-rating">
+                    {{-- <ul class="products-rating">
                         @php
                             $averageRating = $trendingArticle->averageRating();
                         @endphp
@@ -379,7 +379,7 @@
                                 ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
                             </a>
                         </li>
-                    </ul>
+                    </ul> --}}
 
                     <ul class="products-price">
                         <li>
@@ -507,7 +507,7 @@
                                                 {{ $flashSale->article->name }}
                                             </a>
             
-                                            <ul class="products-rating">
+                                            {{-- <ul class="products-rating">
                                                 @php
                                                     $averageRating = $trendingArticle->averageRating();
                                                 @endphp
@@ -521,7 +521,7 @@
                                                         ({{ $trendingArticle->reviewsCount() }} {{ Str::plural('avis', $trendingArticle->reviewsCount()) }})
                                                     </a>
                                                 </li>
-                                            </ul>
+                                            </ul> --}}
             
                                             <ul class="products-price">
                                                 <li>{{ $flashSale->discount_price }} FCFA<del>{{ $flashSale->article->price }} FCFA</del></li>
