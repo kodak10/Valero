@@ -12,7 +12,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\CommentController;
 
 use App\Http\Controllers\ImageSearchController;
-
+use App\Http\Controllers\OrderController;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('index');
 Route::get('/contact', [WebsiteController::class, 'contact']);
@@ -43,6 +43,25 @@ Route::delete('/comments/{id}', [CommentController::class, 'destroy'])->name('co
 
 Route::post('/contact', [WebsiteController::class, 'sendMail'])->name('contact.send');
 
+
+
+//new
+Route::get('/panier', [WebsiteController::class, 'cart'])->name('panier');
+
+Route::post('/add-to-cart', [WebsiteController::class, 'addToCart'])->name('addToCart');
+Route::post('/update-cart', [WebsiteController::class, 'updateCart'])->name('updateCart');
+Route::delete('/remove-from-cart/{product_id}', [WebsiteController::class, 'removeFromCart'])->name('removeFromCart');
+// Route::get('/clear-cart', [WebsiteController::class, 'clearCart'])->name('clearCart');
+Route::post('/clear-cart', [WebsiteController::class, 'clearCart'])->name('clearCart');
+Route::get('/get-cart-count', [WebsiteController::class, 'getCartCount']);
+
+
+
+Route::get('/checkout', [WebsiteController::class, 'checkout'])->name('checkout');
+Route::post('/commander', [OrderController::class, 'store'])->name('order.store');
+
+
+Route::get('/order-success/{orderId}', [OrderController::class, 'success'])->name('order.success');
 
 
 // Route::get('/image-search', [ImageSearchController::class, 'showForm'])->name('image.form');

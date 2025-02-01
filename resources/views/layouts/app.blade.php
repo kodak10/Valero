@@ -291,10 +291,14 @@
                             </ul>
                             
 
-                            <ul class="cart-check-btn">
-                                
+                            <ul class="cart-check-btn justify-content-between">
                                 <li class="checkout">
-                                    <a href="#" class="default-btn">
+                                    <a href="panier" class="default-btn">
+                                        Mon Panier
+                                    </a>
+                                </li>
+                                <li class="checkout">
+                                    <a href="/checkout" class="default-btn">
                                         Payer
                                     </a>
                                 </li>

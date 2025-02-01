@@ -55,4 +55,9 @@ public function flashSales()
         return $this->belongsToMany(Article::class, 'associated_products', 'article_id', 'associated_article_id');
     }
 
+    public function orderDetails()
+    {
+        return $this->hasMany(OrderDetail::class);
+    }
+
 }
