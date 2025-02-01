@@ -1,10 +1,6 @@
 @extends('layouts.app')
 @section('content')
 
-
-
-
-
 <!-- Start Hero Slider Area -->
 <section class="hero-slider-area hero-slider-area-style-two">
     <div class="hero-slider-two owl-carousel owl-theme">
@@ -91,7 +87,7 @@
             <div class="col-lg-2 col-sm-6 col-md-4">
                 <div class="single-popular-categories">
                     <a href="{{ route('articles.filter', ['categorie_id' => $categorie->id]) }}">
-                        <img src="{{ asset('images/articles/couvertures/' . $categorie->couverture) }}" alt="Image">
+                        <img src="{{ $categorie->images }}" alt="Image">
                         <span>{{$categorie->nom}}</span> 
                     </a>
                 </div>
@@ -132,7 +128,7 @@
                         <div class="single-products">
                             <div class="product-img">
                                 <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
+                                                        <img src="{{ $article->images }}" style="height: 150px !important" alt="Image">
                                 </a>
                             </div>
                     

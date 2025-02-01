@@ -140,6 +140,52 @@
             
 
 		</style>
+
+        <style>
+          /* Styles de base pour la barre de navigation */
+.sticky-footer {
+    position: fixed;
+    bottom: -100px; /* Caché par défaut */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    transition: bottom 0.3s ease;
+    z-index: 1000;
+}
+
+.sticky-footer.visible {
+    bottom: 0; /* Afficher la barre de navigation */
+}
+
+.sticky-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #666;
+    text-decoration: none;
+}
+
+.sticky-link i {
+    font-size: 1.5rem;
+}
+
+.sticky-link p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Masquer la barre de navigation sur les écrans larges */
+@media (min-width: 769px) {
+    .sticky-footer {
+        display: none; /* Désactive la barre de navigation sur les grands écrans */
+    }
+}
+        </style>
     </head>
 
     <body>
@@ -158,48 +204,14 @@
         @include('layouts.footer')
 
 
-        <!-- Start of Sticky Footer -->
-    <div class="sticky-footer sticky-content fix-bottom" style="height: 70px">
-        <a href="/l" class="sticky-link active">
-            <i class="w-icon-home"></i>
-            <p>Accueil</p>
-        </a>
-        <a href="/magasin" class="sticky-link">
-            <i class="w-icon-category"></i>
-            <p>Magasin</p>
-        </a>
-        <a href="/home" class="sticky-link">
-            <i class="w-icon-account"></i>
-            <p>Mon Compte</p>
-        </a>
-        <a href="/panier" class="sticky-link">
-            <i class="w-icon-account"></i>
-            <p>Mon Panier</p>
-        </a>
        
-
-        <div class="header-search hs-toggle dir-up">
-            <a href="#" class="search-toggle sticky-link">
-                <i class="w-icon-search"></i>
-                <p>Rechercher</p>
-            </a>
-            <form method="get" action="" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
-                
-                <input type="text" class="form-control" name="search" id="search" placeholder="Tapez ici..." value="{{ request('search') }}" />
-                {{-- <input type="text" class="form-control" name="search" autocomplete="off" placeholder="Rechercher" --}}
-                    required />
-                <button class="btn btn-search" type="submit">
-                    <i class="w-icon-search"></i>
-                </button>
-            </form>
-        </div>
-    </div>
-    <!-- End of Sticky Footer -->
 
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
 			<i class="ri-arrow-up-s-fill"></i>
 		</div>
+
+
 
 
 
@@ -332,6 +344,25 @@
                 </div>
             </div>
         </div>
+
+        <div class="sticky-footer" id="sticky-footer">
+            <a href="#" class="sticky-link">
+                <i class="ri-home-line"></i>
+                <p>Accueil</p>
+            </a>
+            <a href="#" class="sticky-link">
+                <i class="ri-store-line"></i>
+                <p>Shop</p>
+            </a>
+            <a href="#" class="sticky-link">
+                <i class="ri-user-line"></i>
+                <p>Compte</p>
+            </a>
+            <a href="#" class="sticky-link">
+                <i class="ri-search-line"></i>
+                <p>Recherche</p>
+            </a>
+        </div>
 		
 		<!-- End Go Top Area -->
 
@@ -376,5 +407,21 @@
 
 
 		</script>
+
+        <script>
+           document.addEventListener('DOMContentLoaded', function() {
+    const stickyFooter = document.getElementById('sticky-footer');
+    const scrollHeight = 200; // Hauteur de défilement à partir de laquelle la barre de navigation doit apparaître
+
+    window.addEventListener('scroll', function() {
+        // Vérifiez si l'écran est en mode mobile (largeur <= 768px)
+        if (window.innerWidth <= 768 && window.scrollY > scrollHeight) {
+            stickyFooter.classList.add('visible');
+        } else {
+            stickyFooter.classList.remove('visible');
+        }
+    });
+});
+        </script>
     </body>
 </html>

@@ -23,7 +23,7 @@ class CategoriesController extends Controller
     {
         $request->validate([
             'nom' => 'required|string|max:255',
-            'couverture' => 'required|image|mimes:jpg,png,jpeg|max:2048',
+            'couverture' => 'image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
         // Enregistrez la catégorie
