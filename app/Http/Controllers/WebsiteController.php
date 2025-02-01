@@ -1,22 +1,23 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Mail\ContactMail;
-
-use Alimranahmed\LaraOCR\Facades\LaraOCR;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
-
-use App\Models\Comment;
-
-use App\Models\Category;
 use App\Models\Article;
 use App\Models\ArticleClick;
+
+use App\Models\Category;
+
+use App\Models\Comment;
 use App\Models\FlashSale;
+use App\Services\TrendingArticleService;
+use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\DB;
-use App\Services\TrendingArticleService;
+use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request as FacadesRequest;
+use thiagoalessio\TesseractOCR\TesseractOCR;
 
 
 
@@ -198,36 +199,110 @@ class WebsiteController extends Controller
         return view('administrateur/home');
     }
 
-    public function searchByImage(Request $request)
+
+    public function importImage(Request $request)
     {
-        // Valider que l'image a été correctement téléchargée
+        $allCategories = Category::all();
+
+        $trendingArticles = $this->trendingArticleService->getTrendingArticles();
+
+        $countNouveau = Article::where('second_mains', 0)->count();
+        $countOccasion = Article::where('second_mains', 1)->count();
+
+        $articlesSecondMains = Article::where('second_mains', true)->get();
+
         $request->validate([
-            'image' => 'required|image',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-    
-        // Récupérer le fichier image téléchargé
-        $image = $request->file('image');
-    
-        // Générer un nom de fichier unique pour l'image
-        $fileName = uniqid('image_') . '.' . $image->getClientOriginalExtension();
-        
-        // Déplacer l'image vers le répertoire public/images/search avec un nom de fichier unique
-        $image->move(public_path('images/search'), $fileName);
-    
-        // Chemin complet vers l'image enregistrée
-        $imageFullPath = public_path('images/search/' . $fileName);
-    
-        // Utilisation de LaraOCR pour extraire le texte de l'image
-        $text = LaraOCR::scan($imageFullPath);
-    
-        // Recherche des articles basée sur le texte extrait
-        $articles = Article::where('nom', 'like', '%' . $text . '%')
-            ->orWhere('description', 'like', '%' . $text . '%')
-            ->get();
-    
-        // Retourner la vue avec les articles trouvés
-        return view('search-results', compact('articles'));
+
+        // Sauvegarder l'image temporairement
+        $imagePath = $request->file('image')->store('temp');
+        $imageContent = file_get_contents(storage_path('app/' . $imagePath));
+
+        // Envoyer l'image à l'API OCR.Space
+        $response = Http::attach(
+            'file', $imageContent, 'image.jpg'
+        )->post('https://api.ocr.space/parse/image', [
+            'apikey' => 'K82989655488957', // Remplacez par votre clé API OCR.Space
+            'language' => 'fre', // Langue française
+        ]);
+
+        $result = $response->json();
+
+        // Vérifier si l'OCR a réussi
+        if (!isset($result['ParsedResults'][0]['ParsedText'])) {
+            return redirect()->back()->with('error', 'Erreur lors de l\'extraction du texte.');
+        }
+
+        // Récupérer le texte extrait
+        $text = $result['ParsedResults'][0]['ParsedText'];
+
+        // Traiter le texte extrait (par exemple, le diviser en lignes)
+        $lines = explode("\n", $text);
+
+        // Rechercher les articles correspondants dans la base de données
+        $results = [];
+        $resultsCount = 0; // Initialiser le compteur de résultats
+        foreach ($lines as $line) {
+            // Nettoyer la ligne (supprimer les espaces inutiles)
+            $searchTerm = trim($line);
+
+            // Ignorer les lignes vides
+            if (empty($searchTerm)) {
+                continue;
+            }
+
+            // Rechercher les articles dont le nom, surnoms ou description correspondent au terme de recherche
+            $articles = Article::where('nom', 'LIKE', "%{$searchTerm}%")
+                ->orWhere('surnoms', 'LIKE', "%{$searchTerm}%")
+                ->orWhere('description', 'LIKE', "%{$searchTerm}%")
+                ->paginate(10); 
+
+
+            // Ajouter les résultats à la liste
+            if ($articles->isNotEmpty()) {
+                $results[$searchTerm] = $articles;
+                $resultsCount += $articles->count(); // Compter le nombre total d'articles trouvés
+            }
+        }
+
+        // Nombre total de produits dans la base de données
+        $nbrArticle = Article::count();
+
+        // Passer les résultats à la vue
+        return view('search-results', compact('results', 'allCategories', 'resultsCount', 'nbrArticle', 'trendingArticles', 'countNouveau', 'countOccasion', 'articlesSecondMains'));
     }
+
+    // public function searchByImage(Request $request)
+    // {
+    //     // Valider que l'image a été correctement téléchargée
+    //     $request->validate([
+    //         'image' => 'required|image',
+    //     ]);
+    
+    //     // Récupérer le fichier image téléchargé
+    //     $image = $request->file('image');
+    
+    //     // Générer un nom de fichier unique pour l'image
+    //     $fileName = uniqid('image_') . '.' . $image->getClientOriginalExtension();
+        
+    //     // Déplacer l'image vers le répertoire public/images/search avec un nom de fichier unique
+    //     $image->move(public_path('images/search'), $fileName);
+    
+    //     // Chemin complet vers l'image enregistrée
+    //     $imageFullPath = public_path('images/search/' . $fileName);
+    
+    //     // Utilisation de LaraOCR pour extraire le texte de l'image
+    //     $text = LaraOCR::scan($imageFullPath);
+    
+    //     // Recherche des articles basée sur le texte extrait
+    //     $articles = Article::where('nom', 'like', '%' . $text . '%')
+    //         ->orWhere('description', 'like', '%' . $text . '%')
+    //         ->get();
+    
+    //     // Retourner la vue avec les articles trouvés
+    //     return view('search-results', compact('articles'));
+    // }
     
     public function images()
     {

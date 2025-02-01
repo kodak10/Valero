@@ -23,7 +23,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 Route::post('/register', [UserController::class, 'store'])->name('register.store');
 
 
-Route::post('/', [WebsiteController::class, 'searchByImage'])->name('searchImage');
+Route::post('/', [WebsiteController::class, 'importImage'])->name('searchImage');
 Route::get('/contact', [WebsiteController::class, 'contact']);
 
 Route::get('/images', [WebsiteController::class, 'images']);
@@ -45,8 +45,8 @@ Route::post('/contact', [WebsiteController::class, 'sendMail'])->name('contact.s
 
 
 
-Route::get('/image-search', [ImageSearchController::class, 'showForm'])->name('image.form');
-Route::post('/image-search', [ImageSearchController::class, 'search'])->name('image.search');
+// Route::get('/image-search', [ImageSearchController::class, 'showForm'])->name('image.form');
+// Route::post('/image-search', [ImageSearchController::class, 'search'])->name('image.search');
 
 
 Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {

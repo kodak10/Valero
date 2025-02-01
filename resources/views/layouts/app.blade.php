@@ -53,6 +53,92 @@
                 right: 112px;
             }
 
+
+            .sticky-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 4rem;
+  background: #fff;
+}
+.sticky-footer > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.sticky-footer .cart-dropdown {
+  position: relative;
+}
+.sticky-footer .cart-dropdown .dropdown-box {
+  top: auto;
+  bottom: 100%;
+  right: 0;
+  min-width: 34rem;
+  padding: 2rem 3rem 3rem;
+  margin-bottom: 2.1rem;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+  transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+  transition: transform 0.3s, opacity 0.3s, visibility 0.3s, -webkit-transform 0.3s;
+}
+.sticky-footer .cart-dropdown:hover .dropdown-box {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.sticky-footer .products {
+  border: none;
+}
+.sticky-footer .product-name a {
+  padding: 0;
+}
+.sticky-footer .cart-total {
+  padding-top: 1rem;
+}
+
+.sticky-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #666;
+  margin: 1.4rem 0 1.3rem;
+}
+.sticky-link i, .cart-dropdown .sticky-link i {
+  font-size: 2.3rem;
+  color: #666;
+}
+.sticky-link p {
+  margin-top: 0.9rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 1;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+}
+.sticky-link.search-toggle p {
+  margin-top: 1rem;
+}
+.sticky-link:hover {
+  color: #2266cc;
+}
+.sticky-link:hover i {
+  color: inherit;
+}
+            
+
 		</style>
     </head>
 
@@ -72,10 +158,50 @@
         @include('layouts.footer')
 
 
+        <!-- Start of Sticky Footer -->
+    <div class="sticky-footer sticky-content fix-bottom" style="height: 70px">
+        <a href="/l" class="sticky-link active">
+            <i class="w-icon-home"></i>
+            <p>Accueil</p>
+        </a>
+        <a href="/magasin" class="sticky-link">
+            <i class="w-icon-category"></i>
+            <p>Magasin</p>
+        </a>
+        <a href="/home" class="sticky-link">
+            <i class="w-icon-account"></i>
+            <p>Mon Compte</p>
+        </a>
+        <a href="/panier" class="sticky-link">
+            <i class="w-icon-account"></i>
+            <p>Mon Panier</p>
+        </a>
+       
+
+        <div class="header-search hs-toggle dir-up">
+            <a href="#" class="search-toggle sticky-link">
+                <i class="w-icon-search"></i>
+                <p>Rechercher</p>
+            </a>
+            <form method="get" action="" class="input-wrapper header-search hs-expanded hs-round d-none d-md-flex">
+                
+                <input type="text" class="form-control" name="search" id="search" placeholder="Tapez ici..." value="{{ request('search') }}" />
+                {{-- <input type="text" class="form-control" name="search" autocomplete="off" placeholder="Rechercher" --}}
+                    required />
+                <button class="btn btn-search" type="submit">
+                    <i class="w-icon-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- End of Sticky Footer -->
+
 		<div class="go-top">
 			<i class="ri-arrow-up-s-fill"></i>
 			<i class="ri-arrow-up-s-fill"></i>
 		</div>
+
+
 
 		<div class="camera-container">
 			<button class="eye-btn" style="background-color: transparent !important" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -93,7 +219,7 @@
                         </button>
 					</div>
 					<div class="modal-body">
-                        <form action="{{ route('image.search') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('searchImage') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
                                 <label for="image">Choisir une image</label>
@@ -107,103 +233,105 @@
 		</div>
 
 
+        
+
 		<!-- Modal-->
 
-		
-<div class="modal fade cart-shit" id="exampleModal-cart" tabindex="-1" aria-hidden="true">
-    <div class="cart-shit-wrap">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close-btn" data-bs-dismiss="modal">
-                        <i class="ri-close-fill"></i>
-                    </button>
-                </div>
+            
+        <div class="modal fade cart-shit" id="exampleModal-cart" tabindex="-1" aria-hidden="true">
+            <div class="cart-shit-wrap">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close-btn" data-bs-dismiss="modal">
+                                <i class="ri-close-fill"></i>
+                            </button>
+                        </div>
 
-                <div class="modal-body">
-                    <ul class="cart-list">
-                        @foreach(session('cart', []) as $id => $details)
+                        <div class="modal-body">
+                            <ul class="cart-list">
+                                @foreach(session('cart', []) as $id => $details)
+                                    <li>
+                                        <img src="{{ asset('images/articles/' . $details['photo']) }}" style="height: 60px !important; width:60px !important" alt="Image">
+                                        
+                                        <a href="{{ route('article.details', ['id' => $id]) }}">
+                                            {{ $details['name'] }}
+                                        </a>
+                                    
+
+                                        <span>{{ $details['price'] }} FCFA</span>
+                                        <form action="{{ route('cart.destroy', $id) }}" method="POST">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="ri-close-fill"></button>
+                                        </form>
+                                    </li>
+                                @endforeach
+                            </ul>
+                            
+                            <ul class="payable">
+                                <li>
+                                    Total
+                                </li>
+                                <li class="total">
+                                    <span>{{ array_sum(array_column(session('cart', []), 'price')) }} FCFA</span>
+                                </li>
+                            </ul>
+                            
+
+                            <ul class="cart-check-btn">
+                                
+                                <li class="checkout">
+                                    <a href="#" class="default-btn">
+                                        Payer
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal pour les souhaits -->
+        <div class="modal fade" id="exampleModal-wishlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Mes Souhaits</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        @if(!empty(session('wishlist')) && count(session('wishlist')) > 0)
+                        <ul class="wishlist-list">
+                            @foreach(session('wishlist') as $id => $details)
                             <li>
                                 <img src="{{ asset('images/articles/' . $details['photo']) }}" style="height: 60px !important; width:60px !important" alt="Image">
-                                
+
+
                                 <a href="{{ route('article.details', ['id' => $id]) }}">
                                     {{ $details['name'] }}
                                 </a>
-                               
-
                                 <span>{{ $details['price'] }} FCFA</span>
-                                <form action="{{ route('cart.destroy', $id) }}" method="POST">
+                                <form action="{{ route('wishlist.destroy', $id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="ri-close-fill"></button>
                                 </form>
                             </li>
-                        @endforeach
-                    </ul>
-                    
-                    <ul class="payable">
-                        <li>
-                            Total
-                        </li>
-                        <li class="total">
-                            <span>{{ array_sum(array_column(session('cart', []), 'price')) }} FCFA</span>
-                        </li>
-                    </ul>
-                    
-
-                    <ul class="cart-check-btn">
-                        
-                        <li class="checkout">
-                            <a href="#" class="default-btn">
-                                Payer
-                            </a>
-                        </li>
-                    </ul>
+                            @endforeach
+                        </ul>
+                        @else
+                        <p>Votre liste de souhaits est vide.</p>
+                        @endif
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
-
-
-<!-- Modal pour les souhaits -->
-<div class="modal fade" id="exampleModal-wishlist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Mes Souhaits</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                @if(!empty(session('wishlist')) && count(session('wishlist')) > 0)
-                <ul class="wishlist-list">
-                    @foreach(session('wishlist') as $id => $details)
-                    <li>
-                        <img src="{{ asset('images/articles/' . $details['photo']) }}" style="height: 60px !important; width:60px !important" alt="Image">
-
-
-                        <a href="{{ route('article.details', ['id' => $id]) }}">
-                            {{ $details['name'] }}
-                        </a>
-                        <span>{{ $details['price'] }} FCFA</span>
-                        <form action="{{ route('wishlist.destroy', $id) }}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="ri-close-fill"></button>
-                        </form>
-                    </li>
-                    @endforeach
-                </ul>
-                @else
-                <p>Votre liste de souhaits est vide.</p>
-                @endif
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            </div>
-        </div>
-    </div>
-</div>
 		
 		<!-- End Go Top Area -->
 

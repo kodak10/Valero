@@ -12,7 +12,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-3">
+                <div class="col-lg-6 ">
                     <form action="{{ route('articles.searchText') }}" method="GET" class="search-box">
                         <input type="text" name="search" placeholder="Rechercher un article" class="form-control" value="{{ request()->input('search') }}">
 
@@ -24,8 +24,8 @@
                 </div>
                         
 
-                <div class="col-lg-6">
-                    <ul class="wish-cart">
+                <div class="col-lg-3 d-none d-md-block">
+                    <ul class="wish-cart d-flex">
 
                     @auth
                         <li>
@@ -33,8 +33,8 @@
                                 <span class="wish-icon">
                                     <i class="ri-dashboard-line"></i>
                                 </span>
-                                <span class="favorite">Mon Compte</span>
-                                Menu Général
+                                {{-- <span class="favorite">Mon Compte</span> --}}
+                                {{-- Menu Général --}}
                             </a>
                         </li>
                     @else
@@ -43,8 +43,8 @@
                             <span class="wish-icon">
                                 <i class="ri-user-add-line"></i>
                             </span>
-                            <span class="favorite">Mon Compte</span>
-                            S'inscrire / Connexion
+                            {{-- <span class="favorite">Mon Compte</span> --}}
+                            {{-- S'inscrire / Connexion --}}
                         </a>
                     </li>
                     @endauth
@@ -58,8 +58,8 @@
                                     <i class="ri-heart-line"></i>
                                     <span class="count">{{ count(session('wishlist', [])) }}</span>
                                 </span>
-                                <span class="favorite">Mes Favoris</span>
-                                Mes souhaits
+                                {{-- <span class="favorite">Mes Favoris</span> --}}
+                                {{-- Mes souhaits --}}
                             </a>
                         </li>
                         <li>
@@ -68,8 +68,8 @@
                                     <i class="ri-shopping-cart-line"></i>
                                     <span class="count">{{ count(session('cart', [])) }}</span>
                                 </span>
-                                <span class="favorite">Mon Panier</span>
-                                {{ array_sum(array_column(session('cart', []), 'price')) }} FCFA
+                                {{-- <span class="favorite">Mon Panier</span> --}}
+                                {{-- {{ array_sum(array_column(session('cart', []), 'price')) }} FCFA --}}
                             </span>
                         </li>
                     </ul>
@@ -285,6 +285,9 @@
             </div>
         </div>
     </div>
+
+   
+    
     <!-- End Navbar Area -->
 </header>
 <!-- End Header Area -->
