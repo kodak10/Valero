@@ -51,6 +51,8 @@
                                     <th class="product-price"><span>Prix</span></th>
                                     <th class="product-quantity"><span>Quantité</span></th>
                                     <th class="product-subtotal"><span>Sous-Total</span></th>
+                                    <th class="product-subtotal"><span>Couverture(200f)</span></th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -105,6 +107,9 @@
                                         </td>
                                         <td class="product-subtotal">
                                             <span class="amount">{{ number_format($details['price'] * $details['quantity'], 2) }} FCFA</span>
+                                        </td>
+                                        <td>
+                                            <input type="checkbox" name="" id="">
                                         </td>
                                     </tr>
                                 @endforeach

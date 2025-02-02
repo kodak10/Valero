@@ -28,6 +28,7 @@ class ArticleFactory extends Factory
             'description' => $this->faker->paragraph,
             'images' => $this->faker->imageUrl(),
             'second_mains' => $this->faker->boolean,
+            'status' => 'published',
         ];
     }
 }

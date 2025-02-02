@@ -13,16 +13,20 @@ return new class extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('categorie_id')->nullable()->constrained('categories'); // clé étrangère auto-référencée (si nécessaire)
-            $table->string('nom');
-            $table->string('surnoms')->nullable();
-            $table->decimal('prix', 10, 2); // Exemple de champ pour le prix
-            $table->string('couleurs')->nullable();
-            $table->string('taille_format')->nullable();
-            $table->integer('en_stock')->default(0);
+            $table->string('name');
             $table->text('description')->nullable();
-            $table->json('images')->nullable(); // Stockage JSON des chemins d'images
+            $table->decimal('price', 10, 2);
+            $table->enum('status', ['published', 'draft', 'inactive'])->default('published');
+            $table->decimal('quantite', 8, 2)->default(1);
+            $table->string('couverture')->default('images/default.jpg');
+            $table->string('slug')->unique();
             $table->boolean('second_mains')->default(false);
+
+            $table->boolean('is_promotion')->default(false);
+            $table->enum('promotion_type', ['none', 'percentage', 'fixed'])->default('none'); 
+            $table->decimal('promotion_value', 8, 2)->nullable(); 
+            $table->date('promotion_start')->nullable();
+            $table->date('promotion_end')->nullable();
 
             $table->timestamps();
         });

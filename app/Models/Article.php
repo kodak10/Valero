@@ -9,7 +9,22 @@ class Article extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'categorie_id', 'nom', 'surnoms', 'prix', 'taille_format', 'description', 'images','second_mains', 'couverture'
+        'name',
+        'slug', 
+        'description', 
+        'price', 
+        'quantite', 
+        'status', 
+        'discount_type', 
+        'discount_value', 
+        'couverture', 
+        'is_promotion',
+        'promotion_type',
+        'promotion_value',
+        'promotion_start',
+        'promotion_end',
+        'second_mains'
+
     ];
 
     protected $casts = [
@@ -17,11 +32,19 @@ class Article extends Model
         // 'couleurs' => 'array',
     ];
 
-    // Relation avec la catégorie
-    public function categorie()
+    public function categories()
     {
-        return $this->belongsTo(Category::class, 'categorie_id');
+        return $this->belongsToMany(Category::class, 'article_category', 'article_id', 'category_id');
     }
+
+    public function sousCategories()
+    {
+        return $this->belongsToMany(SousCategorie::class, 'article_sub_category', 'article_id', 'sub_category_id');
+    }
+
+
+
+
 
     public function wishes()
     {

@@ -22,13 +22,13 @@ class CategoriesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nom' => 'required|string|max:255',
+            'name_categorie' => 'required|string|max:255',
             'couverture' => 'image|mimes:jpg,png,jpeg|max:2048',
         ]);
 
         // Enregistrez la catégorie
         $category = new Category();
-        $category->nom = $request->nom;
+        $category->nom = $request->name_categorie;
         if ($request->hasFile('couverture')) {
             $fileName = time().'.'.$request->couverture->extension();
             $request->couverture->move(public_path('images/articles/couvertures'), $fileName);
@@ -36,7 +36,7 @@ class CategoriesController extends Controller
         }
         $category->save();
 
-        return redirect()->route('categories.create')->with('success', 'Catégorie ajoutée avec succès.');
+        return redirect()->route('admin.articles.create')->with('success', 'Catégorie ajoutée avec succès.');
     }
 
     public function edit(Category $category)

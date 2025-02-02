@@ -24,10 +24,24 @@
             <li class="nav-item">
               <a class="nav-link" data-bs-toggle="collapse" href="#two" aria-expanded="false" aria-controls="two">
                 <i class="menu-icon mdi mdi-floor-plan"></i>
-                <span class="menu-title">Gestion des Articles</span>
+                <span class="menu-title">Gestion des Sous Catégories</span>
                 <i class="menu-arrow"></i>
               </a>
               <div class="collapse" id="two">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="{{route('subcategories.index')}}">Liste </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="{{route('subcategories.create')}}">Ajouter</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" data-bs-toggle="collapse" href="#three" aria-expanded="false" aria-controls="three">
+                <i class="menu-icon mdi mdi-floor-plan"></i>
+                <span class="menu-title">Gestion des Articles</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="three">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="{{route('articles.index')}}">Liste </a></li>
                   <li class="nav-item"> <a class="nav-link" href="{{route('articles.create')}}">Ajouter</a></li>
@@ -37,12 +51,12 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" data-bs-toggle="collapse" href="#two" aria-expanded="false" aria-controls="two">
+              <a class="nav-link" data-bs-toggle="collapse" href="#four" aria-expanded="false" aria-controls="four">
                 <i class="menu-icon mdi mdi-floor-plan"></i>
                 <span class="menu-title">Marketing</span>
                 <i class="menu-arrow"></i>
               </a>
-              <div class="collapse" id="two">
+              <div class="collapse" id="four">
                 <ul class="nav flex-column sub-menu">
                   <li class="nav-item"> <a class="nav-link" href="#">Ventes Flash </a></li>
                 </ul>

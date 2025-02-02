@@ -16,9 +16,11 @@ class UserSeeder extends Seeder
             'name' => 'Atchin parfait',
             'email' => 'kodak@gmail.com',
             'password' => Hash::make('password'), // Utiliser Hash pour crypter le mot de passe
+            'role' => 'serviceClient',
+            'email_verified_at' => now(),
         ]);
 
         // Créer des utilisateurs aléatoires
-        User::factory()->count(10)->create();
+        //User::factory()->count(10)->create();
     }
 }

@@ -7,7 +7,7 @@
           </div>
           <div>
             <a class="navbar-brand brand-logo" href="/administration">
-              <img src="" alt="Valero Project" />
+              <img src="{{ asset('assets/images/logo-blue.jpg') }}" alt="Valero Project" style="height: 100px; width:100%"/>
             </a>
             <a class="navbar-brand brand-logo-mini" href="/administration">
               <img src="" alt="Valero Project" />

@@ -21,6 +21,14 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
+                                    <label for="categorie_id">Sous Catégories</label>
+                                    {{-- <select class="form-control" id="categorie_id" name="categorie_id">
+                                        @foreach($Souscategories as $Souscategorie)
+                                        <option value="{{ $Souscategorie->id }}">{{ $Souscategorie->name }}</option>
+                                        @endforeach
+                                    </select> --}}
+                                </div>
+                                <div class="form-group">
                                     <label for="nom">Nom</label>
                                     <input type="text" class="form-control" id="nom" name="nom" placeholder="Nom de l'article">
                                 </div>

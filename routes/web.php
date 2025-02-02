@@ -13,6 +13,7 @@ use App\Http\Controllers\CommentController;
 
 use App\Http\Controllers\ImageSearchController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\SousCategorie;
 
 Route::get('/', [WebsiteController::class, 'index'])->name('index');
 Route::get('/contact', [WebsiteController::class, 'contact']);
@@ -68,15 +69,13 @@ Route::get('/order-success/{orderId}', [OrderController::class, 'success'])->nam
 // Route::post('/image-search', [ImageSearchController::class, 'search'])->name('image.search');
 
 
-Route::prefix('administration')->middleware(['auth', 'role:serviceClient'])->group(function () {
-// Route::prefix('administration')->group(function () {
-    Route::get('/', [AdministrationController::class, 'index']);
-    
-    // route des categories
-    Route::resource('/categories', CategoriesController::class);
-    // route des articles
-    Route::resource('/articles', ArticlesController::class);
+Route::middleware(['auth', 'verified', 'role:serviceClient'])->prefix('admin')->name('admin.')->group(function () {
 
+    Route::get('/', [AdministrationController::class, 'index']);
+    Route::resource('/articles', ArticlesController::class);
+    Route::post('categories', [CategoriesController::class, 'store'])->name('categories.store');
+    Route::post('sousCategories', [SousCategorie::class, 'store'])->name('sousCategories.store');
+    
 });
 
 Route::middleware('auth')->group(function () {
