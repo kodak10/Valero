@@ -29,22 +29,23 @@
       <div class="card-body p-3">
         @if(session('success'))
             <div class="alert customize-alert alert-dismissible text-primary text-primary alert-light-primary bg-primary-subtle fade show remove-close-icon" role="alert">
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                <div class="d-flex align-items-center me-3 me-md-0">
-                    <i class="ti ti-info-circle fs-5 me-2 flex-shrink-0 text-primary"></i>
-                    {{ session('success') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    <div class="d-flex align-items-center me-3 me-md-0">
+                        <i class="ti ti-info-circle fs-5 me-2 flex-shrink-0 text-primary"></i>
+                        {{ session('success') }}
+                    </div>
                 </div>
-            </div>
         @endif
         @if ($errors->any())
-      <div class="alert alert-danger">
-          <ul>
-              @foreach ($errors->all() as $error)
-                  <li>{{ $error }}</li>
-              @endforeach
-          </ul>
-      </div>
-      @endif
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+    
         <div class="datatables">
             <!-- start File export -->
             <div class="card">

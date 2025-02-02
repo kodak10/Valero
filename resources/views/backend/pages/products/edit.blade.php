@@ -188,7 +188,7 @@
                 </div>
             </div> --}}
 
-            {{-- <div class="card">
+            <div class="card">
                 <div class="row">
                     <div class="col-lg-6">
                       <div class="card-body">
@@ -199,15 +199,17 @@
                   </div>
                   <div class="col-lg-6">
                     <div class="card-body">
-                      <label class="form-label mb-2">Limite de stock</label>
-                      <input type="number" class="form-control @error('limit_quantite') is-invalid @enderror" name="limit_quantite" value="{{ old('limit_quantite', floor($article->limit_quantite)) }}" min="1" max="100" step="1" required>
-    
+                      <label class="form-label mb-2">Second Mains ?</label>
+                      <select class="form-control" id="second_mains" name="second_mains">
+                        <option value="0" {{ old('second_mains', $article->second_mains) == "0" ? 'selected' : '' }}>Non</option>
+                        <option value="1" {{ old('second_mains', $article->second_mains) == "1" ? 'selected' : '' }}>Oui</option>
+                    </select>    
                   </div>
                   </div>
                 </div>
 
                 
-            </div> --}}
+            </div>
         </div>
 
         <div class="col-lg-4">
@@ -218,7 +220,7 @@
                         <select class="select2 form-control @error('categories') is-invalid @enderror" multiple="multiple" name="categories[]">
                             @foreach ($categories as $categorie)
                                 <option value="{{ $categorie->id }}" {{ in_array($categorie->id, old('categories', $article->categories->pluck('id')->toArray())) ? 'selected' : '' }}>
-                                    {{ $categorie->name }}
+                                    {{ $categorie->nom }}
                                 </option>
                             @endforeach
                         </select>
@@ -237,11 +239,11 @@
                         <select class="select2 form-control @error('tags') is-invalid @enderror" multiple="multiple" name="tags[]">
                             @foreach ($tags as $tag)
                                 <option value="{{ $tag->id }}" 
-                                    @if(in_array($tag->id, old('tags', $article->tags->pluck('id')->toArray())))
+                                    @if(in_array($tag->id, old('tags', $article->sousCategories->pluck('id')->toArray())))
                                         selected
                                     @endif
                                 >
-                                    {{ $tag->tag_name }}
+                                    {{ $tag->name }}
                                 </option>
                             @endforeach
                         </select>
@@ -320,40 +322,40 @@
             </div>
             
             <!-- Afficher les images existantes -->
-            @if($images->isNotEmpty())
-    <div class="card mt-4">
-        <div class="card-body">
-            <label class="form-label mb-2">Images existantes</label>
-            <div class="row">
-                @foreach($images as $image)
-                    <div class="col-md-4 mb-3">
-                        <div class="image-container" style="position: relative; display: inline-block;">
+            {{-- @if($images->isNotEmpty())
+                <div class="card mt-4">
+                    <div class="card-body">
+                        <label class="form-label mb-2">Images existantes</label>
+                        <div class="row">
+                            @foreach($images as $image)
+                                <div class="col-md-4 mb-3">
+                                    <div class="image-container" style="position: relative; display: inline-block;">
 
-                            <!-- Image -->
-                            <img src="{{ asset($image->image_path) }}" class="img-fluid custom-image" alt="Image" style="width: 100px; height: 100px; object-fit: cover;">
+                                        <!-- Image -->
+                                        <img src="{{ asset($image->image_path) }}" class="img-fluid custom-image" alt="Image" style="width: 100px; height: 100px; object-fit: cover;">
 
-                            <!-- Icône de suppression avec formulaire -->
-                            <form action="{{ route('admin.image.delete', ['article' => $article->id, 'id' => $image->id]) }}" method="POST" style="position: absolute; top: 0; left: 0; background-color: transparent; border: none; cursor: pointer;">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="delete-btn" style="background-color: transparent; border: none; cursor: pointer;">
-                                    <i class="fas fa-trash-alt" style="color: red; font-size: 18px;"></i>
-                                </button>
-                            </form>
-                            
+                                        <!-- Icône de suppression avec formulaire -->
+                                        <form action="{{ route('admin.image.delete', ['article' => $article->id, 'id' => $image->id]) }}" method="POST" style="position: absolute; top: 0; left: 0; background-color: transparent; border: none; cursor: pointer;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="delete-btn" style="background-color: transparent; border: none; cursor: pointer;">
+                                                <i class="fas fa-trash-alt" style="color: red; font-size: 18px;"></i>
+                                            </button>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            @endforeach
                         </div>
                     </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-@else
-    <div class="card mt-4">
-        <div class="card-body">
-            <p>Aucune image disponible pour cet article.</p>
-        </div>
-    </div>
-@endif
+                </div>
+                @else
+                    <div class="card mt-4">
+                        <div class="card-body">
+                            <p>Aucune image disponible pour cet article.</p>
+                        </div>
+                    </div>
+            @endif --}}
 
             
             

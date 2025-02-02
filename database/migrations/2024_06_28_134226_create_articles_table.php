@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('quantite', 8, 2)->default(1);
             $table->string('couverture')->default('images/default.jpg');
             $table->string('slug')->unique();
-            $table->boolean('second_mains')->default(false);
+            $table->boolean('second_mains')->default(false); // 0 estseconde mains; 1 est neuf --- 
 
             $table->boolean('is_promotion')->default(false);
             $table->enum('promotion_type', ['none', 'percentage', 'fixed'])->default('none'); 
