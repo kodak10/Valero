@@ -258,7 +258,7 @@
                     </div>
                       <button type="button" class="btn mb-1 bg-primary-subtle text-primary" data-bs-toggle="modal" data-bs-target="#modalAddTag">
                         <span class="fs-4 me-1">+</span>
-                        Créer d'autres tags
+                        Créer d'autres sous catégories
                       </button>   
                   </div>
                 </div>
@@ -448,12 +448,12 @@
               @csrf
               <div class="row">
                   <div class="col-md-6 mb-3">
-                      <label class="form-label" for="tag_name">Nom du tag</label>
+                      <label class="form-label" for="tag_name">Nom de la sous catégorie</label>
                       <input type="text" 
                              class="form-control @error('name') is-invalid @enderror" 
                              id="name" 
                              name="name" 
-                             placeholder="Nom du tag" 
+                             placeholder="Nom de la sous catégorie" 
                              value="{{ old('name') }}" 
                              required>
                       @error('name')

@@ -62,7 +62,7 @@
                                     </div>
                                 </th>
                                 <th>Catégories</th>
-                                <th>Tags</th>
+                                <th>Sous Catégories</th>
                                 <th>Couverture</th>
                                 <th>Nom</th>
                                 <th>Prix</th>

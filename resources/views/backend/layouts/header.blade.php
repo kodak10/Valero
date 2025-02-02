@@ -189,7 +189,7 @@
           </li>
           <li class="nav-item d-none d-xl-block">
             <a href="main/index.html" class="text-nowrap nav-link">
-              <img src="assets/backend/images/logos/dark-logo.svg" class="dark-logo" alt="flexy-img" />
+              <img src="" class="dark-logo" alt="flexy-img" />
               <img src="assets/backend/images/logos/light-logo.svg" class="light-logo" alt="flexy-img" />
             </a>
           </li>
