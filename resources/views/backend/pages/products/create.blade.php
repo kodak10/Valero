@@ -143,61 +143,7 @@
                     </div>
                     
                   </div>
-                </div>
-              
-                <div class="card">
-                  <div class="card-body">
-                      <label class="form-label">Ajouter des variantes de l'article</label>
-                      <div class="email-repeater mb-3">
-                          <div data-repeater-list="variations">
-                              <div data-repeater-item class="row mb-3">
-                                  <div class="col-md-4">
-                                      <select name="variations[][type]" class="select2 form-control">
-                                          <option value="Couleur">Couleur</option>
-                                          <option value="Taille">Taille</option>
-                                          <option value="Poids">Poids</option>
-                                      </select>
-                                  </div>
-                                  <div class="col-md-4 mt-3 mt-md-0">
-                                      <select name="variations[][value]" class="form-control">
-                                          <!-- Pour Couleur -->
-                                          <option value="Couleur" class="couleur-option" disabled>Couleur</option>
-                                          <option value="#FF5733">#FF5733 - Rouge</option>
-                                          <option value="#33FF57">#33FF57 - Vert</option>
-                                          <option value="#3357FF">#3357FF - Bleu</option>
-                                          <option value="#F5FF33">#F5FF33 - Jaune</option>
-                                          <option value="#FF33F1">#FF33F1 - Rose</option>
-                                          <option value="#33FFF0">#33FFF0 - Aqua</option>
-                                          <option value="#FF8033">#FF8033 - Orange</option>
-                                          <option value="#6A33FF">#6A33FF - Violet</option>
-                                          <option value="#F1F133">#F1F133 - Lime</option>
-                                          <option value="#FF5733">#FF5733 - Rouge foncé</option>
-                                          <!-- Pour Taille -->
-                                          <option value="Taille" class="taille-option" disabled>Taille</option>
-                                          <option value="S">S</option>
-                                          <option value="M">M</option>
-                                          <option value="L">L</option>
-                                          <option value="XL">XL</option>
-                                          <option value="XXL">XXL</option>
-                                          <option value="XXXL">XXXL</option>
-                                          <!-- Pour Poids, l'utilisateur saisit -->
-                                          <option value="Poids" class="poids-option" disabled>Poids</option>
-                                      </select>
-                                  </div>
-                                  <div class="col-md-2 mt-3 mt-md-0">
-                                      <button data-repeater-delete="" class="btn bg-danger-subtle text-danger" type="button">
-                                          <i class="ti ti-x fs-5 d-flex"></i>
-                                      </button>
-                                  </div>
-                              </div>
-                          </div>
-                          <button type="button" data-repeater-create="" class="btn bg-primary-subtle text-primary">
-                              <span class="fs-4 me-1">+</span>
-                              Ajouter une autre variante
-                          </button>
-                      </div>
-                  </div>
-              </div>
+                </div>              
             
             <div class="card">
               <div class="row">
@@ -218,6 +164,26 @@
                   </div>
                 </div>
               </div>
+              
+          </div>
+          <div class="card">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="card-body">
+                  <label class="form-label mb-3">Choix des couleurs</label>
+
+                  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                      @foreach ($colors as $color)
+                          <div style="width: 50px; height: 50px; background-color: {{ $color->code }}; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                              <input type="checkbox" name="colors[]" id="color_{{ $color->id }}" value="{{ $color->id }}" style="cursor: pointer;">
+                          </div>
+                      @endforeach
+                  </div>
+                </div>
+
+                
+              </div>
+            </div>
           </div>
           </div>
           <div class="col-lg-4">
@@ -357,7 +323,7 @@
           Sauvegarder
         </button>
         <button type="button" class="btn bg-danger-subtle text-danger ms-6">
-          Annuler
+         <a href="{{ route('admin.articles.index') }}">Annuler</a>
         </button>
       </div>
 

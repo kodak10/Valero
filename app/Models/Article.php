@@ -42,6 +42,11 @@ class Article extends Model
         return $this->belongsToMany(SousCategorie::class, 'article_sub_category', 'article_id', 'sub_category_id');
     }
 
+    public function colors()
+    {
+        return $this->belongsToMany(Color::class);
+    }
+
 
 
 

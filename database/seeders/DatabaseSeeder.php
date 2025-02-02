@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
             //FlashSaleSeeder::class,
             UserSeeder::class,
             //AssociatedProductsSeeder::class,
+            ColorsTableSeeder::class
         ]);
     }
 }

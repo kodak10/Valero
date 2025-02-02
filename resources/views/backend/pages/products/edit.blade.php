@@ -155,38 +155,7 @@
                 </div>
             </div>
 
-            {{-- <div class="card">
-                <div class="card-body">
-                    <label class="form-label">Ajouter des variantes de l'article</label>
-                    <div class="email-repeater mb-3">
-                        <div data-repeater-list="variations">
-                            @foreach($article->variations as $variation)
-                                <div data-repeater-item class="row mb-3">
-                                    <div class="col-md-4">
-                                        <select name="variations[][type]" class="select2 form-control">
-                                            <option value="Couleur" {{ $variation->type == 'Couleur' ? 'selected' : '' }}>Couleur</option>
-                                            <option value="Taille" {{ $variation->type == 'Taille' ? 'selected' : '' }}>Taille</option>
-                                            <option value="Poids" {{ $variation->type == 'Poids' ? 'selected' : '' }}>Poids</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-4 mt-3 mt-md-0">
-                                        <input type="text" name="variations[][value]" class="form-control" placeholder="Variation" value="{{ $variation->value }}">
-                                    </div>
-                                    <div class="col-md-2 mt-3 mt-md-0">
-                                        <button data-repeater-delete="" class="btn bg-danger-subtle text-danger" type="button">
-                                            <i class="ti ti-x fs-5 d-flex"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            @endforeach
-                        </div>
-                        <button type="button" data-repeater-create="" class="btn bg-primary-subtle text-primary">
-                            <span class="fs-4 me-1">+</span>
-                            Ajouter une autre variante
-                        </button>
-                    </div>
-                </div>
-            </div> --}}
+           
 
             <div class="card">
                 <div class="row">
@@ -210,6 +179,30 @@
 
                 
             </div>
+
+            <div class="card">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-body">
+                            <label class="form-label mb-3">Choix des couleurs</label>
+            
+                            <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                                @foreach ($colors as $color)
+                                    <div style="width: 50px; height: 50px; background-color: {{ $color->code }}; 
+                                        border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+            
+                                        <input type="checkbox" name="colors[]" id="color_{{ $color->id }}" 
+                                            value="{{ $color->id }}" 
+                                            style="cursor: pointer;"
+                                            @if(in_array($color->id, $article->colors->pluck('id')->toArray())) checked @endif>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <div class="col-lg-4">

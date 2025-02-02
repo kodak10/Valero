@@ -50,22 +50,6 @@
               <span class="hide-menu">Les commandes</span>
             </a>
             <ul aria-expanded="false" class="collapse first-level">
-              {{-- <li class="sidebar-item">
-                <a href="main/eco-shop.html" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Shop</span>
-                </a>
-              </li> --}}
-              {{-- <li class="sidebar-item">
-                <a href="main/eco-shop-detail.html" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Details</span>
-                </a>
-              </li> --}}
               <li class="sidebar-item">
                 <a href="" class="sidebar-link">
                   <div class="round-16 d-flex align-items-center justify-content-center">
@@ -83,15 +67,6 @@
                   <span class="hide-menu">Retour de commande</span>
                 </a>
               </li>
-              
-              {{-- <li class="sidebar-item">
-                <a href="main/eco-edit-product.html" class="sidebar-link">
-                  <div class="round-16 d-flex align-items-center justify-content-center">
-                    <i class="ti ti-circle"></i>
-                  </div>
-                  <span class="hide-menu">Edit Product</span>
-                </a>
-              </li> --}}
             </ul>
           </li>
 
@@ -99,14 +74,14 @@
             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
             <span class="hide-menu">Gestions</span>
           </li>
-          <li class="sidebar-item">
-            <a class="sidebar-link has-arrow" href="javascript:void(0)" aria-expanded="false">
+          <li class="sidebar-item ">
+            <a class="sidebar-link has-arrow {{ request()->routeIs('admin.articles*') ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false">
               <span class="d-flex">
                 <i class="ti ti-basket"></i>
               </span>
               <span class="hide-menu">Articles</span>
             </a>
-            <ul aria-expanded="false" class="collapse first-level">
+            <ul aria-expanded="{{ request()->routeIs('admin.articles*') ? 'true' : 'false' }}" class="collapse first-level">
               
               <li class="sidebar-item">
                 <a href="{{ route('admin.articles.index') }}" class="sidebar-link">
