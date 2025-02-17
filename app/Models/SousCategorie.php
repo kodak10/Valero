@@ -17,4 +17,7 @@ class SousCategorie extends Model
     {
         return $this->belongsToMany(Article::class, 'article_sub_category', 'sub_category_id', 'article_id');
     }
+
+    
+
 }

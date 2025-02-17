@@ -32,9 +32,11 @@ class UserController extends Controller
 
     public function home()
     {
+        $categories = Category::all();
+
         $allCategories = Category::take(6)->get();
 
-        return view('account.home' , compact('allCategories'));
+        return view('account.home' , compact('allCategories', 'categories'));
     }
 
     public function editProfil()

@@ -1,6 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
+<div class="container">
+    <span>les categories</span>
+</div>
 <!-- Start Hero Slider Area -->
 <section class="hero-slider-area hero-slider-area-style-two">
     <div class="hero-slider-two owl-carousel owl-theme">
@@ -82,12 +85,13 @@
     <div class="container">
      
         <div class="row justify-content-center">
+            <h5>Les catégories du moment</h5>
             @foreach ($categories as $categorie )
 
             <div class="col-lg-2 col-sm-6 col-md-4">
                 <div class="single-popular-categories">
                     <a href="{{ route('articles.filter', ['categorie_id' => $categorie->id]) }}">
-                        <img src="{{ $categorie->images }}" alt="Image">
+                        <img src="{{ asset('storage/' . $categorie->couverture) }}" alt="Image">
                         <span>{{$categorie->nom}}</span> 
                     </a>
                 </div>
@@ -128,13 +132,13 @@
                         <div class="single-products">
                             <div class="product-img">
                                 <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                                        <img src="{{ $article->images }}" style="height: 150px !important" alt="Image">
+                                                        <img src="{{ asset('storage/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                 </a>
                             </div>
                     
                             <div class="product-content">
                                 <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                    {{$article->nom}}
+                                    {{$article->name}}
                                 </a>
                     
                                 <ul class="products-rating">
@@ -154,7 +158,7 @@
                                 </ul>
                     
                                 <ul class="products-price">
-                                    <li>{{$article->prix}}</li> FCFA
+                                    <li>{{$article->price}}</li> FCFA
                                 </ul>
                     
                                 <ul class="products-cart-wish-view d-flex justify-content-between">
@@ -263,14 +267,14 @@
                             <div class="single-products new-arrivals">
                                 <div class="product-img">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
+                                        <img src="{{ asset('storage/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
 
                                 </div>
 
                                 <div class="product-content">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                        {{$article->nom}}
+                                        {{$article->name}}
                                     </a>
 
                                     {{-- <ul class="products-rating">
@@ -291,7 +295,7 @@
 
                                     <ul class="products-price">
                                         <li>
-                                           {{$article->prix}} FCFA
+                                           {{$article->price}} FCFA
                                         </li>
                                     </ul>
 
@@ -352,13 +356,13 @@
             <div class="single-products">
                 <div class="product-img">
                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                            <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
+                                            <img src="{{ asset('storage/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                     </a>
                 </div>
 
                 <div class="product-content">
                     <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                        {{$article->nom}}
+                        {{$article->name}}
                     </a>
 
                     {{-- <ul class="products-rating">
@@ -379,7 +383,7 @@
 
                     <ul class="products-price">
                         <li>
-                            {{$article->prix}} FCFA
+                            {{$article->price}} FCFA
                         </li>
                     </ul>
 

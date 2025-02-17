@@ -32,7 +32,7 @@ class CategoriesController extends Controller
         if ($request->hasFile('couverture')) {
             $fileName = time().'.'.$request->couverture->extension();
             $request->couverture->move(public_path('images/articles/couvertures'), $fileName);
-            $category->couverture = $fileName;
+            $category->couverture = 'images/categories/couverture/' . $fileName;
         }
         $category->save();
 

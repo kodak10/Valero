@@ -73,7 +73,9 @@ class WebsiteController extends Controller
 
 
     // Récupérer les catégories et les articles associés
-    $categories = Category::with('articles')->take(6)->get(); // Vous pouvez ajuster la limite selon vos besoins
+    $categories = Category::with('sousCategories.articles')->take(6)->get();
+
+    //$categories = Category::with('articles')->take(6)->get(); // Vous pouvez ajuster la limite selon vos besoins
     $allCategories = Category::all(); // Récupérer toutes les catégories
     $articlesSecondMains = Article::where('second_mains', true)->get();
 
@@ -168,8 +170,8 @@ class WebsiteController extends Controller
     public function contact()
     {
         $allCategories = Category::all();
-
-        return view('contact', compact('allCategories'));
+        $categories = Category::all();
+        return view('contact', compact('allCategories', 'categories'));
     }
 
     public function sendMail(Request $request)
@@ -195,9 +197,11 @@ class WebsiteController extends Controller
 
     public function my_account()
     {
+        $categories = Category::take(6)->get();
+
         $allCategories = Category::take(6)->get();
 
-        return view('account', compact('allCategories'));
+        return view('account', compact('allCategories', 'categories'));
     }
 
     public function adminDashboard()

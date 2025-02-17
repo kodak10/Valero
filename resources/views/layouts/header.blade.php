@@ -113,175 +113,78 @@
             <div class="container">
                 <nav class="navbar navbar-expand-md navbar-light">
                     <div class="navbar-category">
-                        <button type="button" id="categoryButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="ri-menu-line"></i>
-                            TOUTES LES CATEGORIES
-                            <i class="arrow-down ri-arrow-down-s-line"></i>
+                        <button type="button" id="categoryButton" class="btn btn-primary" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="ri-menu-line"></i> TOUTES LES CATÉGORIES <i class="arrow-down ri-arrow-down-s-line"></i>
                         </button>
-
-                        <div class="navbar-category-dropdown dropdown-menu" aria-labelledby="categoryButton">
-                            <ul>
-                                @foreach ($allCategories as $allCategorie)
-                                    <li>
-                                        <a href="">{{$allCategorie->nom}}</a>
-                                    </li>
+                
+                        <div class="dropdown-menu mega-dropdown p-3" aria-labelledby="categoryButton">
+                            <div class="row">
+                                @foreach ($categories as $categorie)
+                                    <div class="col-md-4">
+                                        <h6 class="dropdown-header">{{ $categorie->nom }}</h6>
+                                        <ul class="list-unstyled">
+                                            @foreach ($categorie->sousCategories as $sousCategorie)
+                                                <li>
+                                                    <strong>{{ $sousCategorie->nom }}</strong>
+                                                    <ul class="list-unstyled ms-3">
+                                                        @foreach ($sousCategorie->articles as $article)
+                                                            <li><a href="#" class="dropdown-item">{{ $article->titre }}</a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
                                 @endforeach
-                               
-                               
-                            </ul>
+                            </div>
                         </div>
                     </div>
-
+                
                     <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                         <ul class="navbar-nav">
-
-                            <li class="nav-item">
-                                <a href="/" class="nav-link">Accueil</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="/article" class="nav-link">Nos Articles</a>
-                            </li>
-
-                            {{-- <li class="nav-item">
-                                <a href="/administration" class="nav-link">Test Admin</a>
-                            </li> --}}
-
-
-
-
-                            {{-- <!-- <li class="nav-item mega-menu">
-                                <a href="#" class="nav-link">
-                                    Shop
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </a>
-
+                            <li class="nav-item"><a href="/" class="nav-link">Accueil</a></li>
+                            <li class="nav-item"><a href="/article" class="nav-link">Nos Articles</a></li>
+                            <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages <i class="ri-arrow-down-s-line"></i></a>
                                 <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <div class="row">
-                                            <div class="col">
-                                                <h6 class="sub-menu-title">Product Layouts</h6>
-
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="#">Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="best-sellers.html">Best Sellers</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="featured-#">Featured Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="trending-#">Trending Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="new-arrivals.html">New Arrivals</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="categories.html">Categories</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="product-details.html">Product Details</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col">
-                                                <h6 class="sub-menu-title">Other Pages</h6>
-
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="offer-#">Offer Products</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="shopping-cart.html">Shopping Cart</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="checkout.html">Checkout</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="wishlist.html">Wishlist</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="my-account.html">My Account</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="success-order.html">Success Order</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="order-tracking.html">Order Tracking</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col">
-                                                <h6 class="sub-menu-title">Admin Page</h6>
-
-                                                <ul class="sub-menu">
-                                                    <li>
-                                                        <a href="dashboard.html">Dashboard</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="edit-profile.html">Edit Profile</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="edit-address.html">Edit Address</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="order-history.html">Order History</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="order-details.html">Order Details</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="address.html">Add Address</a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="password.html">Change Password</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-
-                                            <div class="col">
-                                                <a href="#" class="menu-img">
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li> --> --}}
-
-                            <li class="nav-item">
-                                <a href="/contact" class="nav-link">Contact</a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                    Pages
-                                    <i class="ri-arrow-down-s-line"></i>
-                                </a>
-
-                                <ul class="dropdown-menu">
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">FAQ</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Politique de confidentialité</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">Termes et conditions</a>
-                                    </li>
+                                    <li><a href="#" class="dropdown-item">FAQ</a></li>
+                                    <li><a href="#" class="dropdown-item">Politique de confidentialité</a></li>
+                                    <li><a href="#" class="dropdown-item">Termes et conditions</a></li>
                                 </ul>
                             </li>
-
-
-
-                           
                         </ul>
-
                     </div>
                 </nav>
+                
+                <style>
+                    .mega-dropdown {
+                        width: 70%;
+                        max-width: 1000px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                    .mega-dropdown .col-md-4 {
+                        border-right: 1px solid #ddd;
+                        padding: 10px;
+                    }
+                    .mega-dropdown .col-md-4:last-child {
+                        border-right: none;
+                    }
+                    .mega-dropdown .dropdown-header {
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: #007bff;
+                    }
+                    .mega-dropdown .dropdown-item {
+                        font-size: 14px;
+                        color: #333;
+                    }
+                </style>
+                
+                
+               
+                
             </div>
         </div>
     </div>

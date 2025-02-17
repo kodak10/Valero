@@ -19,5 +19,11 @@ class Category extends Model
         return $this->belongsToMany(Article::class, 'article_category');
     }
 
+    public function sousCategories()
+    {
+        return $this->belongsToMany(SousCategorie::class, 'article_sub_category', 'article_id', 'sub_category_id');
+    }
+
+
     
 }

@@ -247,13 +247,13 @@
                             <div class="single-products">
                                 <div class="product-img">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}">
-                                        <img src="{{ asset('images/articles/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
+                                        <img src="{{ asset('storage/' . $article->couverture) }}" style="height: 150px !important" alt="Image">
                                     </a>
                                 </div>
 
                                 <div class="product-content">
                                     <a href="{{ route('article.details', ['id' => $article->id]) }}" class="title">
-                                        {{$article->nom}}
+                                        {{$article->name}}
                                     </a>
 
                                     <ul class="products-rating">
@@ -274,7 +274,7 @@
 
                                     <ul class="products-price">
                                         <li>
-                                            {{$article->prix}} FCFA
+                                            {{$article->price}} FCFA
                                         </li>
                                         <li>
                                             @if ($article->second_mains == false)
