@@ -809,7 +809,7 @@
 <!-- End Our Blog Area -->
 
 <!-- Start Partner Area -->
-<div class="partner-area pb-54">
+{{-- <div class="partner-area pb-54">
     <div class="container">
         <div class="partner-wrap">
             <div class="partner-slider owl-carousel owl-theme">
@@ -834,7 +834,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- End Partner Area -->
 
 {{-- <!-- Start Special Area -->
